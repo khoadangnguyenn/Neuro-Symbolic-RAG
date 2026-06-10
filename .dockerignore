@@ -1,0 +1,6 @@
+model/
+*.gguf
+__pycache__/
+*.pyc
+.git/
+.vscode/
