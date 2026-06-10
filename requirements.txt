@@ -1,0 +1,13 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+flask>=3.0,<4
+sympy>=1.12,<2
+z3-solver>=4.12,<5
+chromadb>=0.5,<0.6
+sentence-transformers>=3.0,<4
+networkx>=3.0,<4
+psutil>=5.9,<6
+pynvml>=11.5,<12
+spacy>=3.7,<4
+jinja2>=3.1,<4
+streamlit 
+requests
