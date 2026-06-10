@@ -159,7 +159,7 @@ class Z3Executor(PythonSandboxExecutor):
     """Executor for generated Python/Z3 proof scripts."""
 
     def __init__(self, *, timeout_s: float = 4.0) -> None:
-        super().__init__(timeout_s=timeout_s, allowed_imports={*self.DEFAULT_ALLOWED_IMPORTS, "z3"})
+        super().__init__(timeout_s=timeout_s, allowed_imports={*self.DEFAULT_ALLOWED_IMPORTS, "z3", "networkx"})
 
     def run(self, code: str) -> ExecutionResult:
         result = super().run(code)

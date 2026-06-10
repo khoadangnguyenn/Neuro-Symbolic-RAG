@@ -28,6 +28,7 @@ class PhysicsPipeline:
         graph_path: str,
         alpha: float,
         llm: Optional[OpenAICompatibleLLM] = None,
+        expansion_llm: Optional[OpenAICompatibleLLM] = None,
         retrieval_k: int = 5,
         high_match_threshold: float = 0.85,
         low_match_threshold: float = 0.50,
@@ -39,6 +40,7 @@ class PhysicsPipeline:
         self.graph_path = graph_path
         self.alpha = alpha
         self.llm = llm or OpenAICompatibleLLM()
+        self.expansion_llm = expansion_llm or self.llm
         self.retrieval_k = retrieval_k
         self.high_match_threshold = high_match_threshold
         self.low_match_threshold = low_match_threshold
@@ -149,12 +151,22 @@ class PhysicsPipeline:
         if exact is not None:
             return self._from_example(exact, confidence=0.99, source="exact")
 
-        expanded_query = self._expand_query(question)
+        orchestration_data = self._orchestrate_query(question)
+        complexity = orchestration_data.get("complexity_score", 3)
+        vector_k = max(5, int(complexity * 10))
+        rerank_k = max(2, int(complexity * 2))
+        
+        # Build expanded semantic search query
+        search_query = question
+        anchors = orchestration_data.get("semantic_anchors", [])
+        if anchors:
+            search_query += "\n" + "\n".join(anchors)
+            
         hits = self.index.search(
-            expanded_query, 
-            k=max(15, self.retrieval_k * 2), 
+            search_query, 
+            k=vector_k, 
             reranker=self.reranker, 
-            rerank_top_k=self.retrieval_k
+            rerank_top_k=rerank_k
         )
         if hits and hits[0].score >= self.high_match_threshold:
             return self._from_example(hits[0].item, confidence=min(0.94, hits[0].score), source="retrieval-high", hit=hits[0])
@@ -182,24 +194,37 @@ class PhysicsPipeline:
             metadata={"route_info": route_info}
         )
 
-    def _expand_query(self, question: str) -> str:
-        if not self.llm.enabled:
-            return question
+    def _orchestrate_query(self, question: str) -> dict:
+        fallback = {
+            "exact_entities": [],
+            "semantic_anchors": [question],
+            "complexity_score": 3,
+            "is_solvable": True
+        }
+        if not self.expansion_llm.enabled:
+            return fallback
             
-        system_prompt = "You are a physics expert. Extract 3-5 core physical and mathematical keywords/concepts needed to solve this problem (e.g., 'vector sum', 'coordinate geometry', 'coulomb law'). Return ONLY a JSON object with a single key 'answer' containing a string of comma-separated keywords. No other text."
+        system_prompt = (
+            "You are an orchestration AI. Read the physics problem and return ONLY a valid JSON object with the following schema:\n"
+            "- `exact_entities`: List[str] (Key names, named entities, named variables, formulas)\n"
+            "- `semantic_anchors`: List[str] (1-2 sentences of HyDE contextual assumptions)\n"
+            "- `complexity_score`: int (1-5, where 1 is a simple lookup, 5 is a complex multi-step physics deduction)\n"
+            "- `is_solvable`: bool (False if it's completely nonsensical or missing required parameters)"
+        )
         try:
-            raw = self.llm.chat(
+            raw = self.expansion_llm.chat_json(
                 system_prompt=system_prompt, 
                 user_prompt=question,
                 temperature=0.0,
-                max_tokens=60
+                max_tokens=200
             )
-            if raw and raw.get("answer"):
-                return f"{question}\nKeywords: {raw['answer']}"
+            if raw:
+                print(f"\n🚀 [GEMMA 1B ORCHESTRATION] {json.dumps(raw, ensure_ascii=False)}\n", flush=True)
+                return raw
         except Exception as e:
-            print(f"[EXACT] Query expansion failed: {e}", flush=True)
+            print(f"[EXACT] Query orchestration failed: {e}", flush=True)
             
-        return question
+        return fallback
 
     def _fast_path_execute(self, question: str, payload: dict) -> Optional[PipelineResult]:
         formula_item = self.physics_knowledge_index.fast_path_search(question)

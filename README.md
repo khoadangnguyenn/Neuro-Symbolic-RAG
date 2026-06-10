@@ -4,34 +4,29 @@
 
 Một giải pháp tiên tiến **Neuro-Symbolic AI** cho bài toán **The 2nd International XAI Challenge for Transparent Educational Question-Answering**. 
 
-Pipeline này không sử dụng RAG văn bản (BM25) truyền thống dễ gây "ảo giác" (Hallucination). Thay vào đó, nó xây dựng một **HybridDB** (kết hợp VectorDB và GraphDB) để lập bản đồ tri thức Toán/Lý/Logic dưới dạng Mạng lưới liên kết (Topology).
+Pipeline này không sử dụng RAG văn bản (BM25) truyền thống dễ gây "ảo giác" (Hallucination). Thay vào đó, nó xây dựng một **HybridDB** (kết hợp VectorDB và GraphDB) để lập bản đồ tri thức Toán/Lý/Logic dưới dạng Mạng lưới liên kết (Topology). Phiên bản mới nhất đã được nâng cấp toàn diện với **Adaptive Routing** và **Local Query Expansion**.
 
 ---
 
-## Kiến Trúc Neuro-Symbolic
+## Kiến Trúc Neuro-Symbolic (Đã Nâng Cấp)
 
 Luồng xử lý chính (Workflow):
 
-1. **Adaptive Intent Router:** 
-   Nhận JSON query (chứa `question`, `query_type`, `premises`). Phân loại câu hỏi thành `logic` (Type 1) hoặc `physics` (Type 2).
+1. **Adaptive Intent Router (Zero-LLM Overhead):** 
+   Bộ định tuyến phần cứng nhận thức (Hardware-Aware). Sử dụng NLP tĩnh (`spaCy` mô hình `en_core_web_sm` chỉ 15MB) để chấm điểm độ phức tạp của câu hỏi ($\kappa$) và đo lường áp lực tài nguyên máy tính ($R_p$). Quyết định đi đường `Fast Path` hay `Hybrid Path` trong tíc tắc mà không cần gọi LLM, bảo vệ máy tính khỏi OOM (Sập RAM hoặc vRAM).
    
 2. **HybridDB (Shared Knowledge Base):**
-   Mỗi công thức hoặc quy luật được lưu trữ ở 2 dạng đồng bộ 1-1 (cùng UID):
-   - **VectorDB (ChromaDB):** Xử lý ngôn ngữ mờ (Semantic Similarity).
+   Mỗi công thức hoặc quy luật được lưu trữ ở 2 dạng:
+   - **VectorDB (ChromaDB):** Đã nâng cấp lên mô hình nhúng **`BAAI/bge-small-en-v1.5`** siêu nhẹ (~130MB RAM) nhưng có khả năng bắt ngữ nghĩa xuất sắc.
    - **GraphDB (NetworkX):** Xử lý cấu trúc nhân quả và topology (PageRank).
 
-3. **Luồng Xử Lý Logic (Type 1):**
-   - **Fast Path:** Tra cứu trực tiếp quy luật (k=1). Nếu khớp, Bypass LLM và chạy thẳng Python Sandbox (Z3).
-   - **Hybrid RAG Path:** Lấy Top-K Node từ HybridDB, sau đó **Duyệt Đồ Thị (Graph Traversal)** men theo các dây liên kết `feeds_into` để bốc thêm các quy luật hàng xóm tạo thành chuỗi suy luận.
-   - Giao việc cho LLM sinh mã Python Z3.
+3. **Luồng Xử Lý Logic (Type 1) & Vật Lý (Type 2):**
+   - **Fast Path:** Tra cứu trực tiếp quy luật bằng VectorDB. Nếu độ tự tin siêu cao, Bypass LLM và chạy thẳng công thức tĩnh.
+   - **Hybrid RAG Path (Có Query Expansion):** Nếu Router quyết định dùng RAG, hệ thống sẽ kích hoạt **Query Expansion** bằng cách gọi một model siêu nhẹ (như **Gemma 1B**) để trích xuất các Keyword ẩn trước khi vào VectorDB. Việc gọi Query Expansion CHỈ xảy ra ở nhánh Hybrid, giúp bảo vệ hoàn toàn Fast Path khỏi sự lạm phát điểm độ phức tạp. Sau đó, hệ thống duyệt đồ thị, gom công thức và tiêm **Hàng rào Toạ độ (Coordinate Guardrail)** để cấm LLM đoán bừa khoảng cách hình học, ép giải bằng hệ toạ độ Oxy.
+   - Cuối cùng, giao việc cho LLM chính (hoặc Gemma 1B) sinh mã Python lập trình.
 
-4. **Luồng Xử Lý Vật Lý (Type 2):**
-   - **Fast Path:** Tra cứu trực tiếp công thức. Bypass LLM và chạy thẳng Python Sandbox (SymPy).
-   - **Hybrid RAG Path:** Men theo các dây liên kết `shares_variable` (chung biến số) để gom đủ công thức giải hệ phương trình.
-   - Giao việc cho LLM sinh mã Python SymPy.
-
-5. **Python Sandbox Executor:**
-   Mã do LLM sinh ra bị cô lập hoàn toàn (cấm `os`, `sys`, `exec()`, `eval()`), ép thời gian chạy (4.0s) và giới hạn chỉ dùng thư viện toán học an toàn (`math`, `sympy`, `z3`). Đảm bảo kết quả chính xác 100%, không sai toán học.
+4. **Python Sandbox Executor:**
+   Mã do LLM sinh ra bị cô lập hoàn toàn (cấm `os`, `sys`, `exec()`, `eval()`), ép thời gian chạy (4.0s) và giới hạn chỉ dùng thư viện toán học an toàn (`math`, `sympy`, `z3`). Đảm bảo kết quả chính xác tuyệt đối.
 
 ---
 
@@ -44,28 +39,34 @@ Hệ thống cần đọc file gốc (`Logic_Based_Educational_Queries.json` và
 EXACT_LLM_BASE_URL=http://localhost:8001 EXACT_LLM_MODEL=exact-model python3 scripts/auto_seeder.py
 ```
 
-### 2. Khởi động Máy chủ API & LLM (Docker Compose)
-Khởi động API Server (chạy ở cổng 8000) và LLM Server (chạy ở cổng 8001).
+### 2. Khởi động Máy chủ API & LLM
+Khởi động API Server (chạy ở cổng 8000).
 ```bash
 docker-compose up --build exact-api -d
-docker-compose start exact-api (dùng để mở lại không cần build)
-```
-Nếu bạn muốn chạy mô hình `llama-cpp` cục bộ qua docker:
-```bash
-docker-compose up -d llama-cpp
 ```
 
-*(Lưu ý cho máy Mac M-Series):* Cách tối ưu nhất để tận dụng card đồ họa (Metal acceleration) là không dùng Docker cho LLM, mà hãy cài đặt và chạy `llama-server` trực tiếp trên máy chủ gốc (Host) bằng lệnh sau:
-```bash
-llama-server -m model/deepseek-r1-distill-qwen-7b-exact.Q4_K_M.gguf \
-  --lora model/exact-lora.gguf \
-  --host 0.0.0.0 --port 8001 -c 16384 --alias exact-model 
-  -ngl 99 --parallel 1 --flash-attn
+**Tự Host Đa Mô Hình (Dual-LLM Architecture):**
+Hệ thống hiện tại được thiết kế chạy **2 mô hình LLM chuyên biệt** song song ở ngoài Docker (Local Host):
+- **LLM Chính (Giải toán/Code Z3, Sympy):** Chạy Qwen 2.5 7B.
+- **LLM Trợ lý (Query Expansion):** Chạy Gemma 1B siêu nhẹ để bóc tách từ khóa.
 
+Mở 2 terminal và chạy 2 `llama-server` ở 2 port khác nhau (ví dụ 8001 và 8002):
+
+*Terminal 1 (Main LLM - Port 8001):*
+```bash
 llama-server -m model/Qwen2.5-7B-Instruct-Q4_K_M.gguf \
-  --host 0.0.0.0 --port 8001 -c 16384 --alias exact-model \
+  --host 0.0.0.0 --port 8001 -c 8192 --alias exact-model \
   -ngl 99 --parallel 1 --flash-attn on
 ```
+
+*Terminal 2 (Expansion LLM - Port 8002):*
+```bash
+llama-server -m model/gemma-3-1b-it-Q4_K_M.gguf \
+  --host 0.0.0.0 --port 8002 -c 8192 --alias exact-model \
+  -ngl 99 --parallel 1 --flash-attn on
+```
+
+*(Lưu ý: Nếu bạn chạy Python API trực tiếp, hãy gán biến `EXACT_LLM_BASE_URL=http://localhost:8001` và `EXACT_EXPANSION_LLM_BASE_URL=http://localhost:8002`)*
 
 ---
 
@@ -79,7 +80,7 @@ curl -s http://localhost:8000/answer \
   -H 'Content-Type: application/json' \
   -d '{
     "query_type": "type2",
-    "question": "Calculate the energy stored in capacitor C when C = 100 μF and U = 30 V."
+    "question": "Two point charges q1 = 10^-8 C and q2 = -2×10^-8 C are placed in air at two points A and B, 8 cm apart. Calculate the net force."
   }'
 ```
 
@@ -104,10 +105,10 @@ EXACT-Full-Pipeline/
 │
 └── exact_pipeline/              # Mã nguồn cốt lõi của hệ thống Neuro-Symbolic
     ├── Full-Pipeline-Exact-2026.png # Hình ảnh sơ đồ pipeline
-    ├── docker-compose.yml       # Cấu hình khởi chạy nhanh API và LLM
+    ├── docker-compose.yml       # Cấu hình khởi chạy nhanh API
     ├── Dockerfile               # Tệp tin cấu hình đóng gói Docker
     ├── dataset/                 # Chứa dữ liệu gốc (JSON, CSV) và VectorDB/GraphDB
-    ├── model/                   # Nơi lưu trữ trọng số mô hình LLM (.gguf, LoRA)
+    ├── model/                   # Nơi lưu trữ trọng số mô hình LLM (.gguf)
     ├── scripts/                 # Các công cụ hỗ trợ
     │   ├── auto_seeder.py       # Kịch bản tự động nạp và cấy dữ liệu vào HybridDB
     │   └── evaluate_local.py    # Kịch bản đánh giá độ chính xác (Accuracy)
@@ -121,7 +122,7 @@ EXACT-Full-Pipeline/
     │   ├── graph_db.py          # NetworkX GraphDB và hàm tính điểm PageRank + Vector
     │   └── retrieval.py         # VectorDB (ChromaDB)
     ├── llm/                     # Xử lý giao tiếp với LLM
-    │   ├── llm.py               # HTTP Client gọi tới LLM (vLLM / llama.cpp)
+    │   ├── llm.py               # HTTP Client gọi tới LLM (vLLM / llama.cpp / Ollama)
     │   └── templates.py         # Nơi chứa các System Prompt (Jinja2)
     └── orchestration/           
         ├── router.py            # Bộ định tuyến (Intent Router) chia luồng Logic/Physics

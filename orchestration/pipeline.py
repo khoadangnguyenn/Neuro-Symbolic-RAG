@@ -26,6 +26,11 @@ class ExactPipeline:
             model=self.settings.llm_model,
             timeout_s=self.settings.llm_timeout_s,
         )
+        expansion_llm = OpenAICompatibleLLM(
+            base_url=self.settings.expansion_llm_base_url,
+            model=self.settings.expansion_llm_model,
+            timeout_s=self.settings.llm_timeout_s,
+        )
         from exact_pipeline.orchestration.router import AdaptiveRouter
         self.router = AdaptiveRouter(self.settings)
 
@@ -34,6 +39,7 @@ class ExactPipeline:
             "db_path": db_path,
             "alpha": self.settings.alpha,
             "llm": llm,
+            "expansion_llm": expansion_llm,
             "retrieval_k": self.settings.retrieval_k,
             "high_match_threshold": self.settings.high_match_threshold,
             "low_match_threshold": self.settings.low_match_threshold,

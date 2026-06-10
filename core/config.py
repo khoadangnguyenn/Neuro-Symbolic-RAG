@@ -44,6 +44,8 @@ class Settings:
     physics_path: Path
     llm_base_url: str
     llm_model: str
+    expansion_llm_base_url: str
+    expansion_llm_model: str
     llm_timeout_s: float
     retrieval_k: int
     high_match_threshold: float
@@ -76,6 +78,8 @@ class Settings:
             ).resolve(),
             llm_base_url=os.getenv("EXACT_LLM_BASE_URL", "").rstrip("/"),
             llm_model=os.getenv("EXACT_LLM_MODEL", ""),
+            expansion_llm_base_url=os.getenv("EXACT_EXPANSION_LLM_BASE_URL", os.getenv("EXACT_LLM_BASE_URL", "")).rstrip("/"),
+            expansion_llm_model=os.getenv("EXACT_EXPANSION_LLM_MODEL", os.getenv("EXACT_LLM_MODEL", "")),
             llm_timeout_s=_env_float("EXACT_LLM_TIMEOUT", 300.0),
             retrieval_k=_env_int("EXACT_RETRIEVAL_K", 5),
             high_match_threshold=_env_float("EXACT_HIGH_MATCH_THRESHOLD", 18.0),

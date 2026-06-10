@@ -7,31 +7,11 @@ services:
       EXACT_SERVER_BACKEND: flask
       EXACT_LLM_BASE_URL: ${EXACT_LLM_BASE_URL:-http://host.docker.internal:8001}
       EXACT_LLM_MODEL: ${EXACT_LLM_MODEL:-exact-model}
+      EXACT_EXPANSION_LLM_BASE_URL: ${EXACT_EXPANSION_LLM_BASE_URL:-http://host.docker.internal:8002}
+      EXACT_EXPANSION_LLM_MODEL: ${EXACT_EXPANSION_LLM_MODEL:-exact-model}
       EXACT_MAX_RETRIES: ${EXACT_MAX_RETRIES:-2}
       EXACT_CODE_TIMEOUT: ${EXACT_CODE_TIMEOUT:-4}
     volumes:
       - ./dataset/chromadb_data:/app/exact_pipeline/dataset/chromadb_data
       - ./dataset/graph_data:/app/exact_pipeline/dataset/graph_data
     restart: unless-stopped
-
-  llama-cpp:
-    image: ghcr.io/ggerganov/llama.cpp:server
-    profiles:
-      - llm
-    ports:
-      - "8001:8080"
-    volumes:
-      - ./model:/models
-    command:
-      - -m
-      - /models/deepseek-r1-distill-qwen-7b-exact.Q4_K_M.gguf
-      - --lora
-      - /models/exact-lora.gguf
-      - --host
-      - 0.0.0.0
-      - --port
-      - "8080"
-      - -c
-      - "4096"
-      - --alias
-      - exact-model

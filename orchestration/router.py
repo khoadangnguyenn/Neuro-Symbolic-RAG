@@ -109,7 +109,6 @@ class AdaptiveRouter:
         if u_hybrid > u_fast:
             decision = "hybrid"
             
-        # Overrides based on Master Plan: "Nếu \kappa(q) thấp HOẶC GPU > 90% -> Fast Path"
         if self.settings.enable_gpu_protection and r_p > 0.9:
             decision = "fast"
             

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Dict, List, Optional, Sequence
 import math
+import re
 
 from exact_pipeline.core.data import logic_document
 from exact_pipeline.engines.executors import ExecutionResult, Z3Executor
@@ -136,6 +137,7 @@ class LogicPipeline:
         graph_path: str,
         alpha: float,
         llm: Optional[OpenAICompatibleLLM] = None,
+        expansion_llm: Optional[OpenAICompatibleLLM] = None,
         retrieval_k: int = 5,
         high_match_threshold: float = 0.85,
         low_match_threshold: float = 0.50,
@@ -147,6 +149,7 @@ class LogicPipeline:
         self.graph_path = graph_path
         self.alpha = alpha
         self.llm = llm or OpenAICompatibleLLM()
+        self.expansion_llm = expansion_llm or self.llm
         self.retrieval_k = retrieval_k
         self.high_match_threshold = high_match_threshold
         self.low_match_threshold = low_match_threshold
@@ -208,16 +211,26 @@ class LogicPipeline:
                 exact = maybe
         if exact is not None:
             return self._from_example(exact, confidence=0.99, source="exact")
-
-        # Tra cứu VectorDB bằng ngôn ngữ tự nhiên để làm ngữ cảnh (Few-shot RAG)
-        # BỎ early-return (trả về trực tiếp) dựa trên similarity score vì rủi ro "Context Domination"
-        # Hai câu hỏi khác nhau nhưng chung 36 tiền đề sẽ có vector gần như giống hệt nhau.
+        # Query VectorDB for context using natural language.
+        # Bypassing early-return here to avoid "Context Domination" 
+        # (different questions sharing the same premises have near-identical vectors).
         query_text = "\n".join([*premises_nl, question])
+        orchestration_data = self._orchestrate_query(question)
+        complexity = orchestration_data.get("complexity_score", 3)
+        vector_k = max(5, int(complexity * 10))
+        rerank_k = max(2, int(complexity * 2))
+        
+        # Build expanded semantic search query
+        search_query = question
+        anchors = orchestration_data.get("semantic_anchors", [])
+        if anchors:
+            search_query += "\n" + "\n".join(anchors)
+            
         hits = self.index.search(
-            query_text, 
-            k=max(15, self.retrieval_k * 2), 
+            search_query, 
+            k=vector_k, 
             reranker=self.reranker, 
-            rerank_top_k=self.retrieval_k
+            rerank_top_k=rerank_k
         )
 
         # RAG-Based FOL Cache (Offline Pre-computation):
@@ -318,6 +331,40 @@ class LogicPipeline:
                 
         return all_fol
 
+    def _orchestrate_query(self, question: str) -> dict:
+        fallback = {
+            "exact_entities": [],
+            "semantic_anchors": [question],
+            "complexity_score": 3,
+            "is_solvable": True
+        }
+        if not self.expansion_llm.enabled:
+            return fallback
+            
+        system_prompt = (
+            "You are an orchestration AI. Read the problem and return ONLY a valid JSON object with the following schema:\n"
+            "- `exact_entities`: List[str] (Key names, named entities, named variables)\n"
+            "- `semantic_anchors`: List[str] (1-2 sentences of HyDE contextual assumptions)\n"
+            "- `complexity_score`: int (1-5, where 1 is a simple lookup, 5 is a complex multi-step logical deduction)\n"
+            "- `is_solvable`: bool (False if it's completely nonsensical or missing required premises)"
+        )
+        try:
+            raw = self.expansion_llm.chat_json(
+                system_prompt=system_prompt, 
+                user_prompt=question,
+                temperature=0.0,
+                max_tokens=200
+            )
+            if raw:
+                # If we get a response, it might already be parsed by our robust parse_llm_response,
+                # or it might be raw dict. We just use it directly.
+                print(f"\n🚀 [GEMMA 1B ORCHESTRATION] {json.dumps(raw, ensure_ascii=False)}\n", flush=True)
+                return raw
+        except Exception as e:
+            print(f"[EXACT] Query orchestration failed: {e}", flush=True)
+            
+        return fallback
+
     def _fast_path_execute(
         self, question: str, premises_nl: Sequence[str], premises_fol: Sequence[str], payload: dict
     ) -> Optional[PipelineResult]:
@@ -401,18 +448,41 @@ else:
 
         examples_text = render_hits(hits, logic_document)
         
-        # Nếu đã có FOL chuẩn, cấm tuyệt đối đưa NL thô vào để tránh phân tâm (attention distraction)
-        # Chỉ dùng NL nếu vì lý do nào đó FOL bị lỗi rỗng.
-        if premises_fol:
+        from exact_pipeline.llm.templates import LOGIC_NETWORKX_TEMPLATE, LOGIC_TEMPLATE
+        q_lower = question.lower()
+        
+        # Strict structural intent matching. 
+        # This prevents Decoy phrases in Yes/No questions or multi-clause Boolean questions from triggering NetworkX.
+        strict_patterns = [
+            r"\b(what|which)( of the following)? is the( absolute)?( logical)? strongest( possible)? conclusion\b",
+            r"\b(what|which)( of the following)? conclusion is (the )?strongest\b",
+            r"\bfind the fewest (premises|steps)\b",
+            r"\bwhat requires the fewest (premises|steps)\b",
+            r"\bwith the minimum (number of )?(premises|steps)\b",
+            r"\b(what|which) is the most direct( path| inference)?\b",
+            r"\b(what|which) is the (longest|shortest) (chain|path)\b",
+            r"\bfind the (longest|shortest) (chain|path)\b"
+        ]
+        
+        is_comparative = any(re.search(pattern, q_lower) for pattern in strict_patterns)
+
+        # If FOL is available, exclusively use it to avoid attention distraction.
+        # Fallback to NL only if FOL is missing or empty.
+        # EXCEPTION: NetworkX comparative queries work much better with natural language.
+        if premises_fol and not is_comparative:
             display_premises = "Premises-FOL:\n" + "\n".join(premises_fol)
             premises_list = list(premises_fol)
         else:
             display_premises = "Premises-NL:\n" + "\n".join(f"{i + 1}. {premise}" for i, premise in enumerate(premises_nl))
             premises_list = list(premises_nl)
             
-        system_prompt = LOGIC_TEMPLATE.render(question=question, premises=premises_list)
-        subgraph_context_lines = get_reasoning_subgraph_context(question, self.logic_knowledge_index, max_cards=4)
-        subgraph_text = "\n".join(subgraph_context_lines)
+        if is_comparative:
+            system_prompt = LOGIC_NETWORKX_TEMPLATE.render(question=question, premises=premises_list)
+            subgraph_text = ""
+        else:
+            system_prompt = LOGIC_TEMPLATE.render(question=question, premises=premises_list)
+            subgraph_context_lines = get_reasoning_subgraph_context(question, self.logic_knowledge_index, max_cards=4)
+            subgraph_text = "\n".join(subgraph_context_lines)
 
         base_prompt = (
             f"{display_premises}\n\n"
@@ -423,6 +493,7 @@ else:
             "Retrieved examples:\n"
             f"{examples_text}"
         )
+        
         last_raw: Optional[dict] = None
         errors: List[str] = []
         for attempt in range(self.max_retries + 1):
@@ -445,6 +516,7 @@ else:
             if not z3_code.strip():
                 break
 
+            print(f"\\n[DEBUG] LLM Generated Code:\\n{z3_code}\\n", flush=True)
             executed = self.z3_executor.run(z3_code)
             if executed.ok:
                 return self._from_logic_execution(raw, executed, premises_nl, premises_fol, attempt + 1)
@@ -471,6 +543,7 @@ else:
         metadata = {
             "llm_attempts": attempts,
             "executor": "z3",
+            "executed_code": raw.get("python_code", raw.get("code", "")),
             **executed.metadata,
         }
         return PipelineResult(
@@ -497,6 +570,8 @@ else:
         if not raw:
             return None
         metadata = {"executor": "z3", "fallback_reason": "execution_failed_or_not_provided"}
+        if raw and (raw.get("python_code") or raw.get("code")):
+            metadata["failed_code"] = raw.get("python_code") or raw.get("code")
         if errors:
             metadata["execution_errors"] = list(errors[-2:])
         return PipelineResult(
