@@ -2,8 +2,7 @@
 This project completely replaces traditional text-based RAG (BM25) to eliminate LLM hallucinations. It leverages a Neuro-Symbolic HybridDB to map Logic and Physics knowledge as a topological network, heavily augmented with Offline Pre-computation, Graph Traversal (Steiner Tree), and Adaptive Routing.
 
 ## 🧠 System Architecture
-![Pipeline Optimized](Pipeline-Optimized.png)
-
+<img src="Pipeline-Optimized.png" alt="Pipeline Optimized" width="100%">
 The pipeline consists of 4 core components:
 
 ### 1. Adaptive Intent Router (Zero-LLM Overhead)
