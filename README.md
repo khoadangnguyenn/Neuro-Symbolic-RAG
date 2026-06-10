@@ -2,7 +2,8 @@
 This project completely replaces traditional text-based RAG (BM25) to eliminate LLM hallucinations. It leverages a Neuro-Symbolic HybridDB to map Logic and Physics knowledge as a topological network, heavily augmented with Offline Pre-computation, Graph Traversal (Steiner Tree), and Adaptive Routing.
 
 ## 🧠 System Architecture
-<img src="Pipeline-Optimized.png" alt="Pipeline Optimized" width="100%">
+![Pipeline Optimized](Pipeline-Optimized.png)
+
 The pipeline consists of 4 core components:
 
 ### 1. Adaptive Intent Router (Zero-LLM Overhead)
@@ -32,6 +33,19 @@ A completely isolated execution environment:
 ## 🚀 Quick Start
 
 The system relies on a **Dual-LLM** architecture. Please execute the following steps in order.
+
+### Step 0: Download Models
+Create a `model/` directory and download the required GGUF weights (e.g., from Hugging Face):
+
+```bash
+mkdir -p model
+
+# Download Main LLM (Qwen2.5 7B)
+wget https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF/resolve/main/qwen2.5-7b-instruct-q4_k_m.gguf -O model/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+
+# Download Expansion LLM (Gemma 3 1B)
+wget https://huggingface.co/bartowski/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf -O model/gemma-3-1b-it-Q4_K_M.gguf
+```
 
 ### Step 1: Start the Dual-LLM Servers
 Run two LLM processes locally in separate terminals:
