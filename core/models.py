@@ -39,31 +39,30 @@ class PipelineResult:
     source: Optional[str] = None
     matched_id: Optional[str] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
+    
+    # EXACT 2026 Format Required Fields
+    unit: str = ""
+    premises_used: List[int] = field(default_factory=list)
+    reasoning: Optional[Dict[str, Any]] = None
 
     def to_response(self) -> Dict[str, Any]:
-        """Return the EXACT-compatible JSON response.
-
-        Only answer and explanation are required by the competition, but the
-        extra fields are useful for the P3 reasoning-depth criterion.
+        """Return the EXACT 2026 compatible JSON response.
+        
+        The schema strictly requires exactly 6 keys:
+        query_id, answer, unit, explanation, premises_used, reasoning.
+        (query_id is injected by the orchestrator).
         """
-
-        response: Dict[str, Any] = {
+        reasoning = self.reasoning
+        if not reasoning and (self.fol or self.cot):
+            reasoning = {
+                "type": "fol" if self.fol else "cot",
+                "steps": self.cot if self.cot else []
+            }
+            
+        return {
             "answer": self.answer,
+            "unit": self.unit,
             "explanation": self.explanation,
+            "premises_used": self.premises_used,
+            "reasoning": reasoning
         }
-        if self.fol:
-            response["fol"] = self.fol
-        if self.cot:
-            response["cot"] = self.cot
-        if self.premises:
-            response["premises"] = self.premises
-        response["confidence"] = round(float(self.confidence), 4)
-        if self.query_type:
-            response["query_type"] = self.query_type
-        if self.source:
-            response["source"] = self.source
-        if self.matched_id:
-            response["matched_id"] = self.matched_id
-        if self.metadata:
-            response["metadata"] = self.metadata
-        return response

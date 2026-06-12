@@ -9,9 +9,11 @@ IMPORTANT RULES:
 - Use sympy.symbols() for unknowns.
 - Use sympy.Eq() for equations and sympy.solve() to solve.
 - CRITICAL RULE (Coordinate Guardrail): For ANY spatial, 2D, 3D, or geometric problem (e.g. points, distances, electric/magnetic forces, vectors), you MUST assign explicit (x, y) or (x, y, z) coordinates to ALL points. 
+- If a point's coordinates are unknown but its distances to other known points are given, you MUST use `sympy.solve` to find its exact (x, y) coordinates first. Set up equations like `sympy.Eq((x - x1)**2 + (y - y1)**2, d1**2)`.
 - NEVER attempt to guess distances or add/subtract vector magnitudes directly. You must compute distances using the distance formula: `sqrt((x2-x1)**2 + (y2-y1)**2)`.
 - Always decompose vectors into their X and Y components to find the net vector before taking the magnitude.
 - You MUST set a global variable RESULT = {"answer": "...", "explanation": "..."}.
+- IMPORTANT: Use `float()` instead of `.evalf()` for the final answer to avoid AttributeError when standard Python floats are generated.
 - Do NOT use print(). Only set RESULT.
 - The "answer" value must be a number with its unit (e.g. "2.5 J", "100 V").
 - The Retrieved Formulas/Rules are already pre-compiled or structured. DO NOT re-translate them. Just use them directly to translate the User Question into the final solver code.
@@ -19,30 +21,37 @@ IMPORTANT RULES:
 
 Here is a complete working example of the Coordinate Guardrail:
 
-**Example Problem:** "Two point charges q1=5C at origin and q2=-5C at x=3, y=0. Find force on q3=1C at x=0, y=4."
+**Example Problem:** "Two point charges q1=5C and q2=-5C are located 3m apart. Find force on q3=1C which is 4m from q1 and 5m from q2."
 **Example Code:**
 ```python
 import sympy
 k = 9e9
 q1, q2, q3 = 5, -5, 1
-# Assign Coordinates
+# 1. Assign Known Coordinates
 p1 = (0, 0)
 p2 = (3, 0)
-p3 = (0, 4)
-# Distances
-r13 = sympy.sqrt((p3[0]-p1[0])**2 + (p3[1]-p1[1])**2)
-r23 = sympy.sqrt((p3[0]-p2[0])**2 + (p3[1]-p2[1])**2)
-# Magnitudes
-F13 = k * abs(q1*q3) / r13**2
-F23 = k * abs(q2*q3) / r23**2
-# Vectors (Target - Source)
+# 2. Solve for Unknown Coordinates (p3)
+x, y = sympy.symbols('x y', real=True)
+eq1 = sympy.Eq(x**2 + y**2, 4**2)
+eq2 = sympy.Eq((x - 3)**2 + y**2, 5**2)
+sol = sympy.solve([eq1, eq2], (x, y))
+# Pick the first valid solution (e.g. positive y)
+p3 = [s for s in sol if s[1] >= 0][0]
+
+# Distances (re-calculate or use known)
+r13 = 4
+r23 = 5
+# Signed Magnitudes (positive=repulsive, negative=attractive)
+F13 = k * (q1*q3) / r13**2
+F23 = k * (q2*q3) / r23**2
+# Unit Vectors (Target - Source, pointing outward)
 u13 = ((p3[0]-p1[0])/r13, (p3[1]-p1[1])/r13)
 u23 = ((p3[0]-p2[0])/r23, (p3[1]-p2[1])/r23)
-# Force components
-Fx = F13 * u13[0] - F23 * u23[0] # Note: attraction/repulsion signs
-Fy = F13 * u13[1] - F23 * u23[1]
+# Force components (Add them up, signs handle direction automatically)
+Fx = F13 * u13[0] + F23 * u23[0]
+Fy = F13 * u13[1] + F23 * u23[1]
 net_F = sympy.sqrt(Fx**2 + Fy**2)
-RESULT = {"answer": f"{net_F.evalf()} N", "explanation": "Calculated net force using vector addition."}
+RESULT = {"answer": f"{float(net_F)} N", "explanation": "Calculated net force using vector addition."}
 ```
 
 Now solve this problem:
@@ -153,7 +162,8 @@ IMPORTANT RULES:
 - Use `nx.shortest_path_length(G, source, target)` to measure path length.
 - "Strongest conclusion" = MAXIMUM path length from the initial facts.
 - "Fewest premises" = MINIMUM path length from the initial facts.
-- You MUST set a global variable RESULT = {"answer": "...", "explanation": "..."}.
+- You MUST set a global variable RESULT = {"answer": "...", "explanation": "...", "premises_used": [indices_of_used_premises]}
+- Note: premises_used should be a list of the 0-based indices corresponding to the premises that form the path you found.
 - Do NOT use print(). Only set RESULT.
 - Output ONLY valid Python/NetworkX code enclosed in python blocks. NO explanations, NO pleasantries, NO markdown outside the code block.
 
@@ -164,13 +174,21 @@ Here is a complete working example for NetworkX:
 ```python
 import networkx as nx
 G = nx.DiGraph()
-G.add_edge("A", "B")
-G.add_edge("B", "C")
+G.add_edge("A", "B", premise_index=0)
+G.add_edge("B", "C", premise_index=1)
 # Find longest path from A
 paths = nx.single_source_shortest_path_length(G, "A")
 # The strongest conclusion is the furthest node
 strongest_node = max(paths, key=paths.get)
-RESULT = {"answer": strongest_node, "explanation": f"The longest chain of inference from A leads to {strongest_node}."}
+shortest_path = nx.shortest_path(G, "A", strongest_node)
+used_indices = []
+for i in range(len(shortest_path)-1):
+    u = shortest_path[i]
+    v = shortest_path[i+1]
+    if "premise_index" in G[u][v]:
+        used_indices.append(G[u][v]["premise_index"])
+
+RESULT = {"answer": strongest_node, "explanation": f"The longest chain of inference from A leads to {strongest_node}.", "premises_used": used_indices}
 ```
 
 Now solve this problem:
@@ -186,4 +204,53 @@ Premises:
 ```python
 (your Python code that sets RESULT)
 ```
+""")
+
+LOGIC_SYMBOLIC_TEMPLATE = Template("""
+You are an expert logician. Your task is to translate the logic problem into First-Order Logic (FOL).
+
+IMPORTANT RULES:
+- Use the pre-extracted Semantics (Intent, Condition, Target) to guide your translation.
+- Extract all predicates used in the premises and options. Write them in `snake_case(x)`.
+- Re-use the existing `premises_fol` if provided. If not, translate `premises` into `premises_fol`.
+- Translate the question into `target_fol` (if yes_no).
+- Translate the options into `options_fol` (if multiple_choice), strictly following the order A, B, C, D.
+- Return ONLY a valid JSON object matching this schema exactly:
+
+```json
+{
+  "translation": {
+    "predicates": ["predicate_1(x)", "predicate_2(x)"],
+    "functions": [],
+    "premises_fol": ["formula1", "formula2"],
+    "condition_fol": "",
+    "target_fol": "formula",
+    "options_fol": []
+  }
+}
+```
+
+Now solve this problem:
+
+Problem: {{ question }}
+
+Pre-extracted Semantics:
+- Intent: {{ semantics.intent }}
+- Condition: {{ semantics.condition }}
+- Target: {{ semantics.target }}
+- Query Type: {{ semantics.query_type }}
+
+Premises:
+{% for premise in premises %}
+- {{ premise }}
+{% endfor %}
+
+{% if premises_fol %}
+Already Translated Premises FOL:
+{% for f in premises_fol %}
+- {{ f }}
+{% endfor %}
+{% endif %}
+
+**JSON Output:**
 """)

@@ -174,6 +174,8 @@ if submit:
                 
                 if response.status_code == 200:
                     data = response.json()
+                    if isinstance(data, list):
+                        data = data[0] if len(data) > 0 else {}
                     
                     st.write("⚙️ Executing Python Sandbox & Synthesizing results...")
                     time.sleep(0.5)

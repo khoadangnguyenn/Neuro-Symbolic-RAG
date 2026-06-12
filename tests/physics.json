@@ -1,0 +1,5000 @@
+[
+  {
+    "query_id": "TD411",
+    "type": "type2",
+    "query": "Calculate the energy stored in a 150 μF capacitor when it is charged to a potential difference of 24 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD412",
+    "type": "type2",
+    "query": "Find the capacitance of a capacitor that holds 450 μC of charge at a voltage of 15 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD413",
+    "type": "type2",
+    "query": "Determine the energy stored by a capacitor with C = 25 μF and U = 200 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD414",
+    "type": "type2",
+    "query": "If a capacitor stores 10 mC when charged to 50 V, what is its capacitance?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD415",
+    "type": "type2",
+    "query": "Compute the energy stored in a capacitor with a capacitance of 80 μF operated at 110 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD416",
+    "type": "type2",
+    "query": "Calculate the capacitance C if the capacitor stores 0.2 mC of charge under a potential of 10 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD417",
+    "type": "type2",
+    "query": "Find the electrical energy stored in a capacitor of 500 μF when connected to a 9 V battery.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD418",
+    "type": "type2",
+    "query": "Given a charge Q = 75 μC and U = 5 V, calculate the value of the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD419",
+    "type": "type2",
+    "query": "What is the energy stored in a capacitor with a capacity of 0.5 mF at 12 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD420",
+    "type": "type2",
+    "query": "Determine the capacitance of a component that accumulates 1.2 mC of charge at 60 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD421",
+    "type": "type2",
+    "query": "How much energy is stored in a 10 μF capacitor if the potential difference is 400 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD422",
+    "type": "type2",
+    "query": "Find the capacitance C, knowing the capacitor stores 0.8 mC when the voltage is 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD423",
+    "type": "type2",
+    "query": "Calculate the potential energy stored in a 300 μF capacitor when charged to 18 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD424",
+    "type": "type2",
+    "query": "Calculate the capacitance of a capacitor that stores 50 μC of charge at 2.5 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD425",
+    "type": "type2",
+    "query": "Determine the energy stored in a 75 μF capacitor when the voltage is 120 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD411",
+    "type": "type2",
+    "query": "Calculate the energy stored in a 150 μF capacitor when it is charged to a potential difference of 24 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD412",
+    "type": "type2",
+    "query": "Find the capacitance of a capacitor that holds 450 μC of charge at a voltage of 15 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD413",
+    "type": "type2",
+    "query": "Determine the energy stored by a capacitor with C = 25 μF and U = 200 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD414",
+    "type": "type2",
+    "query": "If a capacitor stores 10 mC when charged to 50 V, what is its capacitance?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD415",
+    "type": "type2",
+    "query": "Compute the energy stored in a capacitor with a capacitance of 80 μF operated at 110 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD416",
+    "type": "type2",
+    "query": "Calculate the capacitance C if the capacitor stores 0.2 mC of charge under a potential of 10 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD417",
+    "type": "type2",
+    "query": "Find the electrical energy stored in a capacitor of 500 μF when connected to a 9 V battery.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD418",
+    "type": "type2",
+    "query": "Given a charge Q = 75 μC and U = 5 V, calculate the value of the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD419",
+    "type": "type2",
+    "query": "What is the energy stored in a capacitor with a capacity of 0.5 mF at 12 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD420",
+    "type": "type2",
+    "query": "Determine the capacitance of a component that accumulates 1.2 mC of charge at 60 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD421",
+    "type": "type2",
+    "query": "How much energy is stored in a 10 μF capacitor if the potential difference is 400 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD422",
+    "type": "type2",
+    "query": "Find the capacitance C, knowing the capacitor stores 0.8 mC when the voltage is 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD423",
+    "type": "type2",
+    "query": "Calculate the potential energy stored in a 300 μF capacitor when charged to 18 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD424",
+    "type": "type2",
+    "query": "Calculate the capacitance of a capacitor that stores 50 μC of charge at 2.5 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD425",
+    "type": "type2",
+    "query": "Determine the energy stored in a 75 μF capacitor when the voltage is 120 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD426",
+    "type": "type2",
+    "query": "Find the energy stored in a 40 μF capacitor if the voltage is 500 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD427",
+    "type": "type2",
+    "query": "Calculate the capacitance C if a capacitor holds 6 mC of charge at a potential of 12 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD428",
+    "type": "type2",
+    "query": "Determine the energy stored in a 120 μF capacitor when connected to a 48 V supply.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD429",
+    "type": "type2",
+    "query": "What is the capacitance of a device that stores 400 μC of charge under a 10 V potential difference?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD430",
+    "type": "type2",
+    "query": "Compute the energy stored in a 250 μF capacitor when the voltage across it is 15 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD431",
+    "type": "type2",
+    "query": "Calculate the capacitance if the charge stored is 9 mC at a voltage of 30 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD432",
+    "type": "type2",
+    "query": "Find the stored energy in a 60 μF capacitor operating at a voltage of 220 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD433",
+    "type": "type2",
+    "query": "Determine the capacitance if the stored charge is 150 μC and the voltage is 5 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD434",
+    "type": "type2",
+    "query": "Calculate the energy in a 0.1 mF capacitor when it is charged to 100 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD435",
+    "type": "type2",
+    "query": "Find the capacitance of a capacitor that accumulates 2.5 mC of charge at 50 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD436",
+    "type": "type2",
+    "query": "What is the stored energy in a 15 μF capacitor when the potential difference is 300 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD437",
+    "type": "type2",
+    "query": "Calculate the capacitance given that it stores 750 μC of charge at 25 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD438",
+    "type": "type2",
+    "query": "Compute the energy stored in a 90 μF capacitor with a potential difference of 80 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD439",
+    "type": "type2",
+    "query": "Determine the capacitance if a capacitor holds 3.5 mC of charge when charged to 70 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD440",
+    "type": "type2",
+    "query": "Calculate the total energy stored in a 55 μF capacitor at 40 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A1",
+    "type": "type2",
+    "query": "Determine the energy stored in a capacitor if C = 120 μF and U = 25 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A2",
+    "type": "type2",
+    "query": "Calculate the electrical energy accumulated in a capacitor with capacitance 80 μF when connected to a 40 V source.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A3",
+    "type": "type2",
+    "query": "Find the energy stored by a capacitor where C = 150 μF and the voltage across it is 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A4",
+    "type": "type2",
+    "query": "A capacitor has capacitance 220 μF and is charged to 12 V. Compute its stored energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A5",
+    "type": "type2",
+    "query": "Evaluate the energy contained in a capacitor with C = 47 μF under a potential difference of 50 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A6",
+    "type": "type2",
+    "query": "How much energy is stored in a capacitor of 330 μF charged to 18 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A7",
+    "type": "type2",
+    "query": "Calculate the stored electrostatic energy when a 68 μF capacitor is charged to 24 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A8",
+    "type": "type2",
+    "query": "Find the energy of a capacitor if its capacitance is 560 μF and the applied voltage is 15 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A9",
+    "type": "type2",
+    "query": "Determine the amount of energy stored in a capacitor with C = 200 μF and U = 35 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A10",
+    "type": "type2",
+    "query": "A capacitor rated at 90 μF is charged to 45 V. Calculate the energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A11",
+    "type": "type2",
+    "query": "Compute the energy accumulated in a capacitor with capacitance 75 μF and voltage 60 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A12",
+    "type": "type2",
+    "query": "What is the stored energy of a 500 μF capacitor charged under 10 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B1",
+    "type": "type2",
+    "query": "Calculate the capacitance of a capacitor if it stores Q = 4 mC when charged to U = 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B2",
+    "type": "type2",
+    "query": "Find the capacitance C given that the charge is 2.5 mC at a voltage of 50 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B3",
+    "type": "type2",
+    "query": "Determine the capacitor's capacitance when Q = 6 mC and U = 30 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B4",
+    "type": "type2",
+    "query": "A capacitor carries 1.8 mC of charge at 12 V. Compute its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B5",
+    "type": "type2",
+    "query": "Evaluate the capacitance of a capacitor storing 7 mC under a potential difference of 35 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B6",
+    "type": "type2",
+    "query": "How large is the capacitance if a capacitor holds 9 mC when connected across 45 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B7",
+    "type": "type2",
+    "query": "Determine C for a capacitor that stores Q = 0.75 mC at U = 15 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B8",
+    "type": "type2",
+    "query": "Find the capacitance given a stored charge of 12 mC and an applied voltage of 60 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B9",
+    "type": "type2",
+    "query": "A fully charged capacitor contains 5 mC of charge at 25 V. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B10",
+    "type": "type2",
+    "query": "Compute the capacitance when the charge is 3.6 mC and the voltage is 18 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B11",
+    "type": "type2",
+    "query": "What is the capacitance of a capacitor that stores 15 mC at 75 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B12",
+    "type": "type2",
+    "query": "Given Q = 8.4 mC and U = 42 V, determine the capacitance C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A13",
+    "type": "type2",
+    "query": "Calculate the energy stored in a capacitor with capacitance 180 μF and voltage 28 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A14",
+    "type": "type2",
+    "query": "Determine the electrostatic energy stored when C = 250 μF and U = 16 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A15",
+    "type": "type2",
+    "query": "Find the energy accumulated in a capacitor of 95 μF charged to 32 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A16",
+    "type": "type2",
+    "query": "A capacitor has capacitance 400 μF and is connected to a 14 V supply. Calculate the stored energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A17",
+    "type": "type2",
+    "query": "Compute the energy stored by a capacitor where C = 130 μF and the voltage is 22 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A18",
+    "type": "type2",
+    "query": "Evaluate the energy contained in a capacitor with capacitance 75 μF under 48 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A19",
+    "type": "type2",
+    "query": "How much electrical energy is stored in a 510 μF capacitor charged to 9 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A20",
+    "type": "type2",
+    "query": "Find the stored energy if a capacitor of 60 μF is charged under a voltage of 55 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A21",
+    "type": "type2",
+    "query": "Determine the energy stored in a capacitor with C = 820 μF and U = 11 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A22",
+    "type": "type2",
+    "query": "Calculate the electrostatic energy in a capacitor rated at 270 μF when charged to 26 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A23",
+    "type": "type2",
+    "query": "A capacitor has a capacitance of 390 μF and a voltage of 19 V. Compute its stored energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A24",
+    "type": "type2",
+    "query": "Find the amount of energy stored by a capacitor with C = 56 μF and U = 65 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A25",
+    "type": "type2",
+    "query": "Determine the capacitor energy when its capacitance is 145 μF and the applied voltage is 34 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A26",
+    "type": "type2",
+    "query": "Calculate the stored energy of a 680 μF capacitor charged to 13 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A27",
+    "type": "type2",
+    "query": "Evaluate the energy held in a capacitor where C = 220 μF and U = 27 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A28",
+    "type": "type2",
+    "query": "Find the energy stored in a capacitor with capacitance 33 μF and voltage 70 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A29",
+    "type": "type2",
+    "query": "How much energy is stored when a 470 μF capacitor is charged to 21 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A30",
+    "type": "type2",
+    "query": "Compute the electrostatic energy stored in a capacitor of 1000 μF under 8 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A31",
+    "type": "type2",
+    "query": "Given C = 125 μF and U = 36 V, calculate the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD401_A32",
+    "type": "type2",
+    "query": "A capacitor with capacitance 290 μF is charged to 17 V. Determine its stored energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B13",
+    "type": "type2",
+    "query": "Calculate the capacitance if a capacitor stores 4.8 mC of charge at 24 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B14",
+    "type": "type2",
+    "query": "Determine the capacitance C when Q = 10 mC and U = 50 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B15",
+    "type": "type2",
+    "query": "Find the capacitance of a capacitor carrying 2.1 mC at a voltage of 14 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B16",
+    "type": "type2",
+    "query": "A capacitor stores 6.6 mC when charged to 22 V. Compute its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B17",
+    "type": "type2",
+    "query": "Evaluate the capacitance if the stored charge is 13.5 mC and the voltage is 45 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B18",
+    "type": "type2",
+    "query": "Determine C for a capacitor with Q = 1.2 mC and U = 8 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B19",
+    "type": "type2",
+    "query": "Find the capacitance when a capacitor stores 7.2 mC at 36 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B20",
+    "type": "type2",
+    "query": "A fully charged capacitor contains 9.9 mC of charge under 33 V. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B21",
+    "type": "type2",
+    "query": "Compute the capacitance of a capacitor given Q = 5.4 mC and U = 27 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B22",
+    "type": "type2",
+    "query": "What is the capacitance of a capacitor that stores 16 mC at 40 V?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B23",
+    "type": "type2",
+    "query": "Determine the capacitance when the stored charge is 3.3 mC and the applied voltage is 11 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B24",
+    "type": "type2",
+    "query": "Find C if a capacitor accumulates 18 mC under a potential difference of 90 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B25",
+    "type": "type2",
+    "query": "Calculate the capacitance of a capacitor storing 2.8 mC at 35 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B26",
+    "type": "type2",
+    "query": "A capacitor holds 11.2 mC of charge when connected across 56 V. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B27",
+    "type": "type2",
+    "query": "Evaluate the capacitance when Q = 14.4 mC and U = 48 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B28",
+    "type": "type2",
+    "query": "Given a charge of 4.5 mC and a voltage of 15 V, compute the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B29",
+    "type": "type2",
+    "query": "Determine the capacitor capacitance if it stores 20 mC at 80 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B30",
+    "type": "type2",
+    "query": "Find the capacitance corresponding to Q = 6.25 mC and U = 25 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B31",
+    "type": "type2",
+    "query": "A capacitor charged to 72 V stores 10.8 mC. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD402_B32",
+    "type": "type2",
+    "query": "Compute C when the capacitor stores 24 mC at a voltage of 120 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD403_C1",
+    "type": "type2",
+    "query": "Calculate the voltage U across a capacitor if C = 120 μF and Q = 4.8 mC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD403_C2",
+    "type": "type2",
+    "query": "Determine the potential difference across a capacitor that stores 7.5 mC with capacitance 250 μF.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD403_C3",
+    "type": "type2",
+    "query": "Find the voltage across a capacitor given Q = 2.4 mC and C = 80 μF.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD403_C4",
+    "type": "type2",
+    "query": "A capacitor has capacitance 500 μF and charge 10 mC. Calculate the voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD403_C5",
+    "type": "type2",
+    "query": "Compute U when a capacitor of 150 μF stores 6 mC of charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD404_D1",
+    "type": "type2",
+    "query": "Calculate the charge stored in a capacitor with C = 220 μF and U = 24 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD404_D2",
+    "type": "type2",
+    "query": "Determine the charge Q on a capacitor whose capacitance is 470 μF and voltage is 15 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD404_D3",
+    "type": "type2",
+    "query": "Find the charge accumulated in a capacitor with capacitance 68 μF under 50 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD404_D4",
+    "type": "type2",
+    "query": "A capacitor rated at 330 μF is charged to 18 V. Calculate the stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD404_D5",
+    "type": "type2",
+    "query": "Evaluate the charge on a capacitor if C = 1000 μF and U = 12 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD405_E1",
+    "type": "type2",
+    "query": "A capacitor stores 0.054 J of energy when charged to 30 V. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD405_E2",
+    "type": "type2",
+    "query": "Find the capacitance of a capacitor that stores 0.1 J at 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD405_E3",
+    "type": "type2",
+    "query": "Calculate C if the stored energy is 0.032 J and the voltage is 40 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD405_E4",
+    "type": "type2",
+    "query": "Determine the capacitance of a capacitor containing 0.18 J of energy under 60 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD405_E5",
+    "type": "type2",
+    "query": "A capacitor charged to 25 V stores 0.075 J. Compute its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD406_F1",
+    "type": "type2",
+    "query": "Calculate the voltage across a capacitor that stores 0.045 J of energy and has capacitance 100 μF.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD406_F2",
+    "type": "type2",
+    "query": "Find U if a capacitor with C = 220 μF stores 0.099 J.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD406_F3",
+    "type": "type2",
+    "query": "Determine the charging voltage of a 470 μF capacitor that contains 0.2115 J of energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD406_F4",
+    "type": "type2",
+    "query": "A capacitor of 150 μF stores 0.0675 J. Calculate the voltage across it.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD406_F5",
+    "type": "type2",
+    "query": "Compute the voltage if a capacitor with capacitance 75 μF stores 0.06 J.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD407_G1",
+    "type": "type2",
+    "query": "Find the charge stored in a capacitor if its energy is 0.09 J and the voltage is 30 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD407_G2",
+    "type": "type2",
+    "query": "Calculate Q given that a capacitor stores 0.12 J under 40 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD407_G3",
+    "type": "type2",
+    "query": "Determine the charge on a capacitor whose energy is 0.225 J and voltage is 50 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD407_G4",
+    "type": "type2",
+    "query": "A capacitor contains 0.048 J of energy at 24 V. Find the stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD407_G5",
+    "type": "type2",
+    "query": "Compute the charge if the stored energy equals 0.08 J and the voltage equals 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD408_H1",
+    "type": "type2",
+    "query": "A capacitor stores Q = 5 mC and has energy 0.05 J. Calculate the voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD408_H2",
+    "type": "type2",
+    "query": "Determine the voltage across a capacitor given charge 8 mC and stored energy 0.12 J.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD408_H3",
+    "type": "type2",
+    "query": "Find U if a capacitor stores 3 mC of charge and 0.03 J of energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD408_H4",
+    "type": "type2",
+    "query": "A capacitor contains 0.2 J of energy and carries 10 mC of charge. Compute the voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD408_H5",
+    "type": "type2",
+    "query": "Calculate the potential difference across a capacitor storing 0.072 J and 6 mC of charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD409_I1",
+    "type": "type2",
+    "query": "Determine the capacitance of a capacitor if its charge is 12 mC and stored energy is 0.24 J.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD409_I2",
+    "type": "type2",
+    "query": "Find C given Q = 4 mC and stored energy = 0.04 J.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD409_I3",
+    "type": "type2",
+    "query": "Calculate the capacitance of a capacitor carrying 15 mC while storing 0.375 J.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD409_I4",
+    "type": "type2",
+    "query": "A capacitor stores 7 mC of charge and 0.07 J of energy. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD409_I5",
+    "type": "type2",
+    "query": "Compute the capacitance if a capacitor contains 0.18 J of energy and 9 mC of charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD410_J1",
+    "type": "type2",
+    "query": "Calculate the energy stored in a capacitor if the charge is 6 mC and the voltage is 20 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD410_J2",
+    "type": "type2",
+    "query": "Determine the stored energy given Q = 10 mC and U = 30 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD410_J3",
+    "type": "type2",
+    "query": "Find the electrostatic energy of a capacitor carrying 2.5 mC under 40 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD410_J4",
+    "type": "type2",
+    "query": "A capacitor has charge 9 mC and voltage 50 V. Compute the energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "TD410_J5",
+    "type": "type2",
+    "query": "Evaluate the energy accumulated in a capacitor with Q = 12 mC and U = 24 V.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF001",
+    "type": "type2",
+    "query": "Two charges, q1 = 8 × 10^-8 C and q2 = -8 × 10^-8 C, are fixed at points A and B in air, with AB = 10 cm. A third charge q3 = 8 × 10^-8 C is placed at point C such that CA = 6 cm and CB = 4 cm. Determine the resultant electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF002",
+    "type": "type2",
+    "query": "Charges q1 = 4 × 10^-8 C and q2 = -7 × 10^-8 C are located at points A and B, 12 cm apart. A charge q3 = 5 × 10^-8 C is placed at point C where AC = 5 cm and BC = 13 cm. Calculate the net force exerted on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF003",
+    "type": "type2",
+    "query": "Two point charges q1 = 2 × 10^-7 C and q2 = -1 × 10^-7 C are placed at A and B in air with a separation of 15 cm. A third charge q3 = 3 × 10^-8 C is positioned at C such that AC = 9 cm and BC = 12 cm. Find the force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF004",
+    "type": "type2",
+    "query": "Three charges are fixed in space. Charges q1 = 9 × 10^-8 C and q2 = -9 × 10^-8 C are located at A and B, respectively, with AB = 6 cm. A charge q3 = 4 × 10^-8 C is placed at C where AC = 3 cm and BC = 3 cm. Determine the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF005",
+    "type": "type2",
+    "query": "Charges q1 = 7 × 10^-8 C and q2 = -5 × 10^-8 C are separated by 9 cm. A third charge q3 = 6 × 10^-8 C is located at a point C such that AC = 4 cm and BC = 5 cm. Calculate the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF006",
+    "type": "type2",
+    "query": "Three charges are placed at the vertices of a right triangle ABC, right-angled at A. Given AB = 3 m, AC = 4 m, qA = 4 μC, qB = -6 μC, and qC = 5 μC, determine the resultant electric force acting on the charge at A.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF007",
+    "type": "type2",
+    "query": "Charges qA = 8 μC, qB = -4 μC, and qC = 6 μC are fixed at the vertices of a right triangle ABC with AB = 6 m and BC = 10 m. The right angle is at A. Find the net force acting on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF008",
+    "type": "type2",
+    "query": "Three electric charges are placed at points A, B, and C forming a right triangle with sides AB = 5 m, AC = 12 m, and BC = 13 m. If qA = 3 μC, qB = -7 μC, and qC = 5 μC, calculate the resultant force on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF009",
+    "type": "type2",
+    "query": "At the vertices of a right triangle ABC, charges qA = 10 μC, qB = -8 μC, and qC = 4 μC are fixed. Given AB = 8 m and AC = 6 m, determine the total force acting on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF010",
+    "type": "type2",
+    "query": "Three point charges qA = 2 μC, qB = -3 μC, and qC = 7 μC are located at the vertices of a right triangle with legs AB = 9 m and AC = 12 m. Find the net electric force on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF011",
+    "type": "type2",
+    "query": "Points A and B are 24 cm apart in air. Charges q1 = -4 × 10^-6 C and q2 = 6 × 10^-6 C are fixed at A and B, respectively. A charge q3 = 3 × 10^-6 C is placed at point C such that AC = 15 cm and BC = 21 cm. Determine the magnitude of the electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF012",
+    "type": "type2",
+    "query": "Charges q1 = -2 × 10^-6 C and q2 = 5 × 10^-6 C are located 15 cm apart. A test charge q3 = 4 × 10^-6 C is placed at point C with AC = 9 cm and BC = 12 cm. Calculate the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF013",
+    "type": "type2",
+    "query": "Points A and B are separated by 25 cm. Charges q1 = -5 × 10^-6 C and q2 = 9 × 10^-6 C are fixed at A and B. A charge q3 = 2 × 10^-6 C is placed so that AC = 7 cm and BC = 24 cm. Find the magnitude of the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF014",
+    "type": "type2",
+    "query": "Two charges q1 = -8 × 10^-6 C and q2 = 4 × 10^-6 C are positioned 17 cm apart. A third charge q3 = 3 × 10^-6 C is placed at point C where AC = 8 cm and BC = 15 cm. Calculate the force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF015",
+    "type": "type2",
+    "query": "Charges q1 = -6 × 10^-6 C and q2 = 10 × 10^-6 C are fixed at points A and B, 26 cm apart. A charge q3 = 1 × 10^-6 C is located at C with AC = 10 cm and BC = 24 cm. Determine the resultant electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF016",
+    "type": "type2",
+    "query": "Two point charges q1 = 4 × 10^-8 C and q2 = 3 × 10^-8 C are fixed at points A and B in vacuum with AB = 13 cm. A charge q0 = -5 × 10^-8 C is placed at point M such that MA = 5 cm and MB = 12 cm. Determine the net force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF017",
+    "type": "type2",
+    "query": "Charges q1 = 8 × 10^-8 C and q2 = 6 × 10^-8 C are located at A and B with AB = 10 cm. A charge q0 = -4 × 10^-8 C is positioned at M where MA = 6 cm and MB = 8 cm. Calculate the resultant electric force on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF018",
+    "type": "type2",
+    "query": "Two charges q1 = 5 × 10^-8 C and q2 = 2 × 10^-8 C are separated by 17 cm. A charge q0 = -3 × 10^-8 C is placed at point M such that MA = 8 cm and MB = 15 cm. Find the net force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF019",
+    "type": "type2",
+    "query": "Charges q1 = 7 × 10^-8 C and q2 = 7 × 10^-8 C are fixed at A and B, where AB = 25 cm. A charge q0 = -6 × 10^-8 C is located at M with MA = 7 cm and MB = 24 cm. Calculate the electric force exerted on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF020",
+    "type": "type2",
+    "query": "Two point charges q1 = 9 × 10^-8 C and q2 = 4 × 10^-8 C are placed 20 cm apart. A charge q0 = -5 × 10^-8 C is positioned so that MA = 12 cm and MB = 16 cm. Determine the resultant force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF021",
+    "type": "type2",
+    "query": "Three identical charges q1 = q2 = q3 = 2.0 × 10^-19 C are placed at the vertices of an equilateral triangle with side length 20 cm in air. Determine the net electric force vector acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF022",
+    "type": "type2",
+    "query": "Charges q1 = q2 = q3 = 3.2 × 10^-19 C occupy the vertices of an equilateral triangle of side 12 cm. Calculate the resultant force acting on q2.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF023",
+    "type": "type2",
+    "query": "Three equal charges of 5.0 × 10^-19 C are located at the corners of an equilateral triangle with side length 25 cm. Find the net force on the charge at vertex C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF024",
+    "type": "type2",
+    "query": "At the vertices of an equilateral triangle of side 18 cm are charges q1 = q2 = q3 = 4.0 × 10^-19 C. Determine the resultant electric force vector acting on q1.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF025",
+    "type": "type2",
+    "query": "Three identical positive charges of magnitude 6.0 × 10^-19 C are placed at the vertices of an equilateral triangle whose side length is 30 cm. Calculate the net electric force on one of the charges.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF026",
+    "type": "type2",
+    "query": "Two charges q1 = 1.2 × 10^-7 C and q2 = -8 × 10^-8 C are fixed at points A and B in air, 14 cm apart. A third charge q3 = 4 × 10^-8 C is placed at point C such that AC = 10 cm and BC = 24 cm. Determine the resultant electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF027",
+    "type": "type2",
+    "query": "Charges q1 = 5 × 10^-8 C and q2 = -9 × 10^-8 C are located at points A and B with AB = 13 cm. A charge q3 = 3 × 10^-8 C is placed at point C where AC = 5 cm and BC = 12 cm. Calculate the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF028",
+    "type": "type2",
+    "query": "Two point charges q1 = 7 × 10^-8 C and q2 = -2 × 10^-7 C are separated by 20 cm. A charge q3 = 6 × 10^-8 C is placed at a point C such that AC = 12 cm and BC = 16 cm. Find the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF029",
+    "type": "type2",
+    "query": "Charges q1 = 9 × 10^-8 C and q2 = -4 × 10^-8 C are fixed 17 cm apart. A third charge q3 = 2 × 10^-8 C is located at point C where AC = 8 cm and BC = 15 cm. Determine the force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF030",
+    "type": "type2",
+    "query": "Two charges q1 = 1 × 10^-7 C and q2 = -1 × 10^-7 C are placed at A and B, respectively, with AB = 15 cm. A charge q3 = 5 × 10^-8 C is placed at point C such that AC = 9 cm and BC = 12 cm. Calculate the resultant electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF031",
+    "type": "type2",
+    "query": "Three charges are fixed at the vertices of a right triangle ABC, right-angled at A. Given AB = 8 m, AC = 15 m, qA = 6 μC, qB = -8 μC, and qC = 10 μC, determine the net electric force acting on the charge at A.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF032",
+    "type": "type2",
+    "query": "Charges qA = 12 μC, qB = -4 μC, and qC = 9 μC are placed at the vertices of a right triangle with sides AB = 5 m and AC = 12 m. Find the resultant force acting on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF033",
+    "type": "type2",
+    "query": "Three electric charges form a right triangle ABC with AB = 7 m and AC = 24 m. If qA = 5 μC, qB = -10 μC, and qC = 15 μC, calculate the total electric force acting on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF034",
+    "type": "type2",
+    "query": "At the vertices of a right triangle ABC, charges qA = 3 μC, qB = -6 μC, and qC = 8 μC are fixed. Given AB = 9 m and AC = 40 m, determine the resultant force on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF035",
+    "type": "type2",
+    "query": "Three charges are positioned at the vertices of a right triangle where AB = 12 m and AC = 16 m. The charges are qA = 7 μC, qB = -5 μC, and qC = 4 μC. Find the net force acting on qA.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF036",
+    "type": "type2",
+    "query": "Points A and B are separated by 30 cm in air. Charges q1 = -6 × 10^-6 C and q2 = 9 × 10^-6 C are fixed at A and B. A charge q3 = 2 × 10^-6 C is placed at C such that AC = 18 cm and BC = 24 cm. Calculate the magnitude of the electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF037",
+    "type": "type2",
+    "query": "Charges q1 = -5 × 10^-6 C and q2 = 7 × 10^-6 C are placed 34 cm apart. A test charge q3 = 3 × 10^-6 C is located at point C where AC = 16 cm and BC = 30 cm. Determine the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF038",
+    "type": "type2",
+    "query": "Two charges q1 = -8 × 10^-6 C and q2 = 12 × 10^-6 C are fixed at points A and B separated by 37 cm. A charge q3 = 4 × 10^-6 C is placed such that AC = 35 cm and BC = 12 cm. Calculate the electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF039",
+    "type": "type2",
+    "query": "Charges q1 = -2 × 10^-6 C and q2 = 10 × 10^-6 C are located 41 cm apart. A charge q3 = 5 × 10^-6 C is placed at point C where AC = 9 cm and BC = 40 cm. Find the magnitude of the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF040",
+    "type": "type2",
+    "query": "Points A and B are 50 cm apart. Charges q1 = -4 × 10^-6 C and q2 = 6 × 10^-6 C are fixed at A and B, respectively. A charge q3 = 1 × 10^-6 C is placed at point C such that AC = 30 cm and BC = 40 cm. Determine the resultant electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF041",
+    "type": "type2",
+    "query": "Two point charges q1 = 8 × 10^-8 C and q2 = 6 × 10^-8 C are fixed at points A and B with AB = 25 cm. A charge q0 = -4 × 10^-8 C is placed at point M such that MA = 7 cm and MB = 24 cm. Calculate the net force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF042",
+    "type": "type2",
+    "query": "Charges q1 = 3 × 10^-8 C and q2 = 9 × 10^-8 C are located 15 cm apart. A charge q0 = -2 × 10^-8 C is placed at M where MA = 9 cm and MB = 12 cm. Determine the resultant electric force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF043",
+    "type": "type2",
+    "query": "Two charges q1 = 1 × 10^-7 C and q2 = 4 × 10^-8 C are fixed at A and B. The distance AB equals 41 cm. A charge q0 = -5 × 10^-8 C is located at M such that MA = 40 cm and MB = 9 cm. Find the net electric force on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF044",
+    "type": "type2",
+    "query": "Charges q1 = 5 × 10^-8 C and q2 = 5 × 10^-8 C are placed at points A and B with AB = 17 cm. A charge q0 = -3 × 10^-8 C is placed at point M where MA = 8 cm and MB = 15 cm. Determine the force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF045",
+    "type": "type2",
+    "query": "Two positive charges q1 = 7 × 10^-8 C and q2 = 2 × 10^-8 C are separated by 10 cm. A charge q0 = -4 × 10^-8 C is located at M such that MA = 6 cm and MB = 8 cm. Calculate the resultant electric force on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF046",
+    "type": "type2",
+    "query": "Three identical charges q1 = q2 = q3 = 2.5 × 10^-19 C are placed at the vertices of an equilateral triangle of side length 10 cm in air. Determine the net electric force vector acting on q1.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF047",
+    "type": "type2",
+    "query": "Charges q1 = q2 = q3 = 8.0 × 10^-19 C occupy the vertices of an equilateral triangle whose side length is 14 cm. Calculate the resultant force acting on q2.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF048",
+    "type": "type2",
+    "query": "Three equal charges of magnitude 4.5 × 10^-19 C are located at the corners of an equilateral triangle with side length 22 cm. Find the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF049",
+    "type": "type2",
+    "query": "At the vertices of an equilateral triangle of side length 28 cm are charges q1 = q2 = q3 = 1.0 × 10^-18 C. Determine the resultant electric force vector acting on q1.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF050",
+    "type": "type2",
+    "query": "Three identical positive charges of 3.5 × 10^-19 C are placed at the vertices of an equilateral triangle with side length 18 cm. Calculate the net force acting on the charge at vertex B.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF051",
+    "type": "type2",
+    "query": "Three charges q1 = 6 μC, q2 = -4 μC, and q3 = 8 μC are placed at the vertices of an equilateral triangle with side length 5 m. Determine the resultant force acting on q1.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF052",
+    "type": "type2",
+    "query": "Charges qA = 10 μC, qB = -8 μC, and qC = 6 μC are fixed at the vertices of an equilateral triangle of side length 12 m. Calculate the net force acting on qB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF053",
+    "type": "type2",
+    "query": "Three electric charges form an equilateral triangle of side length 8 m. Given q1 = 4 μC, q2 = 9 μC, and q3 = -5 μC, determine the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF054",
+    "type": "type2",
+    "query": "At the corners of an equilateral triangle with side length 15 m are charges q1 = -6 μC, q2 = 12 μC, and q3 = 8 μC. Find the total electric force acting on q1.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF055",
+    "type": "type2",
+    "query": "Three point charges q1 = 7 μC, q2 = -3 μC, and q3 = -9 μC are placed at the vertices of an equilateral triangle of side length 10 m. Determine the net electric force acting on q2.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF056",
+    "type": "type2",
+    "query": "Two point charges q1 = 2×10^-8 C and q2 = -4×10^-8 C are placed in air at points A and B, 10 cm apart. A charge q = 3×10^-8 C is placed at point M on the perpendicular bisector of AB, 4 cm from AB. Given k = 9×10^9 N·m²/C², determine the magnitude of the net electric force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF057",
+    "type": "type2",
+    "query": "Charges q1 = 5×10^-8 C and q2 = -2×10^-8 C are fixed at points A and B separated by 12 cm. A charge q = 1×10^-8 C is located on the perpendicular bisector of AB at a distance of 5 cm from AB. Find the magnitude of the resultant electric force on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF058",
+    "type": "type2",
+    "query": "Two charges q1 = 8×10^-8 C and q2 = -8×10^-8 C are positioned 16 cm apart. A third charge q = 4×10^-8 C is placed on the perpendicular bisector of the segment joining them, 6 cm from AB. Calculate the net electric force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF059",
+    "type": "type2",
+    "query": "Charges q1 = 3×10^-8 C and q2 = -6×10^-8 C are placed 14 cm apart in air. A charge q = 2×10^-8 C is located on the perpendicular bisector of AB, 8 cm away from the line AB. Determine the resultant force exerted on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF060",
+    "type": "type2",
+    "query": "Two point charges q1 = 1×10^-7 C and q2 = -5×10^-8 C are fixed 20 cm apart. A charge q = 3×10^-8 C is placed on the perpendicular bisector of AB at a distance of 12 cm from AB. Find the magnitude of the net force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF061",
+    "type": "type2",
+    "query": "Charges q1 = +4×10^-6 C and q2 = -4×10^-6 C are placed at points A and B in vacuum, 10 cm apart. A third charge q3 = +4×10^-6 C is located on the perpendicular bisector of AB, 6 cm away from AB. Calculate the magnitude of the resultant electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF062",
+    "type": "type2",
+    "query": "Two charges q1 = +1×10^-6 C and q2 = -1×10^-6 C are fixed 8 cm apart. A charge q3 = +3×10^-6 C is placed on the perpendicular bisector of AB at a distance of 3 cm from AB. Determine the net force exerted on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF063",
+    "type": "type2",
+    "query": "Charges q1 = +5×10^-6 C and q2 = -5×10^-6 C are separated by 12 cm. A third charge q3 = +2×10^-6 C lies on the perpendicular bisector of AB, 5 cm from AB. Find the magnitude of the electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF064",
+    "type": "type2",
+    "query": "Two charges q1 = +3×10^-6 C and q2 = -3×10^-6 C are placed 14 cm apart. A charge q3 = +1×10^-6 C is located on the perpendicular bisector of AB, 4 cm from AB. Calculate the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF065",
+    "type": "type2",
+    "query": "Charges q1 = +6×10^-6 C and q2 = -6×10^-6 C are fixed at points A and B, 18 cm apart. A third charge q3 = +2×10^-6 C is placed on the perpendicular bisector of AB, 8 cm from AB. Determine the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF066",
+    "type": "type2",
+    "query": "Two electric forces with magnitudes 7 N and 9 N act in the same direction. Determine the magnitude of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF067",
+    "type": "type2",
+    "query": "Two electric forces of 12 N and 5 N act along the same straight line and in the same direction. Calculate the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF068",
+    "type": "type2",
+    "query": "Electric forces of magnitudes 15 N and 8 N are acting in the same direction. What is the resultant force?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF069",
+    "type": "type2",
+    "query": "Two forces of 20 N and 11 N act along the same line and point in the same direction. Determine their resultant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF070",
+    "type": "type2",
+    "query": "Two electric forces of magnitudes 6 N and 13 N are acting in the same direction. Find the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF071",
+    "type": "type2",
+    "query": "Two electric forces, each having magnitude 8 N, act at an angle of 60° to one another. Calculate the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF072",
+    "type": "type2",
+    "query": "Two forces with magnitudes 10 N and 10 N act at an angle of 120° to each other. Determine the magnitude of their resultant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF073",
+    "type": "type2",
+    "query": "Two electric forces of 6 N each act with an angle of 90° between them. Find the magnitude of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF074",
+    "type": "type2",
+    "query": "Two forces, each equal to 12 N, act at an angle of 45° to one another. Calculate the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF075",
+    "type": "type2",
+    "query": "Two electric forces of magnitude 20 N each are inclined at 30° to each other. Determine the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF076",
+    "type": "type2",
+    "query": "Three charges q1 = +4 μC, q2 = +4 μC, and q3 = -4 μC are placed at the vertices of an equilateral triangle of side length 15 cm. Determine the magnitude of the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF077",
+    "type": "type2",
+    "query": "Charges q1 = +3 μC, q2 = +3 μC, and q3 = -3 μC are located at the corners of an equilateral triangle with side length 12 cm. Calculate the resultant force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF078",
+    "type": "type2",
+    "query": "Three point charges q1 = +5 μC, q2 = +5 μC, and q3 = -2 μC occupy the vertices of an equilateral triangle of side 20 cm. Find the magnitude of the net force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF079",
+    "type": "type2",
+    "query": "Charges q1 = +1 μC, q2 = +1 μC, and q3 = -4 μC are placed at the vertices of an equilateral triangle whose side length is 25 cm. Determine the resultant electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF080",
+    "type": "type2",
+    "query": "Three charges q1 = +6 μC, q2 = +6 μC, and q3 = -6 μC are fixed at the vertices of an equilateral triangle with side length 8 cm. Calculate the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF081",
+    "type": "type2",
+    "query": "A charge is subjected to two electric forces of magnitudes 9 N and 12 N acting at an angle of 90° to each other. Determine the magnitude of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF082",
+    "type": "type2",
+    "query": "Two perpendicular electric forces of 5 N and 12 N act on a charge. Calculate the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF083",
+    "type": "type2",
+    "query": "A charge experiences two electric forces with magnitudes 8 N and 15 N that are mutually perpendicular. Find the magnitude of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF084",
+    "type": "type2",
+    "query": "Two electric forces of 7 N and 24 N act at right angles to each other. Determine the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF085",
+    "type": "type2",
+    "query": "An electric charge is subjected to two perpendicular forces with magnitudes 20 N and 21 N. Calculate the magnitude of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF086",
+    "type": "type2",
+    "query": "Three charges q1 = +2 μC, q2 = +2 μC, and q3 = -1 μC are placed at the vertices of an equilateral triangle with side length 30 cm. Calculate the magnitude of the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF087",
+    "type": "type2",
+    "query": "Charges q1 = +5 μC, q2 = +5 μC, and q3 = -5 μC are fixed at the vertices of an equilateral triangle of side length 18 cm. Determine the resultant force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF088",
+    "type": "type2",
+    "query": "Three point charges q1 = +8 μC, q2 = +8 μC, and q3 = -4 μC are placed at the corners of an equilateral triangle with side 25 cm. Find the net electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF089",
+    "type": "type2",
+    "query": "Charges q1 = +10 μC, q2 = +10 μC, and q3 = -2 μC are located at the vertices of an equilateral triangle of side length 40 cm. Calculate the magnitude of the resultant force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF090",
+    "type": "type2",
+    "query": "Three charges q1 = +3 μC, q2 = +3 μC, and q3 = -6 μC are placed at the vertices of an equilateral triangle with side length 16 cm. Determine the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF091",
+    "type": "type2",
+    "query": "A charge q = -2 μC is attracted by two positive charges of +3 μC each. The two positive charges lie on opposite sides of q along the same straight line, at distances of 4 cm and 10 cm from q. Determine the magnitude of the net electric force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF092",
+    "type": "type2",
+    "query": "A charge q = -4 μC is located between two charges of +2 μC and +2 μC. The distances from q to these charges are 6 cm and 15 cm respectively. Calculate the magnitude of the resultant electric force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF093",
+    "type": "type2",
+    "query": "A charge q = -3 μC is attracted by two identical positive charges of +1 μC placed on the same straight line through q, at distances of 8 cm and 20 cm. Find the net force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF094",
+    "type": "type2",
+    "query": "A charge q = -5 μC is located on a line between two charges of +4 μC and +4 μC. The distances are 5 cm and 25 cm respectively. Determine the resultant electric force acting on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF095",
+    "type": "type2",
+    "query": "Two charges of +6 μC are positioned on opposite sides of a charge q = -2 μC, at distances of 12 cm and 18 cm. Calculate the magnitude of the net electric force exerted on q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF096",
+    "type": "type2",
+    "query": "Charges q1 = +4 μC and q2 = -4 μC are fixed 12 cm apart. A charge q3 = +2 μC is placed at the midpoint of the segment joining q1 and q2. Determine the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF097",
+    "type": "type2",
+    "query": "Two charges q1 = +1 μC and q2 = -3 μC are separated by 8 cm. A charge q3 = +2 μC is located at the midpoint between them. Calculate the resultant electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF098",
+    "type": "type2",
+    "query": "Charges q1 = +5 μC and q2 = -5 μC are placed 20 cm apart. A charge q3 = +1 μC is located at the midpoint of the line segment connecting them. Determine the force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF099",
+    "type": "type2",
+    "query": "Two charges q1 = +6 μC and q2 = -2 μC are fixed 16 cm apart. A charge q3 = +2 μC is placed exactly halfway between them. Find the net electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF100",
+    "type": "type2",
+    "query": "Charges q1 = +8 μC and q2 = -8 μC are separated by 24 cm. A charge q3 = +4 μC is positioned at the midpoint of AB. Calculate the magnitude and direction of the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF101",
+    "type": "type2",
+    "query": "Two collinear forces act in opposite directions with magnitudes 25 N and 7 N. Determine the magnitude and direction of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF102",
+    "type": "type2",
+    "query": "Two electric forces act along the same line but in opposite directions. Their magnitudes are 18 N and 12 N. Calculate the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF103",
+    "type": "type2",
+    "query": "A charge is subjected to two opposite collinear forces of 40 N and 22 N. Determine the magnitude and direction of the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF104",
+    "type": "type2",
+    "query": "Two forces with magnitudes 16 N and 5 N act along the same straight line in opposite directions. Find the resultant force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF105",
+    "type": "type2",
+    "query": "Two opposite electric forces of 50 N and 35 N act on a charge. Calculate the magnitude and direction of the net force.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF106",
+    "type": "type2",
+    "query": "Three charges q1 = +2 μC, q2 = -3 μC, and q3 = +4 μC are placed at the vertices of an isosceles right triangle whose equal legs are 0.2 m. Determine the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF107",
+    "type": "type2",
+    "query": "Charges q1 = +5 μC, q2 = -1 μC, and q3 = +2 μC occupy the vertices of an isosceles right triangle with legs measuring 0.15 m. Calculate the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF108",
+    "type": "type2",
+    "query": "Three charges q1 = +1 μC, q2 = -4 μC, and q3 = +2 μC are located at the vertices of an isosceles right triangle with leg length 0.3 m. Find the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF109",
+    "type": "type2",
+    "query": "Charges q1 = +3 μC, q2 = -6 μC, and q3 = +5 μC are fixed at the vertices of a right isosceles triangle with equal sides of 10 cm. Determine the resultant electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF110",
+    "type": "type2",
+    "query": "Three point charges q1 = +8 μC, q2 = -2 μC, and q3 = +6 μC are placed at the vertices of an isosceles right triangle with legs of 25 cm. Calculate the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF111",
+    "type": "type2",
+    "query": "Charges q1 = +3 μC and q2 = +3 μC are placed at the ends of a 12 cm line segment. A charge q3 = -2 μC is positioned on the line joining q1 and q2, at a distance of 5 cm from q1. Determine the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF112",
+    "type": "type2",
+    "query": "Two equal positive charges q1 = q2 = 5 μC are fixed 20 cm apart. A charge q3 = -1 μC lies between them, 8 cm from q1. Calculate the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF113",
+    "type": "type2",
+    "query": "Charges q1 = +2 μC and q2 = +2 μC are located 16 cm apart. A charge q3 = -4 μC is placed on the line joining them, 6 cm away from q1. Determine the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF114",
+    "type": "type2",
+    "query": "Two positive charges q1 = 4 μC and q2 = 4 μC are fixed at the ends of a segment 18 cm long. A charge q3 = -2 μC is placed between them, 7 cm from q1. Calculate the resultant electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF115",
+    "type": "type2",
+    "query": "Charges q1 = +6 μC and q2 = +6 μC are separated by 30 cm. A charge q3 = -3 μC is located on the line segment joining them, 12 cm from q1. Find the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF116",
+    "type": "type2",
+    "query": "Two electric charges q1 = 6 × 10^-8 C and q2 = -6 × 10^-8 C are placed at points A and B in air, with AB = 8 cm. Determine the force acting on a third charge q3 = 6 × 10^-8 C if CA = 5 cm and CB = 3 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF117",
+    "type": "type2",
+    "query": "Charges q1 = 4 × 10^-8 C and q2 = -4 × 10^-8 C are located at points A and B, where AB = 10 cm. A third charge q3 = 4 × 10^-8 C is placed such that CA = 6 cm and CB = 4 cm. Determine the resultant force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF118",
+    "type": "type2",
+    "query": "Two charges q1 = 1 × 10^-7 C and q2 = -1 × 10^-7 C are fixed 12 cm apart. A charge q3 = 2 × 10^-8 C is placed at point C such that CA = 7 cm and CB = 5 cm. Calculate the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF119",
+    "type": "type2",
+    "query": "Charges q1 = 8 × 10^-8 C and q2 = -8 × 10^-8 C are separated by 14 cm. A third charge q3 = 4 × 10^-8 C is placed at a point C satisfying CA = 8 cm and CB = 6 cm. Determine the force exerted on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF120",
+    "type": "type2",
+    "query": "Two charges q1 = 3 × 10^-8 C and q2 = -3 × 10^-8 C are located at points A and B with AB = 18 cm. A charge q3 = 6 × 10^-8 C is placed at point C such that CA = 10 cm and CB = 8 cm. Find the resultant electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF121",
+    "type": "type2",
+    "query": "Charges q1 = 8 × 10^-8 C and q2 = -8 × 10^-8 C are placed at points A and B in air with AB = 6 cm. A charge q3 = 8 × 10^-8 C is located at point C such that CA = 8 cm and CB = 14 cm. Determine the net electric force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF122",
+    "type": "type2",
+    "query": "Two charges q1 = 5 × 10^-8 C and q2 = -5 × 10^-8 C are fixed at points A and B, separated by 8 cm. A third charge q3 = 5 × 10^-8 C is placed at point C where CA = 10 cm and CB = 18 cm. Calculate the resultant force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF123",
+    "type": "type2",
+    "query": "Charges q1 = 2 × 10^-8 C and q2 = -2 × 10^-8 C are located at points A and B with AB = 4 cm. A charge q3 = 2 × 10^-8 C is placed at point C such that CA = 6 cm and CB = 10 cm. Determine the force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF124",
+    "type": "type2",
+    "query": "Two electric charges q1 = 7 × 10^-8 C and q2 = -7 × 10^-8 C are separated by 10 cm. A third charge q3 = 7 × 10^-8 C is placed at point C with CA = 12 cm and CB = 22 cm. Find the resultant electric force on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF125",
+    "type": "type2",
+    "query": "Charges q1 = 9 × 10^-8 C and q2 = -9 × 10^-8 C are fixed 16 cm apart. A charge q3 = 3 × 10^-8 C is located at point C such that CA = 20 cm and CB = 36 cm. Calculate the net force acting on q3.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF126",
+    "type": "type2",
+    "query": "Two charges q1 = +4 μC and q2 = +4 μC are placed at points A and B, 12 cm apart. Determine the magnitude of the force acting on a test charge q0 = +2 μC located at a point such that its distances from A and B are 5 cm and 13 cm, respectively.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF127",
+    "type": "type2",
+    "query": "Charges q1 = +8 μC and q2 = +8 μC are fixed 15 cm apart. A test charge q0 = +1 μC is placed at a point 9 cm from q1 and 12 cm from q2. Calculate the net electric force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF128",
+    "type": "type2",
+    "query": "Two equal charges q1 = q2 = +3 μC are located at points A and B separated by 20 cm. A charge q0 = +2 μC is placed at a point such that its distances to A and B are 16 cm and 12 cm. Determine the resultant force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF129",
+    "type": "type2",
+    "query": "Charges q1 = q2 = +6 μC are placed at points A and B, 10 cm apart. A test charge q0 = +3 μC is located at a point 8 cm from A and 6 cm from B. Find the magnitude of the net force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF130",
+    "type": "type2",
+    "query": "Two positive charges q1 = q2 = +10 μC are fixed 25 cm apart. A charge q0 = +2 μC is placed at a point whose distances from q1 and q2 are 15 cm and 20 cm, respectively. Determine the electric force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF131",
+    "type": "type2",
+    "query": "Two charges q1 = +2 μC and q2 = -2 μC are placed 12 cm apart. A test charge q0 = +1 μC is located at the midpoint of the segment joining q1 and q2. Calculate the magnitude of the net electric force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF132",
+    "type": "type2",
+    "query": "Charges q1 = +4 μC and q2 = -4 μC are fixed at two points separated by 16 cm. A charge q0 = +2 μC is placed at the midpoint of the line segment connecting them. Determine the resultant electric force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF133",
+    "type": "type2",
+    "query": "Two charges q1 = +6 μC and q2 = -6 μC are placed 20 cm apart. A test charge q0 = +3 μC is located exactly halfway between them on the line joining the charges. Find the net force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF134",
+    "type": "type2",
+    "query": "Charges q1 = +8 μC and q2 = -8 μC are separated by 10 cm. A charge q0 = +4 μC is placed at the midpoint. Determine the magnitude of the electric force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF135",
+    "type": "type2",
+    "query": "Two charges q1 = +1 μC and q2 = -1 μC are fixed 8 cm apart. A charge q0 = +5 μC is located at the midpoint of the segment joining q1 and q2. Calculate the resultant force acting on q0.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF136",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 25 × 10^-8 C are placed at points A and B, 12 cm apart in air. Determine the electric field strength at point N, where NA = 6 cm and NB = 18 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF137",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 20 × 10^-8 C are fixed at points A and B, separated by 16 cm. Find the electric field intensity at point N such that NA = 8 cm and NB = 24 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF138",
+    "type": "type2",
+    "query": "Two equal point charges q1 = q2 = 10 × 10^-8 C are placed 20 cm apart. Determine the electric field strength at point N, where NA = 10 cm and NB = 30 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF139",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 18 × 10^-8 C are located at points A and B, 14 cm apart. Calculate the electric field strength at point N satisfying NA = 7 cm and NB = 21 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF140",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 12 × 10^-8 C are fixed at points A and B separated by 8 cm. Determine the electric field strength at point N where NA = 4 cm and NB = 12 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF141",
+    "type": "type2",
+    "query": "Two equal charges q1 = q2 = 25 × 10^-8 C are placed at points A and B, 12 cm apart. Determine the electric field strength at point C if AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF142",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 20 × 10^-8 C are fixed 14 cm apart. Calculate the electric field strength at point C given that AC = BC = 9 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF143",
+    "type": "type2",
+    "query": "Two identical charges q1 = q2 = 30 × 10^-8 C are located at points A and B separated by 18 cm. Find the electric field intensity at point C if AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF144",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 15 × 10^-8 C are placed 10 cm apart. Determine the electric field strength at point C, knowing that AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF145",
+    "type": "type2",
+    "query": "Two equal charges q1 = q2 = 8 × 10^-8 C are fixed at points A and B separated by 6 cm. Calculate the electric field strength at point C where AC = BC = 5 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF146",
+    "type": "type2",
+    "query": "At two points A and B separated by 12 cm in air, charges q1 = -q2 = 4 × 10^-6 C are placed. Determine the electric field strength at point C, given AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF147",
+    "type": "type2",
+    "query": "Charges q1 = -q2 = 8 × 10^-6 C are fixed at points A and B, 16 cm apart. Find the electric field intensity at point C where AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF148",
+    "type": "type2",
+    "query": "Two opposite charges q1 = +5 × 10^-6 C and q2 = -5 × 10^-6 C are placed 20 cm apart. Determine the electric field strength at point C satisfying AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF149",
+    "type": "type2",
+    "query": "At points A and B separated by 8 cm, charges q1 = +3 × 10^-6 C and q2 = -3 × 10^-6 C are placed. Calculate the electric field intensity at point C if AC = BC = 17 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF150",
+    "type": "type2",
+    "query": "Charges q1 = +10 × 10^-6 C and q2 = -10 × 10^-6 C are fixed 24 cm apart. Determine the electric field strength at point C, given AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF151",
+    "type": "type2",
+    "query": "Two point charges q1 = 8 × 10^-6 C and q2 = -8 × 10^-6 C are placed in air at points A and B, separated by 12 cm. Calculate the electric force exerted on a charge q3 = -2 × 10^-8 C placed at point C, where AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF152",
+    "type": "type2",
+    "query": "Charges q1 = 4 × 10^-6 C and q2 = -4 × 10^-6 C are fixed 16 cm apart. Determine the electric force acting on q3 = -5 × 10^-8 C at point C, given AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF153",
+    "type": "type2",
+    "query": "Two charges q1 = 10 × 10^-6 C and q2 = -10 × 10^-6 C are placed at points A and B separated by 20 cm. Calculate the force acting on q3 = -1 × 10^-8 C at point C, where AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF154",
+    "type": "type2",
+    "query": "Charges q1 = 6 × 10^-6 C and q2 = -6 × 10^-6 C are fixed at points A and B, 18 cm apart. Determine the electric force exerted on q3 = -4 × 10^-8 C placed at point C such that AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF155",
+    "type": "type2",
+    "query": "Two opposite charges q1 = 12 × 10^-6 C and q2 = -12 × 10^-6 C are separated by 10 cm. Calculate the electric force acting on q3 = -3 × 10^-8 C at point C if AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF156",
+    "type": "type2",
+    "query": "At points A and B separated by 12 cm in air, two charges q1 = q2 = 25 × 10^-8 C are placed. Determine the electrostatic force acting on charge q3 = 3 × 10^-6 C placed at point C, where AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF157",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 12 × 10^-8 C are fixed 16 cm apart. Find the electric force acting on q3 = 1 × 10^-6 C at point C, given AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF158",
+    "type": "type2",
+    "query": "Two equal charges q1 = q2 = 20 × 10^-8 C are placed at points A and B separated by 20 cm. Determine the force exerted on q3 = 5 × 10^-6 C located at point C where AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF159",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 15 × 10^-8 C are fixed at points A and B, 14 cm apart. Calculate the electrostatic force acting on q3 = 4 × 10^-6 C at point C if AC = BC = 25 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF160",
+    "type": "type2",
+    "query": "Two equal point charges q1 = q2 = 8 × 10^-8 C are separated by 8 cm. Determine the electric force acting on q3 = 2 × 10^-6 C placed at point C where AC = BC = 5 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF161",
+    "type": "type2",
+    "query": "At points A and B separated by 30 cm in air, charges q1 = 5 × 10^-6 C and q2 = -8 × 10^-6 C are placed. Determine the electric field strength at point C where AC = 18 cm and BC = 24 cm. Then determine the electric force acting on q3 = -8 × 10^-8 C placed at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF162",
+    "type": "type2",
+    "query": "Charges q1 = 3 × 10^-6 C and q2 = -4 × 10^-6 C are fixed 25 cm apart. Determine the electric field intensity at point C, given AC = 15 cm and BC = 20 cm. Then calculate the force acting on q3 = -2 × 10^-8 C at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF163",
+    "type": "type2",
+    "query": "At two points A and B separated by 50 cm, charges q1 = 8 × 10^-6 C and q2 = -10 × 10^-6 C are placed. Find the electric field strength at point C where AC = 30 cm and BC = 40 cm. Determine the force acting on q3 = -6 × 10^-8 C placed at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF164",
+    "type": "type2",
+    "query": "Charges q1 = 6 × 10^-6 C and q2 = -9 × 10^-6 C are located at points A and B separated by 13 cm. Given AC = 5 cm and BC = 12 cm, calculate the electric field strength at C and the force acting on q3 = -3 × 10^-8 C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF165",
+    "type": "type2",
+    "query": "At points A and B separated by 17 cm, charges q1 = 4 × 10^-6 C and q2 = -7 × 10^-6 C are placed. Point C satisfies AC = 8 cm and BC = 15 cm. Determine the electric field intensity at C and the force acting on q3 = -1 × 10^-7 C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF166",
+    "type": "type2",
+    "query": "Three positive charges q1 = q2 = q3 = 2 × 10^-9 C are placed at three consecutive vertices of a square of side length 20 cm in air. Determine the magnitude of the electric field at the fourth vertex.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF167",
+    "type": "type2",
+    "query": "Three identical positive charges q = 8 × 10^-9 C are fixed at three consecutive vertices of a square with side length 40 cm. Calculate the electric field intensity at the remaining vertex.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF168",
+    "type": "type2",
+    "query": "Three charges q1 = q2 = q3 = 1 × 10^-8 C are located at three vertices of a square of side length 25 cm. Determine the magnitude of the resultant electric field at the fourth vertex.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF169",
+    "type": "type2",
+    "query": "Three equal charges q = 6 × 10^-9 C are placed at three consecutive corners of a square whose side length is 50 cm. Find the electric field strength at the unoccupied corner.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF170",
+    "type": "type2",
+    "query": "Three positive charges, each of magnitude 4 × 10^-9 C, occupy three consecutive vertices of a square with side length 15 cm. Calculate the electric field intensity at the fourth vertex.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF171",
+    "type": "type2",
+    "query": "Three identical charges Q are fixed at the vertices of an equilateral triangle of side length a. Determine the magnitude of the electric field at the centroid of the triangle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF172",
+    "type": "type2",
+    "query": "Three equal positive charges Q are placed at the vertices of an equilateral triangle with side length 2a. Find the electric field intensity at the center of the triangle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF173",
+    "type": "type2",
+    "query": "Three identical charges of magnitude Q are fixed at the corners of an equilateral triangle. Calculate the resultant electric field at the circumcenter of the triangle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF174",
+    "type": "type2",
+    "query": "Three equal positive point charges Q are located at the vertices of an equilateral triangle with side length a. Determine the net electric field strength at the center of the triangle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF175",
+    "type": "type2",
+    "query": "Three identical charges Q occupy the three vertices of an equilateral triangle. What is the magnitude of the electric field at the centroid of the triangle?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF176",
+    "type": "type2",
+    "query": "At the vertices of a right isosceles triangle ABC with AB = AC = a, charges qA = qB = q and qC = 3q are placed in vacuum. Let H be the foot of the altitude from A onto BC. Determine the expression for the electric field intensity at H.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF177",
+    "type": "type2",
+    "query": "A right isosceles triangle ABC has AB = AC = a. Charges qA = qB = 2q and qC = q are fixed at the vertices. Find the electric field strength at point H, where H is the midpoint of BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF178",
+    "type": "type2",
+    "query": "Charges qA = q, qB = 3q, and qC = q are placed at the vertices of a right isosceles triangle with AB = AC = a. Determine the electric field intensity at the foot of the altitude from A to BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF179",
+    "type": "type2",
+    "query": "At the vertices of a right isosceles triangle ABC, where AB = AC = a, charges qA = 2q, qB = 2q, and qC = 4q are fixed. Derive the expression for the electric field at H, the midpoint of BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF180",
+    "type": "type2",
+    "query": "Three positive charges qA = q, qB = 4q, and qC = 2q are located at the vertices of a right isosceles triangle ABC with equal legs a. Find the electric field intensity at H, the foot of the perpendicular from A onto BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF181",
+    "type": "type2",
+    "query": "Two point charges q1 = 9 mC and q2 = -16 mC are placed at points A and B, separated by 25 cm in vacuum. Determine the distance from point M to B if the resultant electric field at M is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF182",
+    "type": "type2",
+    "query": "Charges q1 = 1 mC and q2 = -4 mC are fixed 15 cm apart. Find the distance from point M to the charge q2, knowing that the net electric field at M is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF183",
+    "type": "type2",
+    "query": "Two point charges q1 = 25 mC and q2 = -36 mC are separated by 11 cm. Determine the distance from M to B if the electric field at M vanishes.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF184",
+    "type": "type2",
+    "query": "Charges q1 = 4 mC and q2 = -25 mC are located 18 cm apart in vacuum. Calculate the distance from the equilibrium point M to charge q2, where the resultant electric field is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF185",
+    "type": "type2",
+    "query": "Two charges q1 = 16 mC and q2 = -49 mC are fixed 33 cm apart. Find the distance from point M to B if the net electric field intensity at M is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF186",
+    "type": "type2",
+    "query": "Three negative charges q1 = q2 = q3 = 5 × 10^-9 C are placed at three consecutive vertices of a square with side length 30 cm. Determine the magnitude of the electric field at the fourth vertex.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF187",
+    "type": "type2",
+    "query": "Three charges q1 = q2 = q3 = 8 × 10^-9 C occupy three consecutive vertices of a square of side length 40 cm. Calculate the electric potential at the fourth vertex.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF188",
+    "type": "type2",
+    "query": "Three equal charges Q are fixed at the vertices of an equilateral triangle of side length a. Determine the electric potential at the center of the triangle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF189",
+    "type": "type2",
+    "query": "At the vertices of an equilateral triangle of side length 24 cm, three identical charges of magnitude 6 × 10^-9 C are placed. Calculate the electric potential at the centroid of the triangle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF190",
+    "type": "type2",
+    "query": "Two charges q1 = 9 mC and q2 = -16 mC are placed 25 cm apart. Determine the location of point M on the line AB where the electric potential is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF191",
+    "type": "type2",
+    "query": "Charges q1 = 4 mC and q2 = -9 mC are separated by 13 cm. Find the distance from M to A if the electric potential at M is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF192",
+    "type": "type2",
+    "query": "At the vertices of a right isosceles triangle ABC with AB = AC = a, charges qA = qB = q and qC = 2q are placed. Determine the electric potential at H, the midpoint of BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF193",
+    "type": "type2",
+    "query": "A right isosceles triangle ABC has AB = AC = 20 cm. Charges qA = qB = 3 μC and qC = 6 μC are fixed at the vertices. Calculate the electric potential at H, the midpoint of BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF194",
+    "type": "type2",
+    "query": "Three charges qA = qB = 2 μC and qC = 4 μC are placed at the vertices of a right isosceles triangle with equal legs 10 cm. Find the electric potential at the foot of the altitude from A to BC.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF195",
+    "type": "type2",
+    "query": "Charges q1 = 6 mC and q2 = -24 mC are separated by 20 cm. Determine the distance from point M to charge q2 if the net electric field at M is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF196",
+    "type": "type2",
+    "query": "Two electric charges q1 = +5 × 10^-6 C and q2 = +12 × 10^-6 C are placed at points A and B, which are 13 cm apart. Determine the resultant electric field strength at point M, where MA = 5 cm and MB = 12 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF197",
+    "type": "type2",
+    "query": "Charges q1 = +8 × 10^-6 C and q2 = +15 × 10^-6 C are fixed at points A and B separated by 17 cm. Calculate the net electric field intensity at point M, given that MA = 8 cm and MB = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF198",
+    "type": "type2",
+    "query": "Two positive charges q1 = 2 × 10^-6 C and q2 = 6 × 10^-6 C are located at points A and B, 10 cm apart. Point M satisfies MA = 6 cm and MB = 8 cm. Determine the resultant electric field at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF199",
+    "type": "type2",
+    "query": "Charges q1 = 4 × 10^-6 C and q2 = 9 × 10^-6 C are placed at points A and B separated by 15 cm. Find the electric field strength at point M, where MA = 9 cm and MB = 12 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF200",
+    "type": "type2",
+    "query": "Two charges q1 = +7 × 10^-6 C and q2 = +24 × 10^-6 C are located at points A and B, 25 cm apart. Calculate the resultant electric field intensity at point M if MA = 7 cm and MB = 24 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF201",
+    "type": "type2",
+    "query": "Two point charges q1 = −3 × 10^-6 C and q2 = −3 × 10^-6 C are fixed at points A and B, separated by 8 cm. Point C lies on the perpendicular bisector of AB and is 6 cm from AB. Determine the resultant electric field strength at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF202",
+    "type": "type2",
+    "query": "Charges q1 = q2 = −5 × 10^-6 C are placed at points A and B, 10 cm apart. Calculate the net electric field at point C located on the perpendicular bisector of AB, 12 cm from the segment AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF203",
+    "type": "type2",
+    "query": "Two equal negative charges q1 = q2 = −1 × 10^-6 C are fixed 12 cm apart. Point C is on the perpendicular bisector of AB and is 5 cm away from AB. Determine the resultant electric field intensity at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF204",
+    "type": "type2",
+    "query": "Charges q1 = q2 = −8 × 10^-6 C are located at points A and B separated by 14 cm. Point C lies on the perpendicular bisector of AB and is 24 cm from AB. Find the electric field strength at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF205",
+    "type": "type2",
+    "query": "Two identical negative charges q1 = q2 = −6 × 10^-6 C are fixed at points A and B, 16 cm apart. Point C is located on the perpendicular bisector of AB at a distance of 15 cm from AB. Calculate the resultant electric field at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF206",
+    "type": "type2",
+    "query": "Two charges q1 = +2 × 10^-6 C and q2 = −2 × 10^-6 C are placed 12 cm apart. Determine the resultant electric field at point M, which is equidistant from both charges and lies 8 cm from the line segment connecting them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF207",
+    "type": "type2",
+    "query": "Charges q1 = +4 × 10^-6 C and q2 = −4 × 10^-6 C are fixed at two points separated by 20 cm. Point M is equidistant from both charges and is located 15 cm from AB. Calculate the electric field intensity at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF208",
+    "type": "type2",
+    "query": "Two opposite charges q1 = +5 × 10^-6 C and q2 = −5 × 10^-6 C are separated by 16 cm. Determine the resultant electric field at point M on the perpendicular bisector of AB, 12 cm from AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF209",
+    "type": "type2",
+    "query": "Charges q1 = +3 × 10^-6 C and q2 = −3 × 10^-6 C are located 24 cm apart. Point M lies on the perpendicular bisector and is 10 cm away from AB. Find the electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF210",
+    "type": "type2",
+    "query": "Two electric charges q1 = +8 × 10^-6 C and q2 = −8 × 10^-6 C are placed 18 cm apart. Point M is equidistant from both charges and lies 12 cm from the segment AB. Determine the resultant electric field at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF211",
+    "type": "type2",
+    "query": "Two charges q1 = +6 × 10^-6 C and q2 = −6 × 10^-6 C are placed at points A and B, separated by 14 cm. Point M lies on the perpendicular bisector of AB, at a distance of 24 cm from AB. Calculate the resultant electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF212",
+    "type": "type2",
+    "query": "Charges q1 = +2 × 10^-6 C and q2 = −2 × 10^-6 C are fixed 10 cm apart. Determine the electric field intensity at point M on the perpendicular bisector of AB, 12 cm from AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF213",
+    "type": "type2",
+    "query": "Two opposite charges q1 = +10 × 10^-6 C and q2 = −10 × 10^-6 C are separated by 30 cm. Point M lies on the perpendicular bisector and is 40 cm from AB. Calculate the resultant electric field at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF214",
+    "type": "type2",
+    "query": "Charges q1 = +1 × 10^-6 C and q2 = −1 × 10^-6 C are placed at points A and B, 8 cm apart. Point M lies on the perpendicular bisector of AB and is 15 cm from AB. Determine the electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF215",
+    "type": "type2",
+    "query": "Two charges q1 = +12 × 10^-6 C and q2 = −12 × 10^-6 C are fixed at points A and B separated by 26 cm. Point M lies on the perpendicular bisector and is 84 cm from AB. Find the resultant electric field intensity at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF216",
+    "type": "type2",
+    "query": "Two charges q1 = +4 × 10^-6 C and q2 = +3 × 10^-6 C are placed at points A and B, 5 cm apart. Point M is located such that MA = 4 cm and MB = 3 cm. Calculate the resultant electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF217",
+    "type": "type2",
+    "query": "Charges q1 = +9 × 10^-6 C and q2 = +16 × 10^-6 C are fixed 25 cm apart. Point M satisfies MA = 15 cm and MB = 20 cm. Determine the net electric field at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF218",
+    "type": "type2",
+    "query": "Two positive charges q1 = 7 × 10^-6 C and q2 = 24 × 10^-6 C are located at points A and B separated by 25 cm. Calculate the electric field intensity at point M, where MA = 7 cm and MB = 24 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF219",
+    "type": "type2",
+    "query": "Charges q1 = 12 × 10^-6 C and q2 = 5 × 10^-6 C are fixed at points A and B, 13 cm apart. Determine the resultant electric field at point M satisfying MA = 5 cm and MB = 12 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF220",
+    "type": "type2",
+    "query": "Two charges q1 = +15 × 10^-6 C and q2 = +8 × 10^-6 C are placed at points A and B separated by 17 cm. Point M is such that MA = 8 cm and MB = 15 cm. Find the electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF221",
+    "type": "type2",
+    "query": "Two charges q1 = −4 × 10^-6 C and q2 = −4 × 10^-6 C are fixed 10 cm apart. Point C lies on the perpendicular bisector of AB and is located 12 cm from AB. Calculate the resultant electric field intensity at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF222",
+    "type": "type2",
+    "query": "Two identical negative charges q1 = q2 = −7 × 10^-6 C are placed at points A and B, separated by 24 cm. Point C lies on the perpendicular bisector and is 5 cm away from AB. Determine the electric field strength at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF223",
+    "type": "type2",
+    "query": "Charges q1 = q2 = −9 × 10^-6 C are fixed 30 cm apart. Point C is on the perpendicular bisector of AB and lies 40 cm from AB. Find the resultant electric field at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF224",
+    "type": "type2",
+    "query": "Two equal negative charges q1 = q2 = −12 × 10^-6 C are located at points A and B, 26 cm apart. Point C lies on the perpendicular bisector at a distance of 84 cm from AB. Calculate the electric field intensity at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF225",
+    "type": "type2",
+    "query": "Charges q1 = q2 = −5 × 10^-6 C are fixed at points A and B separated by 18 cm. Point C lies on the perpendicular bisector of AB, 12 cm from AB. Determine the resultant electric field strength at C.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP001",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has a capacitance of 800 pF and is charged to a voltage of 400 V. The capacitor is disconnected from the source and then completely immersed in a dielectric liquid with relative permittivity εr = 4. Determine the new potential difference across the capacitor plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP002",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with capacitance 600 pF is charged to 200 V in air. After disconnecting the capacitor from the voltage source, it is immersed in a dielectric medium with dielectric constant 3. Calculate the voltage across the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP003",
+    "type": "type2",
+    "query": "An air capacitor of capacitance 300 pF is charged to 500 V. It is then disconnected from the source and submerged in a dielectric liquid with εr = 5. Find the new potential difference between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP004",
+    "type": "type2",
+    "query": "A capacitor with capacitance 1000 pF is charged to a voltage of 120 V in air. The capacitor is disconnected and placed in a dielectric material with dielectric constant 6. Determine the voltage across the plates afterward.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP005",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 250 pF and voltage 800 V. It is disconnected from the source and immersed in a dielectric with relative permittivity 2.5. Calculate the new voltage across the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP006",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has capacitance 700 pF and is connected to a 350 V source. While remaining connected, it is immersed in a dielectric liquid with dielectric constant εr = 2. Determine the potential difference across the capacitor plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP007",
+    "type": "type2",
+    "query": "A capacitor of capacitance 400 pF is charged by a 500 V battery. The capacitor remains connected to the battery while being immersed in a dielectric medium with εr = 4. What is the voltage across the plates?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP008",
+    "type": "type2",
+    "query": "An air capacitor with capacitance 900 pF is connected to a voltage source of 250 V. It is then submerged in a dielectric liquid with dielectric constant 5 while still connected. Determine the potential difference across the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP009",
+    "type": "type2",
+    "query": "A parallel-plate capacitor of capacitance 350 pF is connected to a 600 V source. While connected, it is immersed in a dielectric with εr = 3. Calculate the voltage across the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP010",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 1500 pF and is connected to a voltage source of 100 V. The capacitor remains connected while immersed in a dielectric material with dielectric constant 2. Determine the capacitor voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP011",
+    "type": "type2",
+    "query": "An air-filled capacitor of capacitance 600 pF is charged to 400 V. The capacitor is disconnected from the source and immersed in a dielectric liquid with εr = 3. Calculate the electric field energy stored in the capacitor after immersion.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP012",
+    "type": "type2",
+    "query": "A capacitor with capacitance 200 pF is charged to 800 V in air. After being disconnected from the source, it is immersed in a dielectric medium with dielectric constant 4. Determine the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP013",
+    "type": "type2",
+    "query": "An air capacitor has capacitance 1000 pF and voltage 300 V. The capacitor is disconnected and then submerged in a dielectric with relative permittivity 5. Calculate the electric field energy between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP014",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with capacitance 450 pF is charged to 700 V. It is disconnected from the source and immersed in a dielectric liquid of dielectric constant 2. Find the energy stored after immersion.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP015",
+    "type": "type2",
+    "query": "An air-filled capacitor of capacitance 800 pF is charged to a voltage of 250 V. After disconnecting it from the source, it is immersed in a dielectric medium with εr = 8. Determine the stored electric energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP016",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 300 pF is charged to 500 V and remains connected to the source. It is then immersed in a dielectric liquid with dielectric constant 4. Calculate the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP017",
+    "type": "type2",
+    "query": "A capacitor of capacitance 1200 pF is connected to a 150 V source. While connected, it is immersed in a dielectric medium with εr = 5. Determine the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP018",
+    "type": "type2",
+    "query": "An air capacitor with capacitance 500 pF is maintained at a voltage of 600 V. It is then immersed in a dielectric liquid with dielectric constant 2 while remaining connected. Calculate the electric field energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP019",
+    "type": "type2",
+    "query": "A parallel-plate capacitor of capacitance 700 pF is connected to a 400 V battery. The capacitor remains connected as it is immersed in a dielectric with εr = 3. Find the stored energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP020",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 250 pF and voltage 800 V. It remains connected to the source while immersed in a dielectric with relative permittivity 6. Determine the electric field energy between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP021",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has capacitance 5 pF and is charged to a voltage of 800 V. Calculate the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP022",
+    "type": "type2",
+    "query": "A capacitor with capacitance 10 pF is charged to 300 V. Determine the charge Q stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP023",
+    "type": "type2",
+    "query": "An air capacitor has capacitance 8 pF and voltage 1000 V. Calculate the charge accumulated on the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP024",
+    "type": "type2",
+    "query": "A parallel-plate capacitor of capacitance 15 pF is charged to 200 V. Find the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP025",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 3 pF is connected to a voltage source of 1200 V. Determine the capacitor charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP026",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has capacitance 4 pF and is charged to 500 V. The capacitor is disconnected from the source and the plate separation is doubled. Calculate the new capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP027",
+    "type": "type2",
+    "query": "A capacitor with capacitance 12 pF is charged and disconnected from the source. The distance between the plates is increased to three times its original value. Determine the new capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP028",
+    "type": "type2",
+    "query": "An air capacitor of capacitance 20 pF is disconnected from the source. The plate separation is increased by a factor of 4. Calculate the new capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP029",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has capacitance 6 pF. After disconnecting it from the source, the plate distance is doubled. Determine the resulting capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP030",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 18 pF is disconnected from the power source. The separation between its plates becomes five times larger. Find the new capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP031",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 8 pF and is charged to 400 V. After disconnecting it from the source, the distance between the plates is doubled. Determine the new voltage across the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP032",
+    "type": "type2",
+    "query": "A capacitor with capacitance 10 pF is charged to 600 V and disconnected. The plate separation is increased to three times its original value. Calculate the new potential difference.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP033",
+    "type": "type2",
+    "query": "An air capacitor of capacitance 2 pF is charged to 1000 V. After being disconnected from the source, the distance between the plates is increased by a factor of 4. Determine the new voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP034",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with capacitance 16 pF is charged to 250 V and disconnected from the source. The plate spacing is doubled. Find the new voltage across the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP035",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 5 pF and voltage 900 V. After disconnecting the source, the plate separation becomes five times larger. Calculate the resulting voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP036",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 4 pF and is charged to 800 V. It is disconnected from the source and the distance between the plates is doubled. Determine the electric field energy stored afterward.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP037",
+    "type": "type2",
+    "query": "A capacitor of capacitance 10 pF is charged to 300 V and disconnected. The plate spacing is increased to three times its original value. Calculate the new stored energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP038",
+    "type": "type2",
+    "query": "An air capacitor with capacitance 20 pF is charged to 500 V. After disconnection, the plate separation is quadrupled. Determine the electric energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP039",
+    "type": "type2",
+    "query": "A parallel-plate capacitor of capacitance 6 pF is charged to 1000 V and disconnected from the source. The distance between the plates is doubled. Find the new energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP040",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 12 pF and voltage 200 V. After disconnecting it from the source, the plate spacing becomes five times larger. Calculate the resulting electric field energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP041",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has circular plates of radius 40 cm. The distance between the plates is 1.5 mm and air fills the gap. Given that air breaks down at an electric field strength of 3 × 10^6 V/m, determine the maximum charge that can be stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP042",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has plate radius 25 cm and plate separation 0.8 mm. If the dielectric strength of air is 3 × 10^6 V/m, calculate the maximum charge the capacitor can hold without electrical breakdown.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP043",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with circular plates of radius 50 cm is separated by a distance of 3 mm. Air is the dielectric. Given the breakdown field strength of air is 3 × 10^6 V/m, determine the maximum stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP044",
+    "type": "type2",
+    "query": "An air capacitor consists of two circular plates of radius 30 cm separated by 2.5 mm. Calculate the largest charge that can be stored if the maximum permissible electric field is 3 × 10^6 V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP045",
+    "type": "type2",
+    "query": "Two circular capacitor plates each have radius 70 cm and are separated by 1 mm in air. Given the dielectric strength of air is 3 × 10^6 V/m, find the maximum charge that may be accumulated on the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP046",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has capacitance 10 nF. The plate area is 20 cm² and the separation between plates is 2 × 10^-5 m. Determine the dielectric constant of the material between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP047",
+    "type": "type2",
+    "query": "A capacitor filled with a dielectric has capacitance 4.5 nF. The area of each plate is 12 cm² and the distance between the plates is 5 × 10^-6 m. Calculate the dielectric constant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP048",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with dielectric material has capacitance 12 nF. The plate area is 18 cm² and the spacing is 8 × 10^-6 m. Determine the relative permittivity of the dielectric.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP049",
+    "type": "type2",
+    "query": "The capacitance of a dielectric-filled capacitor is 5.0 nF. Each plate has area 10 cm² and the distance between the plates is 1 × 10^-5 m. Find the dielectric constant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP050",
+    "type": "type2",
+    "query": "A capacitor has capacitance 8.0 nF. The plate area is 25 cm² and the separation is 1.5 × 10^-5 m. Determine the dielectric constant of the insulating material between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP051",
+    "type": "type2",
+    "query": "Two capacitors with capacitances C1 = 1 μF and C2 = 4 μF are charged to voltages U1 = 100 V and U2 = 300 V respectively. Their positively charged plates are connected together and their negatively charged plates are connected together. Determine the final voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP052",
+    "type": "type2",
+    "query": "Capacitors C1 = 5 μF and C2 = 2 μF are charged to 250 V and 150 V respectively. After connecting like-charged plates together, calculate the common voltage across the capacitors.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP053",
+    "type": "type2",
+    "query": "Two capacitors, C1 = 8 μF and C2 = 12 μF, are initially charged to 50 V and 200 V respectively. Their like-charged plates are connected together. Determine the final voltage across the combination.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP054",
+    "type": "type2",
+    "query": "Capacitors with capacitances 2 μF and 8 μF are charged to 600 V and 100 V respectively. After joining positive plates together and negative plates together, find the resulting voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP055",
+    "type": "type2",
+    "query": "Two capacitors, C1 = 10 μF and C2 = 5 μF, are charged to voltages 120 V and 360 V. They are then connected with like charges together. Calculate the final equilibrium voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP056",
+    "type": "type2",
+    "query": "Capacitors C1 = 4 μF and C2 = 8 μF are connected in series across a voltage source of 24 V. Determine the voltage across capacitor C2.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP057",
+    "type": "type2",
+    "query": "Two capacitors of capacitance 5 μF and 10 μF are connected in series to a source of 30 V. Calculate the voltage across the 10 μF capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP058",
+    "type": "type2",
+    "query": "Capacitors C1 = 2 μF and C2 = 8 μF are connected in series across a 40 V supply. Find the voltage drop across capacitor C2.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP059",
+    "type": "type2",
+    "query": "A series combination consists of capacitors 12 μF and 3 μF connected to a 60 V source. Determine the voltage across the 3 μF capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP060",
+    "type": "type2",
+    "query": "Two capacitors with capacitances 7 μF and 14 μF are connected in series across a voltage of 21 V. Calculate the voltage across the 14 μF capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP061",
+    "type": "type2",
+    "query": "Capacitors C1 = 0.5 μF and C2 = 1.0 μF are connected in parallel to a source with voltage less than 100 V. If one capacitor carries a charge of 4 × 10^-5 C, determine the source voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP062",
+    "type": "type2",
+    "query": "Two capacitors of capacitance 0.3 μF and 0.9 μF are connected in parallel. One capacitor stores a charge of 1.8 × 10^-5 C. Calculate the applied voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP063",
+    "type": "type2",
+    "query": "Capacitors 0.8 μF and 1.2 μF are connected in parallel to a voltage source. The charge on one capacitor is 6 × 10^-5 C. Determine the voltage of the source.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP064",
+    "type": "type2",
+    "query": "A parallel combination consists of capacitors 0.25 μF and 0.75 μF. One capacitor has a charge of 1.5 × 10^-5 C. Calculate the supply voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP065",
+    "type": "type2",
+    "query": "Two capacitors with capacitances 0.2 μF and 0.5 μF are connected in parallel. If one capacitor stores a charge of 2 × 10^-5 C, determine the voltage across both capacitors.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP066",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 50 cm² and separation 2.0 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP067",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has plate area 24 cm² and distance between plates 1.5 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP068",
+    "type": "type2",
+    "query": "The plates of an air capacitor each have area 80 cm² and are separated by 0.5 mm. Find the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP069",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with air dielectric has plate area 15 cm² and spacing 0.8 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP070",
+    "type": "type2",
+    "query": "An air-filled capacitor has plate area 100 cm² and plate separation 2.5 mm. Determine the capacitance of the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP071",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 45 cm² and separation 1.2 mm. Determine the maximum voltage that can be applied before air breakdown occurs, assuming the dielectric strength of air is 3 × 10^6 V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP072",
+    "type": "type2",
+    "query": "An air capacitor has plate spacing 0.7 mm. Given the breakdown field strength of air is 3 × 10^6 V/m, calculate the maximum voltage the capacitor can withstand.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP073",
+    "type": "type2",
+    "query": "Two circular capacitor plates are separated by 3 mm in air. Determine the breakdown voltage if the dielectric strength of air is 3 × 10^6 V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP074",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has a plate separation of 1.8 mm. Calculate the largest potential difference that can be applied without electrical breakdown.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP075",
+    "type": "type2",
+    "query": "An air-filled capacitor has a gap of 2.2 mm between its plates. Given that air breaks down at 3 × 10^6 V/m, determine the maximum operating voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP076",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has a capacitance of 24.85 pF and is charged to a voltage of 145.3 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP077",
+    "type": "type2",
+    "query": "A capacitor with capacitance 8.72 pF is connected to a 92.4 V source. Determine the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP078",
+    "type": "type2",
+    "query": "An air-filled capacitor has a capacitance of 31.40 pF and is charged to 78.6 V. Calculate the stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP079",
+    "type": "type2",
+    "query": "A parallel-plate capacitor of capacitance 14.25 pF is charged to a potential difference of 215.8 V. Find the charge accumulated on the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP080",
+    "type": "type2",
+    "query": "A capacitor with capacitance 27.63 pF is charged by a 60.5 V source. Determine the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP081",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has a capacitance of 24.85 pF and is charged to a voltage of 145.3 V. Calculate the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP082",
+    "type": "type2",
+    "query": "A capacitor with capacitance 8.72 pF is charged to 92.4 V. Determine the electric energy stored between its plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP083",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 31.40 pF and potential difference 78.6 V. Calculate the stored electric field energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP084",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with capacitance 14.25 pF is charged to 215.8 V. Find the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP085",
+    "type": "type2",
+    "query": "A capacitor of capacitance 27.63 pF is connected to a 60.5 V source. Calculate the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP086",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 18.6 cm² and plate separation 1.24 mm. Calculate the capacitance of the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP087",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has a plate area of 35.2 cm² and a separation of 2.15 mm. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP088",
+    "type": "type2",
+    "query": "A parallel-plate capacitor in air has plate area 14.9 cm² and distance between plates 0.82 mm. Calculate the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP089",
+    "type": "type2",
+    "query": "The area of each plate of an air capacitor is 42.5 cm² and the spacing is 1.75 mm. Find the capacitance of the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP090",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has plate area 25.8 cm² and plate separation 1.05 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP091",
+    "type": "type2",
+    "query": "A capacitor with capacitance 22.74 pF is charged to a voltage of 118.9 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP092",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 22.74 pF and is charged to 118.9 V. Calculate the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP093",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 31.7 cm² and separation 1.56 mm. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP094",
+    "type": "type2",
+    "query": "A capacitor with capacitance 9.48 pF is charged to a voltage of 72.6 V. Calculate the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP095",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 9.48 pF and voltage 72.6 V. Determine the electric field energy stored between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP096",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 16.4 cm² and plate separation 0.73 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP097",
+    "type": "type2",
+    "query": "A capacitor with capacitance 18.36 pF is charged to a potential difference of 164.2 V. Determine the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP098",
+    "type": "type2",
+    "query": "An air-filled capacitor of capacitance 18.36 pF is charged to 164.2 V. Calculate the stored electric field energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP099",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 27.5 cm² and separation 1.48 mm. Calculate the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP100",
+    "type": "type2",
+    "query": "A capacitor with capacitance 15.82 pF is connected to a voltage source of 205.7 V. Determine the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP101",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 15.82 pF and is charged to 205.7 V. Calculate the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP102",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 39.8 cm² and plate spacing 2.02 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP103",
+    "type": "type2",
+    "query": "A capacitor with capacitance 12.44 pF is charged to a voltage of 98.3 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP104",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 12.44 pF is charged to 98.3 V. Determine the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP105",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 22.3 cm² and plate separation 1.21 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP106",
+    "type": "type2",
+    "query": "A capacitor with capacitance 28.17 pF is charged to a voltage of 134.8 V. Determine the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP107",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 28.17 pF and potential difference 134.8 V. Calculate the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP108",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 19.1 cm² and separation 0.91 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP109",
+    "type": "type2",
+    "query": "A capacitor with capacitance 10.65 pF is charged to 56.4 V. Calculate the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP110",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 10.65 pF and voltage 56.4 V. Determine the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP111",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 45.6 cm² and plate separation 2.24 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP112",
+    "type": "type2",
+    "query": "A capacitor with capacitance 20.38 pF is charged to a voltage of 176.5 V. Determine the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP113",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 20.38 pF is charged to 176.5 V. Calculate the electric field energy stored between its plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP114",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 26.7 cm² and plate separation 1.33 mm. Calculate the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP115",
+    "type": "type2",
+    "query": "A capacitor with capacitance 17.21 pF is charged to a voltage of 143.6 V. Calculate the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP116",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 17.21 pF and voltage 143.6 V. Determine the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP117",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 33.4 cm² and separation 1.68 mm. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP118",
+    "type": "type2",
+    "query": "A capacitor with capacitance 14.67 pF is charged to a voltage of 88.2 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP119",
+    "type": "type2",
+    "query": "An air-filled capacitor has capacitance 14.67 pF and is charged to 88.2 V. Calculate the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP120",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 24.9 cm² and plate separation 1.14 mm. Determine the capacitance of the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP121",
+    "type": "type2",
+    "query": "Calculate the capacitance of a parallel-plate air capacitor with a plate area of 18.5 cm² and a plate separation of 0.75 mm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP122",
+    "type": "type2",
+    "query": "Determine the capacitance of an air-filled parallel-plate capacitor whose plate area is 42.8 cm² and whose plate spacing is 1.20 mm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP123",
+    "type": "type2",
+    "query": "An air capacitor has plates of area 25.6 cm² separated by 0.90 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP124",
+    "type": "type2",
+    "query": "Find the capacitance of a parallel-plate air capacitor with plate area 56.4 cm² and separation 2.10 mm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP125",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 29.7 cm² and plate separation 1.05 mm. Calculate the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP126",
+    "type": "type2",
+    "query": "A flat capacitor has a capacitance of 42.38 pF and is charged to a voltage of 86.4 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP127",
+    "type": "type2",
+    "query": "A capacitor with capacitance 75.12 pF is connected to a 210.5 V source. Determine the charge stored on the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP128",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has a capacitance of 28.64 pF and is charged to 95.8 V. Calculate the stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP129",
+    "type": "type2",
+    "query": "A capacitor of capacitance 53.91 pF is charged to a voltage of 118.7 V. Find the charge accumulated on its plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP130",
+    "type": "type2",
+    "query": "A flat capacitor with capacitance 19.48 pF is charged to 64.2 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP131",
+    "type": "type2",
+    "query": "An air capacitor has a capacitance of 42.38 pF and is charged to a voltage of 86.4 V. Calculate the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP132",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 75.12 pF is charged to 210.5 V. Determine the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP133",
+    "type": "type2",
+    "query": "A capacitor of capacitance 28.64 pF is charged to a potential difference of 95.8 V. Calculate the stored electric energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP134",
+    "type": "type2",
+    "query": "An air capacitor has capacitance 53.91 pF and voltage 118.7 V. Calculate the energy stored between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP135",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with capacitance 19.48 pF is charged to 64.2 V. Determine the electric field energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP136",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has plate area 38.6 cm² and plate separation 1.58 mm. Calculate the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP137",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 16.9 cm² and distance between plates 0.84 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP138",
+    "type": "type2",
+    "query": "An air capacitor has a plate area of 52.4 cm² and a plate spacing of 2.25 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP139",
+    "type": "type2",
+    "query": "Calculate the capacitance of an air-filled parallel-plate capacitor with plate area 27.8 cm² and separation 1.12 mm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP140",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plates of area 44.3 cm² separated by 1.76 mm. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP141",
+    "type": "type2",
+    "query": "A capacitor has a capacitance of 21.56 pF and is charged to a voltage of 173.4 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP142",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with capacitance 44.82 pF is charged to a voltage of 91.6 V. Determine the stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP143",
+    "type": "type2",
+    "query": "A capacitor of capacitance 67.35 pF is connected to a 132.8 V source. Calculate the charge accumulated on the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP144",
+    "type": "type2",
+    "query": "A flat capacitor has capacitance 14.73 pF and voltage 208.2 V. Find the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP145",
+    "type": "type2",
+    "query": "A capacitor with capacitance 36.17 pF is charged to 58.9 V. Calculate the charge stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP146",
+    "type": "type2",
+    "query": "An air capacitor has capacitance 21.56 pF and is charged to 173.4 V. Calculate the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP147",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 44.82 pF is charged to 91.6 V. Determine the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP148",
+    "type": "type2",
+    "query": "A capacitor has capacitance 67.35 pF and voltage 132.8 V. Calculate the electric field energy stored between its plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP149",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has capacitance 14.73 pF and is charged to 208.2 V. Determine the stored electric energy.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP150",
+    "type": "type2",
+    "query": "An air capacitor has capacitance 36.17 pF and is charged to a voltage of 58.9 V. Calculate the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP151",
+    "type": "type2",
+    "query": "An air-filled parallel-plate capacitor has plate area 14.2 cm² and plate separation 0.67 mm. Calculate its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP152",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 48.8 cm² and distance between plates 1.94 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP153",
+    "type": "type2",
+    "query": "An air capacitor has plate area 23.5 cm² and plate spacing 1.08 mm. Calculate the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP154",
+    "type": "type2",
+    "query": "A parallel-plate capacitor with air dielectric has plate area 36.9 cm² and separation 1.51 mm. Determine its capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP155",
+    "type": "type2",
+    "query": "Calculate the capacitance of an air-filled capacitor whose plate area is 30.6 cm² and whose plate separation is 0.98 mm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP156",
+    "type": "type2",
+    "query": "A capacitor has capacitance 18.92 pF and is charged to a voltage of 121.7 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP157",
+    "type": "type2",
+    "query": "An air capacitor has capacitance 18.92 pF and is charged to 121.7 V. Determine the electric field energy stored.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP158",
+    "type": "type2",
+    "query": "A capacitor with capacitance 52.74 pF is charged to a voltage of 84.5 V. Calculate the charge stored on the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP159",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 52.74 pF is charged to 84.5 V. Calculate the energy stored in the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP160",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate area 41.2 cm² and plate separation 1.87 mm. Determine the capacitance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP161",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has a capacitance of 24.58 pF and is charged to a voltage of 92.7 V. Calculate the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP162",
+    "type": "type2",
+    "query": "A capacitor has a capacitance of 42.35 pF and is charged to a potential difference of 68.9 V. Determine the charge stored on the capacitor plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP163",
+    "type": "type2",
+    "query": "An air-filled capacitor with capacitance 18.76 pF is connected to a 135.4 V source. Calculate the charge accumulated on the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP164",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has capacitance 56.42 pF and is charged to 110.3 V. Find the charge stored by the capacitor.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP165",
+    "type": "type2",
+    "query": "A capacitor with capacitance 27.91 pF is charged to a voltage of 154.6 V. Calculate the stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP166",
+    "type": "type2",
+    "query": "A parallel-plate capacitor consists of two circular plates of radius 35 cm separated by 1.2 mm. Assuming the dielectric strength of air is 3×10⁵ V/m, calculate the maximum charge that can be stored without dielectric breakdown.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP167",
+    "type": "type2",
+    "query": "Two circular plates of radius 60 cm form an air capacitor with plate separation 2.4 mm. Determine the maximum charge that can be stored if the breakdown field strength of air is 3×10⁵ V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP168",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has circular plates of radius 42 cm and plate spacing 1.8 mm. Calculate the largest charge that can be stored before dielectric breakdown occurs. Use Emax = 3×10⁵ V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP169",
+    "type": "type2",
+    "query": "An air-filled capacitor has circular plates with radius 48 cm and separation 2.0 mm. Given the maximum electric field in air is 3×10⁵ V/m, determine the maximum charge the capacitor can hold.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP170",
+    "type": "type2",
+    "query": "A parallel-plate capacitor is made from two circular plates of radius 52 cm separated by 1.6 mm. Find the maximum stored charge before air breakdown occurs, taking Emax = 3×10⁵ V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP171",
+    "type": "type2",
+    "query": "A capacitor has capacitance 7.4 nF. The plate area is 16.5 cm² and the plate separation is 1.5×10⁻⁵ m. Calculate the dielectric constant of the dielectric material.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP172",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has capacitance 4.8 nF, plate area 11.0 cm², and spacing 8.0×10⁻⁶ m. Determine the dielectric constant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP173",
+    "type": "type2",
+    "query": "A dielectric-filled capacitor has capacitance 10.5 nF. Each plate has area 18 cm² and the distance between plates is 2.0×10⁻⁵ m. Find the relative permittivity of the dielectric.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP174",
+    "type": "type2",
+    "query": "The capacitance of a parallel-plate capacitor is 6.1 nF. The plate area is 8.5 cm² and the separation is 7.5×10⁻⁶ m. Calculate the dielectric constant of the insulating material.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP175",
+    "type": "type2",
+    "query": "A capacitor has capacitance 12.4 nF. Its plates have area 20 cm² and are separated by 1.8×10⁻⁵ m. Determine the dielectric constant of the dielectric between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP176",
+    "type": "type2",
+    "query": "Two capacitors with capacitances C1 = 5 μF and C2 = 8 μF are charged to voltages U1 = 180 V and U2 = 320 V respectively. Their like-charged terminals are connected together. Calculate the final voltage across the capacitors.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP177",
+    "type": "type2",
+    "query": "Capacitors C1 = 2 μF and C2 = 7 μF are charged to 240 V and 120 V respectively. After connecting positive-to-positive and negative-to-negative terminals, determine the common voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP178",
+    "type": "type2",
+    "query": "Two capacitors of capacitance 6 μF and 4 μF are initially charged to 150 V and 450 V. They are then connected with like polarities together. Calculate the final equilibrium voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP179",
+    "type": "type2",
+    "query": "Capacitors C1 = 3.5 μF and C2 = 5.5 μF are charged to 200 V and 280 V respectively. Their corresponding terminals are connected together. Find the voltage after connection.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP180",
+    "type": "type2",
+    "query": "Two capacitors with capacitances 4.5 μF and 2.5 μF are charged to 300 V and 180 V. After connecting like terminals together, determine the final voltage across the combination.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP181",
+    "type": "type2",
+    "query": "Two circular capacitor plates of radius 40 cm are separated by 2.2 mm in air. Calculate the maximum charge that can be stored without dielectric breakdown. Assume Emax = 3×10⁵ V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP182",
+    "type": "type2",
+    "query": "An air-filled capacitor uses circular plates of radius 58 cm separated by 1.4 mm. Determine the maximum charge before breakdown occurs, given Emax = 3×10⁵ V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP183",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has circular plates of radius 47 cm and spacing 1.9 mm. Calculate the largest charge that can be stored if the dielectric strength of air is 3×10⁵ V/m.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP184",
+    "type": "type2",
+    "query": "An air capacitor consists of two circular plates of radius 62 cm separated by 2.6 mm. Find the maximum charge that can be stored without air breakdown.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP185",
+    "type": "type2",
+    "query": "A parallel-plate air capacitor has plate radius 38 cm and separation 1.1 mm. Given Emax = 3×10⁵ V/m, determine the maximum stored charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP186",
+    "type": "type2",
+    "query": "A capacitor has capacitance 5.7 nF. The plates have area 12.8 cm² and are separated by 1.3×10⁻⁵ m. Calculate the dielectric constant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP187",
+    "type": "type2",
+    "query": "A dielectric-filled capacitor has capacitance 8.1 nF, plate area 15.5 cm², and spacing 1.4×10⁻⁵ m. Determine the relative permittivity.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP188",
+    "type": "type2",
+    "query": "The capacitance of a parallel-plate capacitor is 11.2 nF. Each plate has area 19 cm² and the distance between plates is 2.2×10⁻⁵ m. Find the dielectric constant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP189",
+    "type": "type2",
+    "query": "A capacitor with capacitance 6.8 nF has plate area 10 cm² and separation 9.5×10⁻⁶ m. Calculate the dielectric constant of the material inside.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP190",
+    "type": "type2",
+    "query": "A parallel-plate capacitor has capacitance 13.6 nF. The plate area is 22 cm² and the distance between plates is 2.5×10⁻⁵ m. Determine the dielectric constant.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP191",
+    "type": "type2",
+    "query": "Two capacitors, C1 = 1.5 μF and C2 = 4.5 μF, are charged to U1 = 250 V and U2 = 350 V. After connecting their like-polarity terminals, calculate the common voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP192",
+    "type": "type2",
+    "query": "Capacitors C1 = 2.8 μF and C2 = 6.2 μF are charged to 180 V and 260 V respectively. Determine the final voltage after connecting positive-to-positive and negative-to-negative terminals.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP193",
+    "type": "type2",
+    "query": "Two capacitors with capacitances 7 μF and 3 μF are charged to 120 V and 400 V. They are then connected with like charges together. Calculate the resulting voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP194",
+    "type": "type2",
+    "query": "Capacitors C1 = 5.5 μF and C2 = 4.5 μF are charged to voltages 220 V and 140 V. After connecting corresponding terminals together, determine the final voltage.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "CAP195",
+    "type": "type2",
+    "query": "Two capacitors with capacitances 2.2 μF and 3.8 μF are charged to 300 V and 240 V respectively. After joining like-polarity terminals, calculate the voltage across the combined capacitors.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF001",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 20 × 10^-8 C are placed at points A and B, 12 cm apart in air. Determine the electric field strength at point M, where MA = MB = 6 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF002",
+    "type": "type2",
+    "query": "Two identical charges q1 = q2 = 12 × 10^-8 C are located at points A and B, separated by 8 cm. Calculate the electric field strength at the midpoint M of AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF003",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 24 × 10^-8 C are placed 14 cm apart. Find the electric field intensity at point M, which is equidistant from A and B with MA = MB = 7 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF004",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 10 × 10^-8 C are fixed at points A and B, 6 cm apart. Determine the electric field strength at the midpoint between the two charges.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF005",
+    "type": "type2",
+    "query": "Two equal positive charges q1 = q2 = 30 × 10^-8 C are placed at A and B, separated by 20 cm. Calculate the electric field strength at point M, where MA = MB = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF006",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 20 × 10^-8 C are placed at A and B, 12 cm apart. Determine the electric field strength at point N if NA = 6 cm and NB = 18 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF007",
+    "type": "type2",
+    "query": "Two identical charges q1 = q2 = 10 × 10^-8 C are located at A and B, separated by 8 cm. Calculate the electric field strength at point N, where NA = 4 cm and NB = 12 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF008",
+    "type": "type2",
+    "query": "Two charges q1 = q2 = 25 × 10^-8 C are placed 16 cm apart. Determine the electric field intensity at point N given that NA = 8 cm and NB = 24 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF009",
+    "type": "type2",
+    "query": "At points A and B, 14 cm apart, two equal charges q1 = q2 = 18 × 10^-8 C are placed. Find the electric field strength at N where NA = 7 cm and NB = 21 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF010",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 14 × 10^-8 C are fixed 10 cm apart. Calculate the electric field strength at point N if NA = 5 cm and NB = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF011",
+    "type": "type2",
+    "query": "Two equal charges q1 = q2 = 18 × 10^-8 C are placed at points A and B, 12 cm apart. Determine the electric field strength at point C if AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF012",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 24 × 10^-8 C are located at A and B, separated by 14 cm. Calculate the electric field strength at point C, where AC = BC = 9 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF013",
+    "type": "type2",
+    "query": "Two point charges q1 = q2 = 12 × 10^-8 C are placed 8 cm apart in air. Find the electric field intensity at point C given that AC = BC = 6 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF014",
+    "type": "type2",
+    "query": "At points A and B, 16 cm apart, two equal charges q1 = q2 = 30 × 10^-8 C are placed. Determine the electric field strength at point C if AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF015",
+    "type": "type2",
+    "query": "Two identical charges q1 = q2 = 22 × 10^-8 C are fixed at points A and B separated by 18 cm. Calculate the electric field at point C, where AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF016",
+    "type": "type2",
+    "query": "At points A and B, separated by 12 cm, two equal charges q1 = q2 = 20 × 10^-8 C are placed. Determine the electric force acting on q3 = 3 × 10^-6 C at point C, given that AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF017",
+    "type": "type2",
+    "query": "Two charges q1 = q2 = 15 × 10^-8 C are located at A and B, 8 cm apart. Calculate the force exerted on q3 = 5 × 10^-6 C placed at point C, where AC = BC = 6 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF018",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 28 × 10^-8 C are placed at A and B, 14 cm apart. Find the electric force acting on q3 = 1 × 10^-6 C at point C if AC = BC = 9 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF019",
+    "type": "type2",
+    "query": "Two identical charges q1 = q2 = 10 × 10^-8 C are fixed at A and B separated by 10 cm. Determine the force on q3 = 4 × 10^-6 C at point C where AC = BC = 8 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF020",
+    "type": "type2",
+    "query": "At points A and B, 20 cm apart, two charges q1 = q2 = 32 × 10^-8 C are placed. Calculate the electric force exerted on q3 = 2 × 10^-6 C at point C if AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF021",
+    "type": "type2",
+    "query": "Two charges q1 = 8 × 10^-6 C and q2 = -8 × 10^-6 C are placed at points A and B, 12 cm apart. Determine the electric field strength at point C, given that AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF022",
+    "type": "type2",
+    "query": "At points A and B, separated by 8 cm, charges q1 = 4 × 10^-6 C and q2 = -4 × 10^-6 C are placed. Calculate the electric field intensity at point C if AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF023",
+    "type": "type2",
+    "query": "Two point charges q1 = 10 × 10^-6 C and q2 = -10 × 10^-6 C are fixed 16 cm apart. Determine the electric field strength at point C, where AC = BC = 20 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF024",
+    "type": "type2",
+    "query": "Charges q1 = 5 × 10^-6 C and q2 = -5 × 10^-6 C are located at A and B, separated by 14 cm. Find the electric field strength at point C if AC = BC = 18 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF025",
+    "type": "type2",
+    "query": "At two points A and B 10 cm apart, charges q1 = 7 × 10^-6 C and q2 = -7 × 10^-6 C are placed. Determine the electric field intensity at point C given AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF026",
+    "type": "type2",
+    "query": "Two charges q1 = 8 × 10^-6 C and q2 = -8 × 10^-6 C are placed at A and B, separated by 12 cm. Calculate the electric force acting on q3 = -4 × 10^-8 C at point C, where AC = BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF027",
+    "type": "type2",
+    "query": "At points A and B, 8 cm apart, charges q1 = 4 × 10^-6 C and q2 = -4 × 10^-6 C are fixed. Determine the force exerted on q3 = -2 × 10^-8 C placed at point C if AC = BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF028",
+    "type": "type2",
+    "query": "Two opposite charges q1 = 10 × 10^-6 C and q2 = -10 × 10^-6 C are located 16 cm apart. Calculate the electric force on q3 = -5 × 10^-8 C at point C, where AC = BC = 20 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF029",
+    "type": "type2",
+    "query": "Charges q1 = 5 × 10^-6 C and q2 = -5 × 10^-6 C are placed at A and B separated by 14 cm. Determine the electric force acting on q3 = -1 × 10^-7 C at point C if AC = BC = 18 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF030",
+    "type": "type2",
+    "query": "At points A and B, 10 cm apart, charges q1 = 7 × 10^-6 C and q2 = -7 × 10^-6 C are placed. Calculate the electric force on q3 = -6 × 10^-8 C at point C given AC = BC = 13 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF031",
+    "type": "type2",
+    "query": "Charges q1 = -10 × 10^-6 C and q2 = 4 × 10^-6 C are placed at points A and B, respectively, 18 cm apart in air. Calculate the magnitude of the resultant electric field at point C, given that AC = 24 cm and BC = 6 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF032",
+    "type": "type2",
+    "query": "Two charges q1 = -15 × 10^-6 C and q2 = 3 × 10^-6 C are located at points A and B, separated by 12 cm. Determine the magnitude of the electric field strength at point C if AC = 16 cm and BC = 4 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF033",
+    "type": "type2",
+    "query": "Charges q1 = -8 × 10^-6 C and q2 = 2 × 10^-6 C are placed at A and B, 10 cm apart. Calculate the resultant electric field intensity at point C, where AC = 14 cm and BC = 4 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF034",
+    "type": "type2",
+    "query": "At two points A and B separated by 25 cm, charges q1 = -18 × 10^-6 C and q2 = 6 × 10^-6 C are placed. Determine the electric field strength at point C if AC = 35 cm and BC = 10 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF035",
+    "type": "type2",
+    "query": "Charges q1 = -6 × 10^-6 C and q2 = 1.5 × 10^-6 C are fixed at A and B, which are 15 cm apart. Calculate the magnitude of the resultant electric field at point C, given AC = 20 cm and BC = 5 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF036",
+    "type": "type2",
+    "query": "Points A and B are 18 cm apart in air. Charges q1 = -16 × 10^-6 C and q2 = 4 × 10^-6 C are placed at A and B respectively. Find the point M where the resultant electric field is zero. Calculate the distance AM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF037",
+    "type": "type2",
+    "query": "Two charges q1 = -20 × 10^-6 C and q2 = 5 × 10^-6 C are located 24 cm apart. Determine the position M where the net electric field vanishes. Find AM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF038",
+    "type": "type2",
+    "query": "Charges q1 = -9 × 10^-6 C and q2 = 1 × 10^-6 C are placed at A and B, separated by 16 cm. Find the point where the total electric field is zero and calculate the distance from A to that point.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF039",
+    "type": "type2",
+    "query": "At two points A and B, 20 cm apart, charges q1 = -25 × 10^-6 C and q2 = 4 × 10^-6 C are placed. Find point M where the resultant electric field strength equals zero. Determine AM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF040",
+    "type": "type2",
+    "query": "Charges q1 = -14 × 10^-6 C and q2 = 3.5 × 10^-6 C are located 14 cm apart. Determine the distance AM if M is the point where the electric field due to the two charges is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF041",
+    "type": "type2",
+    "query": "Two point charges q1 = -12 × 10^-6 C and q2 = -3 × 10^-6 C are placed at points A and B, respectively, 24 cm apart. Calculate the magnitude of the resultant electric field at point C, given AC = 36 cm and BC = 12 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF042",
+    "type": "type2",
+    "query": "Charges q1 = -16 × 10^-6 C and q2 = -4 × 10^-6 C are fixed at points A and B, 18 cm apart. Determine the electric field strength at point C if AC = 27 cm and BC = 9 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF043",
+    "type": "type2",
+    "query": "At points A and B separated by 12 cm, charges q1 = -8 × 10^-6 C and q2 = -2 × 10^-6 C are placed. Calculate the resultant electric field at point C, where AC = 18 cm and BC = 6 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF044",
+    "type": "type2",
+    "query": "Two negative charges q1 = -18 × 10^-6 C and q2 = -8 × 10^-6 C are placed 30 cm apart. Determine the magnitude of the electric field strength at point C if AC = 45 cm and BC = 15 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF045",
+    "type": "type2",
+    "query": "Charges q1 = -10 × 10^-6 C and q2 = -5 × 10^-6 C are located at A and B, separated by 16 cm. Calculate the resultant electric field intensity at point C, where AC = 24 cm and BC = 8 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF046",
+    "type": "type2",
+    "query": "At two points A and B, 24 cm apart in air, charges q1 = -16 × 10^-6 C and q2 = -9 × 10^-6 C are placed. Find point M where the resultant electric field strength is zero. Calculate AM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF047",
+    "type": "type2",
+    "query": "Charges q1 = -25 × 10^-6 C and q2 = -4 × 10^-6 C are located at A and B, separated by 18 cm. Determine the distance AM if M is the point where the net electric field is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF048",
+    "type": "type2",
+    "query": "Two negative charges q1 = -9 × 10^-6 C and q2 = -1 × 10^-6 C are placed 20 cm apart. Find the point M where the resultant electric field vanishes. Calculate AM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF049",
+    "type": "type2",
+    "query": "Charges q1 = -36 × 10^-6 C and q2 = -4 × 10^-6 C are fixed at points A and B, 30 cm apart. Determine the distance from A to the point where the electric field is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF050",
+    "type": "type2",
+    "query": "At two points A and B separated by 15 cm, charges q1 = -12 × 10^-6 C and q2 = -3 × 10^-6 C are placed. Find point M where the resultant electric field is zero and calculate AM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF051",
+    "type": "type2",
+    "query": "Two charges q1 = -16 × 10^-6 C and q2 = -9 × 10^-6 C are located 24 cm apart. Find point M where the net electric field is zero. Calculate BM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF052",
+    "type": "type2",
+    "query": "At points A and B separated by 18 cm, charges q1 = -25 × 10^-6 C and q2 = -4 × 10^-6 C are placed. Determine the distance BM if M is the point where the electric field vanishes.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF053",
+    "type": "type2",
+    "query": "Two negative charges q1 = -9 × 10^-6 C and q2 = -1 × 10^-6 C are placed 20 cm apart. Find the location where the resultant electric field is zero and calculate BM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF054",
+    "type": "type2",
+    "query": "Charges q1 = -36 × 10^-6 C and q2 = -4 × 10^-6 C are fixed at points A and B, separated by 30 cm. Determine the distance from B to the point where the net electric field is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF055",
+    "type": "type2",
+    "query": "At two points A and B, 15 cm apart, charges q1 = -12 × 10^-6 C and q2 = -3 × 10^-6 C are placed. Find point M where the resultant electric field strength is zero. Calculate BM.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF056",
+    "type": "type2",
+    "query": "At two vertices A and B of an equilateral triangle ABC with side length a, charges q1 = q2 = 6 × 10^-9 C are placed. Determine the value of charge q3 at vertex C such that the resultant electric field at the centroid G is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF057",
+    "type": "type2",
+    "query": "Three point charges are placed at the vertices of an equilateral triangle of side length a. Given q1 = q2 = 8 × 10^-9 C at A and B, find q3 at C so that the electric field at the center of the triangle vanishes.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF058",
+    "type": "type2",
+    "query": "At vertices A and B of an equilateral triangle, two equal charges q1 = q2 = 3 × 10^-9 C are fixed. Calculate q3 at vertex C such that the net electric field at the centroid is zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF059",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 5 × 10^-9 C are placed at two vertices of an equilateral triangle. What charge must be placed at the third vertex so that the electric field at the triangle's centroid is zero?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF060",
+    "type": "type2",
+    "query": "In an equilateral triangle of side length a, charges q1 = q2 = 10 × 10^-9 C are located at A and B. Determine q3 at C so that the total electric field at the centroid G equals zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF061",
+    "type": "type2",
+    "query": "A small conducting sphere carries a charge of 2 × 10^-9 C. Calculate the electric field strength at a point located 5 cm from the sphere in air.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF062",
+    "type": "type2",
+    "query": "An isolated charged sphere has charge 8 × 10^-10 C. Determine the electric field intensity at a point 4 cm away from the sphere.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF063",
+    "type": "type2",
+    "query": "A point charge of 5 × 10^-9 C is placed in air. Find the electric field strength at a distance of 6 cm from the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF064",
+    "type": "type2",
+    "query": "A charged sphere carries a charge of 3 × 10^-9 C. Calculate the electric field magnitude at a point 2 cm from its center.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF065",
+    "type": "type2",
+    "query": "A small sphere has charge 7 × 10^-10 C. What is the electric field strength at a point located 8 cm away in air?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF066",
+    "type": "type2",
+    "query": "A point charge q is placed in a homogeneous medium with dielectric constant 3. At a point 0.5 m away, the electric field magnitude is 6 × 10^5 V/m and points toward the charge. Determine the sign and magnitude of q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF067",
+    "type": "type2",
+    "query": "A charge q is embedded in a dielectric medium with relative permittivity 4. At a distance of 0.3 m, the electric field is 8 × 10^5 V/m and directed toward q. Determine the value and sign of q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF068",
+    "type": "type2",
+    "query": "In a dielectric medium with dielectric constant 2, a point charge q creates an electric field of magnitude 5 × 10^5 V/m at a point 0.25 m away. The field vector points toward the charge. Find q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF069",
+    "type": "type2",
+    "query": "A point charge is placed in a medium of dielectric constant 5. At point M, 0.6 m from the charge, the electric field is 4 × 10^5 V/m and directed toward the charge. Determine the sign and magnitude of the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF070",
+    "type": "type2",
+    "query": "A charge q is located in a dielectric with relative permittivity 2.2. At a point 0.45 m away, the electric field magnitude is 1.0 × 10^6 V/m and points toward q. Calculate q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF071",
+    "type": "type2",
+    "query": "An electron enters a uniform electric field of strength 150 V/m with initial speed 400 km/s in the direction of the electric field. Calculate the distance traveled before the electron momentarily comes to rest.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF072",
+    "type": "type2",
+    "query": "An electron moves along the field lines of a uniform electric field E = 80 V/m. Its initial speed is 250 km/s in the same direction as the field. Determine the distance it travels before stopping.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF073",
+    "type": "type2",
+    "query": "A uniform electric field has strength 120 V/m. An electron is projected along the field direction with speed 500 km/s. Calculate the distance traveled before its velocity becomes zero.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF074",
+    "type": "type2",
+    "query": "An electron enters a homogeneous electric field of magnitude 90 V/m with initial velocity 350 km/s directed along the field. Find the stopping distance.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF075",
+    "type": "type2",
+    "query": "An electron travels in a uniform electric field E = 200 V/m. Its initial speed is 600 km/s and is directed along the field vector. Determine the distance traveled before coming to rest.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF076",
+    "type": "type2",
+    "query": "A charge q is placed in a dielectric medium with dielectric constant 3. At point M, 50 cm away, the electric field magnitude is 7 × 10^5 V/m and points toward q. Determine the sign and magnitude of q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF077",
+    "type": "type2",
+    "query": "A point charge is placed in a medium of relative permittivity 2.8. At a distance of 35 cm, the electric field is 1.2 × 10^6 V/m and directed toward the charge. Find the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF078",
+    "type": "type2",
+    "query": "In a dielectric medium with dielectric constant 4.5, a point charge produces an electric field of 3 × 10^5 V/m at a distance of 60 cm. The field points toward the charge. Determine the sign and magnitude of the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF079",
+    "type": "type2",
+    "query": "A charge q is located in a dielectric medium. At a point 45 cm away, the electric field magnitude is 8 × 10^5 V/m and directed toward q. The dielectric constant is 3.5. Find q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF080",
+    "type": "type2",
+    "query": "A point charge is placed in a medium with dielectric constant 2.4. At a distance of 55 cm, the electric field magnitude is 6 × 10^5 V/m and points toward the charge. Determine the value of the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF081",
+    "type": "type2",
+    "query": "A charge q = 2 × 10^-7 C experiences a force of 5 mN in the electric field of a point charge Q. The distance between them is 40 cm in vacuum. Calculate the magnitude of Q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF082",
+    "type": "type2",
+    "query": "A charge of 5 × 10^-8 C is acted upon by a force of 2 mN due to a point charge Q located 25 cm away in vacuum. Determine Q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF083",
+    "type": "type2",
+    "query": "A point charge q = 8 × 10^-8 C experiences an electric force of 4 mN from another point charge Q. If the separation is 20 cm, calculate the magnitude of Q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF084",
+    "type": "type2",
+    "query": "A charge q = 1.5 × 10^-7 C is placed 50 cm from a point charge Q and experiences a force of 6 mN. Determine the magnitude of Q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF085",
+    "type": "type2",
+    "query": "A charge of 3 × 10^-7 C experiences a force of 8 mN due to a point charge Q in vacuum. If the distance between the charges is 60 cm, calculate Q.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF086",
+    "type": "type2",
+    "query": "A thin circular ring of radius R = 4 cm carries a uniformly distributed charge Q = 2 μC. The ring lies in the xy-plane with its center at the origin. Calculate the magnitude of the electric field at point P on the z-axis, located 3 cm from the center.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF087",
+    "type": "type2",
+    "query": "A circular ring of radius 6 cm carries a total charge of 5 μC uniformly distributed along its circumference. Determine the electric field strength at a point on the axis of the ring, 4 cm from its center.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF088",
+    "type": "type2",
+    "query": "A thin charged ring with radius 8 cm has a total charge Q = 4 μC uniformly distributed. Calculate the electric field magnitude at a point on its symmetry axis located 5 cm from the center.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF089",
+    "type": "type2",
+    "query": "A circular non-conducting ring of radius 3 cm carries a charge of 1.5 μC uniformly distributed around the ring. Find the electric field at a point on the axis 2 cm from the center.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF090",
+    "type": "type2",
+    "query": "A thin ring of radius 10 cm is uniformly charged with a total charge of 6 μC. Determine the electric field magnitude at a point located 7 cm from the center along the ring axis.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF091",
+    "type": "type2",
+    "query": "A non-conducting rod of length L = 12 cm carries a uniform linear charge density λ = 4 × 10^-6 C/m. The rod lies along the z-axis from z = 0 to z = L. Calculate the electric field at a point located 8 cm from the origin along the x-axis.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF092",
+    "type": "type2",
+    "query": "A thin charged rod of length 15 cm has a uniform linear charge density λ = 3 × 10^-6 C/m. The rod is placed along the z-axis. Determine the net electric field at a point 5 cm from the origin on the x-axis.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF093",
+    "type": "type2",
+    "query": "A uniformly charged rod of length 8 cm has linear charge density λ = 6 × 10^-6 C/m. It extends along the z-axis from z = 0 to z = 8 cm. Calculate the electric field at a point 4 cm from the origin on the x-axis.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF094",
+    "type": "type2",
+    "query": "A non-conducting rod of length 20 cm carries a uniform charge density λ = 2 × 10^-6 C/m. The rod lies along the z-axis. Find the electric field at a point located 10 cm from the origin on the x-axis.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF095",
+    "type": "type2",
+    "query": "A thin rod of length 14 cm is uniformly charged with λ = 7 × 10^-6 C/m. The rod extends from z = 0 to z = 14 cm. Calculate the net electric field at a point 6 cm from the origin along the x-axis.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF096",
+    "type": "type2",
+    "query": "Two very large parallel insulating plates carry surface charge densities +σ and -σ, respectively. Given σ = 6.50 × 10^-6 C/m², determine the magnitude of the electric field between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF097",
+    "type": "type2",
+    "query": "Two infinite parallel insulating sheets have surface charge densities +σ and -σ. Calculate the electric field between them if σ = 1.20 × 10^-5 C/m².",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF098",
+    "type": "type2",
+    "query": "Two wide parallel plates carry equal and opposite surface charge densities of magnitude σ = 4.40 × 10^-6 C/m². Determine the electric field strength in the region between the plates.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF099",
+    "type": "type2",
+    "query": "A pair of large parallel insulating sheets carry charges with surface densities +σ and -σ, where σ = 9.00 × 10^-6 C/m². Find the electric field magnitude between the sheets.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF100",
+    "type": "type2",
+    "query": "Two oppositely charged insulating planes have surface charge density magnitude σ = 7.80 × 10^-6 C/m². Calculate the electric field between them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF101",
+    "type": "type2",
+    "query": "Two large parallel insulating sheets carry identical positive surface charge densities σ = 8.00 × 10^-6 C/m². Determine the magnitude of the electric field at a point midway between the sheets.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF102",
+    "type": "type2",
+    "query": "Two wide parallel sheets each have surface charge density σ = 5.50 × 10^-6 C/m². Calculate the electric field magnitude between the sheets.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF103",
+    "type": "type2",
+    "query": "Two infinite insulating planes carry the same positive surface charge density σ = 1.00 × 10^-5 C/m². Determine the electric field strength at a point located between them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF104",
+    "type": "type2",
+    "query": "Two parallel insulating sheets possess identical charge densities σ = 6.00 × 10^-6 C/m². What is the electric field magnitude at a point equidistant from both sheets?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF105",
+    "type": "type2",
+    "query": "Two large parallel sheets have equal positive surface charge densities of σ = 9.50 × 10^-6 C/m². Find the electric field at a point between them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF106",
+    "type": "type2",
+    "query": "The electric field between two vertical oppositely charged plates is 3600 V/m. A dust particle carrying charge q = 3 × 10^-10 C is suspended in equilibrium by a thread that makes an angle of 20° with the vertical. Determine the mass of the particle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF107",
+    "type": "type2",
+    "query": "A charged dust particle with charge 5 × 10^-10 C is in equilibrium between two vertical plates producing a uniform electric field of 5200 V/m. If the suspension thread forms an angle of 25° with the vertical, calculate the particle's mass.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF108",
+    "type": "type2",
+    "query": "Between two oppositely charged vertical plates, the electric field strength is 4200 V/m. A particle carrying charge 2 × 10^-10 C hangs in equilibrium with its thread inclined 35° from the vertical. Determine the particle's mass.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF109",
+    "type": "type2",
+    "query": "A dust particle of charge 6 × 10^-10 C is suspended between two vertical plates creating a uniform electric field of 6000 V/m. The thread holding the particle makes an angle of 40° with the vertical. Find the mass of the particle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF110",
+    "type": "type2",
+    "query": "An electric field of magnitude 4500 V/m exists between two vertical parallel plates. A particle carrying charge 4 × 10^-10 C remains in equilibrium while its supporting thread forms a 30° angle with the vertical. Calculate the mass of the particle.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF111",
+    "type": "type2",
+    "query": "At a certain point in air, the electric field strength due to a point charge is 6000 V/m. The entire region is then filled with a dielectric material of dielectric constant 3. Determine the new electric field strength at that point.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF112",
+    "type": "type2",
+    "query": "A point in air experiences an electric field of 5000 V/m due to a fixed charge. If the charge and the observation point are immersed in a dielectric with relative permittivity 2.5, calculate the electric field strength at that point.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF113",
+    "type": "type2",
+    "query": "The electric field at a point in vacuum is 7200 V/m. A dielectric medium with dielectric constant 4 is introduced around the charge and the point. What is the new electric field magnitude?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF114",
+    "type": "type2",
+    "query": "An electric field of magnitude 3600 V/m exists at a point in air. The region is completely filled with a dielectric material of dielectric constant 1.8. Determine the resulting electric field strength.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF115",
+    "type": "type2",
+    "query": "At a fixed distance from a point charge, the electric field strength in air is 8400 V/m. If a dielectric with relative permittivity 6 surrounds the system, calculate the electric field at that point.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF116",
+    "type": "type2",
+    "query": "Determine the magnitude of the electric field produced by a charge Q = 8 × 10^-9 C at a point located 12 cm away in vacuum.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF117",
+    "type": "type2",
+    "query": "Calculate the electric field strength due to a point charge Q = 3 × 10^-9 C at a distance of 5 cm in vacuum.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF118",
+    "type": "type2",
+    "query": "A charge of 1.2 × 10^-8 C is placed in vacuum. Find the electric field magnitude at a point 20 cm from the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF119",
+    "type": "type2",
+    "query": "What is the electric field strength at a point 8 cm away from a point charge Q = 7 × 10^-9 C in vacuum?",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF120",
+    "type": "type2",
+    "query": "A point charge Q = 9 × 10^-9 C is located in vacuum. Calculate the electric field at a distance of 15 cm from the charge.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF121",
+    "type": "type2",
+    "query": "Two identical charges q = 3.0 × 10^-9 C are placed at points A and B, 8 cm apart in air. Determine the electric field strength at the midpoint of AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF122",
+    "type": "type2",
+    "query": "Two equal point charges q = 1.5 × 10^-9 C are fixed 10 cm apart. Calculate the electric field magnitude at the midpoint between them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF123",
+    "type": "type2",
+    "query": "Two identical charges of 4 × 10^-9 C are located 12 cm apart. Find the electric field strength at the midpoint of the segment joining the charges.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF124",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 2.5 × 10^-9 C are placed 14 cm apart. Determine the electric field intensity at the midpoint between them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF125",
+    "type": "type2",
+    "query": "Two identical positive charges q = 5 × 10^-9 C are separated by 6 cm. Calculate the electric field magnitude at the midpoint of AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF126",
+    "type": "type2",
+    "query": "Two charges q1 = +5 × 10^-9 C and q2 = -5 × 10^-9 C are separated by 6 cm. Point M lies on the perpendicular bisector of AB, 4 cm from the midpoint. Calculate the electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF127",
+    "type": "type2",
+    "query": "Charges q1 = +2 × 10^-9 C and q2 = -2 × 10^-9 C are placed 8 cm apart. Determine the electric field magnitude at a point on the perpendicular bisector located 6 cm from the midpoint of AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF128",
+    "type": "type2",
+    "query": "Two opposite charges q1 = +8 × 10^-9 C and q2 = -8 × 10^-9 C are separated by 10 cm. Point M is on the perpendicular bisector and 12 cm from the midpoint. Find the electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF129",
+    "type": "type2",
+    "query": "Charges +6 × 10^-9 C and -6 × 10^-9 C are located 4 cm apart. Calculate the electric field at a point on the perpendicular bisector 3 cm from the midpoint.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF130",
+    "type": "type2",
+    "query": "Two point charges q1 = +4 × 10^-9 C and q2 = -4 × 10^-9 C are separated by 12 cm. Determine the electric field magnitude at a point on the perpendicular bisector, 5 cm from the midpoint.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF131",
+    "type": "type2",
+    "query": "Charges q1 = +6 × 10^-9 C and q2 = -6 × 10^-9 C are placed at A and B, separated by 4 cm. Calculate the electric field magnitude at point M if MA = 2 cm and MB = 6 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF132",
+    "type": "type2",
+    "query": "Two charges q1 = +3 × 10^-9 C and q2 = -3 × 10^-9 C are located 6 cm apart. Determine the electric field strength at a point M on line AB where MA = 1 cm and MB = 5 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF133",
+    "type": "type2",
+    "query": "Charges q1 = +8 × 10^-9 C and q2 = -8 × 10^-9 C are fixed 10 cm apart. Calculate the electric field at point M if MA = 2 cm and MB = 8 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF134",
+    "type": "type2",
+    "query": "Two opposite charges of magnitude 5 × 10^-9 C are placed 8 cm apart. Find the electric field strength at point M where MA = 1 cm and MB = 7 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF135",
+    "type": "type2",
+    "query": "Charges q1 = +7 × 10^-9 C and q2 = -7 × 10^-9 C are separated by 12 cm. Determine the electric field magnitude at point M if MA = 3 cm and MB = 9 cm.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF136",
+    "type": "type2",
+    "query": "Two identical charges q1 = q2 = 8 × 10^-9 C are placed 12 cm apart. Calculate the electric field strength at the midpoint between them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF137",
+    "type": "type2",
+    "query": "Two equal positive charges of 3 × 10^-8 C are fixed at points A and B, separated by 10 cm. Determine the electric field magnitude at the midpoint of AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF138",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 1 × 10^-8 C are located 6 cm apart. Find the electric field strength at the midpoint between the charges.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF139",
+    "type": "type2",
+    "query": "Two identical charges of 5 × 10^-8 C are placed 14 cm apart. Calculate the electric field intensity at the midpoint of the segment connecting them.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF140",
+    "type": "type2",
+    "query": "Two equal positive point charges q = 4 × 10^-8 C are fixed 16 cm apart. Determine the electric field magnitude at the midpoint.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF141",
+    "type": "type2",
+    "query": "Two charges q1 = +3 × 10^-8 C and q2 = +3 × 10^-8 C are separated by 10 cm. Point M lies on the perpendicular bisector of AB and is 8 cm from AB. Calculate the electric field strength at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF142",
+    "type": "type2",
+    "query": "Two equal positive charges q1 = q2 = 5 × 10^-8 C are placed 12 cm apart. Determine the electric field magnitude at a point on the perpendicular bisector located 9 cm from AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF143",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 2 × 10^-8 C are fixed at points A and B, separated by 6 cm. Point M is located on the perpendicular bisector, 4 cm from AB. Find the electric field at M.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF144",
+    "type": "type2",
+    "query": "Two identical positive charges of 6 × 10^-8 C are separated by 20 cm. Calculate the electric field strength at a point on the perpendicular bisector 15 cm from AB.",
+    "premises": [],
+    "options": []
+  },
+  {
+    "query_id": "EF1450",
+    "type": "type2",
+    "query": "Charges q1 = q2 = 4 × 10^-8 C are placed 8 cm apart. Determine the electric field magnitude at a point located on the perpendicular bisector and 3 cm from AB.",
+    "premises": [],
+    "options": []
+  }
+]

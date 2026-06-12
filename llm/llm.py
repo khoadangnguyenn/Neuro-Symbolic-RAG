@@ -82,9 +82,23 @@ class OpenAICompatibleLLM:
         user_prompt: str,
         temperature: float = 0.0,
         max_tokens: int = 8192,
+        json_schema: Optional[dict] = None,
     ) -> Optional[Dict[str, Any]]:
         if not self.enabled:
             return None
+
+        # Build response_format based on whether a schema is provided
+        if json_schema:
+            response_format = {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "structured_output",
+                    "strict": True,
+                    "schema": json_schema,
+                }
+            }
+        else:
+            response_format = {"type": "json_object"}
 
         payload = {
             "model": self.model,
@@ -94,7 +108,7 @@ class OpenAICompatibleLLM:
             ],
             "temperature": temperature,
             "max_tokens": max_tokens,
-            "response_format": {"type": "json_object"}
+            "response_format": response_format,
         }
         data = json.dumps(payload).encode("utf-8")
         request = urllib.request.Request(

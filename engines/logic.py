@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Dict, List, Optional, Sequence
 import math
 import re
+import json
 
 from exact_pipeline.core.data import logic_document
 from exact_pipeline.engines.executors import ExecutionResult, Z3Executor
@@ -127,6 +128,14 @@ def split_into_elastic_batches(premises: list[str], base_threshold: int, upper_t
         
     return batches
 
+def classify_logic_query_type(options: list[str]) -> str:
+    YES_NO_UNCERTAIN_SET = {"Yes", "No", "Uncertain"}
+    if set(options).issubset(YES_NO_UNCERTAIN_SET):
+        return "yes_no_uncertain"
+    if options:
+        return "multiple_choice"
+    return "open_ended"
+
 
 class LogicPipeline:
     def __init__(
@@ -215,7 +224,17 @@ class LogicPipeline:
         # Bypassing early-return here to avoid "Context Domination" 
         # (different questions sharing the same premises have near-identical vectors).
         query_text = "\n".join([*premises_nl, question])
-        orchestration_data = self._orchestrate_query(question)
+        options = _ensure_list(first_present(payload, ["options", "choices"], []))
+        if not options:
+            import re
+            # Try to extract options from question text (e.g., A. ..., B. ...)
+            matches = re.findall(r"(?:^|\n)([A-Z]\.)\s+", question)
+            if len(matches) >= 2:
+                options = matches
+
+        query_type = classify_logic_query_type(options)
+        
+        orchestration_data = self._orchestrate_query(question, query_type)
         complexity = orchestration_data.get("complexity_score", 3)
         vector_k = max(5, int(complexity * 10))
         rerank_k = max(2, int(complexity * 2))
@@ -271,9 +290,24 @@ class LogicPipeline:
             if matched_fol:
                 premises_fol = list(matched_fol)
             else:
-                premises_fol = list(premises_nl)
+                premises_fol = []
 
-        llm_result = self._answer_with_llm(question, premises_nl, premises_fol, hits)
+        raw_intent = orchestration_data.get("intent", "open_analysis")
+        intent = str(raw_intent).strip().lower()
+        valid_intents = {"verify_true", "verify_false", "choose_true", "choose_false", "choose_strongest_conclusion", "choose_fewest_premises", "path_finding", "open_analysis"}
+        if intent not in valid_intents:
+            intent = "open_analysis"
+
+        is_comparative = intent in ["path_finding", "choose_strongest_conclusion", "choose_fewest_premises"]
+
+        if intent != "path_finding":
+            llm_result = self._answer_with_symbolic_logic(question, premises_nl, premises_fol, hits, orchestration_data)
+        else:
+            llm_result = None
+
+        if llm_result is None:
+            llm_result = self._answer_with_llm(question, premises_nl, premises_fol, hits, is_comparative=is_comparative)
+            
         if llm_result is not None:
             if llm_result.metadata.get("executor") == "z3" and not llm_result.metadata.get("execution_errors"):
                 # Feedback loop if successful
@@ -298,56 +332,172 @@ class LogicPipeline:
             metadata={"route_info": route_info}
         )
 
-    def _translate_nl_to_fol(self, premises_nl: List[str]) -> List[str]:
+    def _translate_nl_to_fol_chunked(
+        self, 
+        premises_nl: List[str], 
+        question: str = "",
+        global_glossary: dict = None,
+        pre_translated_context: dict = None
+    ) -> List[str]:
+        """Translate NL premises to FOL using chunked sentence-by-sentence approach."""
         if not self.llm.enabled:
             return []
+        
+        CHUNK_SIZE = 3
+        
+        system_prompt = (
+            "You are a strict First-Order Logic (FOL) translator. Translate each premise into exactly one FOL formula.\n"
+            f"Target Question/Options for context:\n{question}\n\n"
+            "STRICT SYNTAX RULES:\n"
+            "1. ONLY use standard logical connectives: ∀, ∃, ¬, ∧, ∨, →, ↔. NEVER use English words like 'if', 'then', 'implies', 'and'.\n"
+            "2. EVERY predicate MUST have a variable argument: P(x), NOT bare P.\n"
+            "3. EVERY formula MUST be wrapped in an explicit quantifier: ∀x(...) or ∃x(...).\n"
+            "4. 'If A then B' must be translated as ∀x(A(x) → B(x)).\n"
+            "5. Do NOT invent numbered predicates like l1, l2, l3.\n\n"
+        )
+        
+        if global_glossary:
+            system_prompt += "GLOBAL GLOSSARY (PRIORITIZE THESE):\n"
+            for k, v in global_glossary.items():
+                system_prompt += f"- Use predicate '{k}' if the premise relates to '{v}' (e.g., {k}(x))\n"
+        else:
+            system_prompt += "3. Use descriptive snake_case(x) (e.g., has_camera(x)).\n"
             
-        # Lower thresholds to create more batches for parallel processing
-        batches = split_into_elastic_batches(premises_nl, base_threshold=300, upper_threshold=400)
+        if pre_translated_context:
+            system_prompt += "\nEXISTING TRANSLATIONS (REUSE THESE PREDICATES FOR CONSISTENCY):\n"
+            # Limit to 15 to avoid context bloat if there are many
+            for idx, (en, fol) in enumerate(pre_translated_context.items()):
+                if idx >= 15: break
+                system_prompt += f"- \"{en}\" -> {fol}\n"
+
+            
+        system_prompt += (
+            '\nReturn a JSON object: {"premises_fol": ["formula1", "formula2", ...]}\n'
+            "Output ONLY valid JSON. No explanations."
+        )
+        
+        chunk_schema = {
+            "type": "object",
+            "properties": {
+                "premises_fol": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                }
+            },
+            "required": ["premises_fol"],
+            "additionalProperties": False,
+        }
+        
         all_fol = []
+        prev_last_premise = ""
+        prev_last_fol = ""
         
-        from concurrent.futures import ThreadPoolExecutor, as_completed
-        
-        def _process_batch(batch: str) -> List[str]:
-            batch_sentences = [s.strip() for s in batch.split(".") if s.strip()]
-            user_prompt = get_user_prompt(format_premises_for_prompt(batch_sentences))
+        for i in range(0, len(premises_nl), CHUNK_SIZE):
+            chunk = premises_nl[i:i+CHUNK_SIZE]
+            
+            lines = []
+            for j, p in enumerate(chunk):
+                lines.append(f"P{i + j + 1}: {p}")
+            current_chunk_str = "\n".join(lines)
+            
+            if prev_last_premise and prev_last_fol and i > 0:
+                user_prompt = (
+                    f"<previous_context>\nNL: {prev_last_premise}\nFOL: {prev_last_fol}\n</previous_context>\n\n"
+                    f"<current_premises>\n{current_chunk_str}\n</current_premises>"
+                )
+            else:
+                user_prompt = f"<current_premises>\n{current_chunk_str}\n</current_premises>"
+            
             try:
                 raw = self.llm.chat_json(
-                    system_prompt=TRANSLATION_SYSTEM_PROMPT,
+                    system_prompt=system_prompt,
                     user_prompt=user_prompt,
-                    temperature=0.2,
-                    max_tokens=4096
+                    temperature=0.0,
+                    max_tokens=512,
+                    json_schema=chunk_schema,
                 )
                 if raw and "premises_fol" in raw:
-                    return raw["premises_fol"]
+                    fol_list = raw["premises_fol"]
+                    # Take only as many FOL as premises in this chunk (ignore context line)
+                    fol_list = fol_list[:len(chunk)]
+                    # Auto-balance missing closing parentheses (common artifact)
+                    cleaned_list = []
+                    for f in fol_list:
+                        open_c = f.count('(')
+                        close_c = f.count(')')
+                        if open_c > close_c:
+                            f = f + ')' * (open_c - close_c)
+                        cleaned_list.append(f)
+                    all_fol.extend(cleaned_list)
+                    prev_last_fol = cleaned_list[-1] if cleaned_list else ""
+                else:
+                    # Fallback: mark these premises as untranslated
+                    all_fol.extend([f"/* UNTRANSLATED: {p} */" for p in chunk])
+                    prev_last_fol = ""
             except Exception as exc:
-                print(f"[EXACT] FOL translation error: {exc}", flush=True)
-            return []
-            
-        with ThreadPoolExecutor(max_workers=4) as executor:
-            futures = [executor.submit(_process_batch, batch) for batch in batches]
-            for future in as_completed(futures):
-                all_fol.extend(future.result())
+                print(f"[EXACT] Chunk FOL translation error (chunk {i}): {exc}", flush=True)
+                all_fol.extend([f"/* ERROR: {p} */" for p in chunk])
+                prev_last_fol = ""
                 
+            prev_last_premise = chunk[-1] if chunk else ""
+        
         return all_fol
 
-    def _orchestrate_query(self, question: str) -> dict:
+    def _orchestrate_query(self, question: str, query_type: str = "open_ended") -> dict:
         fallback = {
             "exact_entities": [],
             "semantic_anchors": [question],
             "complexity_score": 3,
-            "is_solvable": True
+            "is_solvable": True,
+            "intent": "open_analysis",
+            "condition": "",
+            "target": "",
+            "query_type": query_type
         }
         if not self.expansion_llm.enabled:
             return fallback
             
-        system_prompt = (
-            "You are an orchestration AI. Read the problem and return ONLY a valid JSON object with the following schema:\n"
-            "- `exact_entities`: List[str] (Key names, named entities, named variables)\n"
-            "- `semantic_anchors`: List[str] (1-2 sentences of HyDE contextual assumptions)\n"
-            "- `complexity_score`: int (1-5, where 1 is a simple lookup, 5 is a complex multi-step logical deduction)\n"
-            "- `is_solvable`: bool (False if it's completely nonsensical or missing required premises)"
-        )
+        system_prompt = f"""You are an orchestration AI. Read the problem and return ONLY a valid JSON object with the following schema:
+- `exact_entities`: List[str] (Key names, named entities, named variables)
+- `semantic_anchors`: List[str] (1-2 sentences of HyDE contextual assumptions)
+- `complexity_score`: int (1-5, where 1 is a simple lookup, 5 is a complex multi-step logical deduction)
+- `is_solvable`: bool (False if it's completely nonsensical or missing required premises)
+- `intent`: str. EXACTLY ONE of: 'verify_true', 'verify_false', 'choose_true', 'choose_false', 'choose_strongest_conclusion', 'choose_fewest_premises', 'path_finding', 'open_analysis'.
+- `condition`: str. The condition, fact, or rule being assumed before evaluating the main statement, or "" if not explicitly stated.
+- `target`: str. Main statement or conclusion being evaluated, or "". It is not the general question, e.g: "Which is the correct conclusion?", return "".
+
+# RULES
+- Do NOT change the original query.
+- Remove fillers like "does it follow that", "according to the premises".
+- The user query type is: {query_type}. If 'yes_no_uncertain', intent is usually verify_true. If 'multiple_choice', pick the choose_* intent. If 'open_ended', pick path_finding or open_analysis.
+
+----------------
+Examples:
+
+Input: Does it follow that if all Python projects are well-structured, then all Python projects are optimized, according to the premises?
+Output:
+{{
+  "exact_entities": ["Python projects"],
+  "semantic_anchors": ["Python projects are well-structured", "Python projects are optimized"],
+  "complexity_score": 2,
+  "is_solvable": true,
+  "intent": "verify_true",
+  "condition": "all Python projects are well-structured",
+  "target": "all Python projects are optimized"
+}}
+
+Input: Based on the premises, which statement is most strongly supported?
+Output:
+{{
+  "exact_entities": [],
+  "semantic_anchors": ["Find the strongest conclusion"],
+  "complexity_score": 3,
+  "is_solvable": true,
+  "intent": "choose_strongest_conclusion",
+  "condition": "",
+  "target": ""
+}}
+"""
         try:
             raw = self.expansion_llm.chat_json(
                 system_prompt=system_prompt, 
@@ -356,10 +506,12 @@ class LogicPipeline:
                 max_tokens=200
             )
             if raw:
-                # If we get a response, it might already be parsed by our robust parse_llm_response,
-                # or it might be raw dict. We just use it directly.
-                print(f"\n🚀 [GEMMA 1B ORCHESTRATION] {json.dumps(raw, ensure_ascii=False)}\n", flush=True)
-                return raw
+                raw["query_type"] = query_type
+                if isinstance(raw, list) and len(raw) > 0:
+                    raw = raw[0]
+                if isinstance(raw, dict):
+                    print(f"\n🚀 [GEMMA 1B ORCHESTRATION] {json.dumps(raw, ensure_ascii=False)}\n", flush=True)
+                    return raw
         except Exception as e:
             print(f"[EXACT] Query orchestration failed: {e}", flush=True)
             
@@ -436,12 +588,290 @@ else:
             metadata=metadata,
         )
 
+    def _answer_with_symbolic_logic(
+        self,
+        question: str,
+        premises_nl: Sequence[str],
+        premises_fol: Sequence[str],
+        hits: Sequence[SearchHit[LogicExample]],
+        orchestration_data: dict,
+    ) -> Optional[PipelineResult]:
+        if not self.llm.enabled:
+            return None
+
+        semantics = {
+            "query_type": orchestration_data.get("query_type", "open_ended"),
+            "intent": orchestration_data.get("intent", "open_analysis"),
+            "condition": orchestration_data.get("condition", ""),
+            "target": orchestration_data.get("target", "")
+        }
+
+        # Extract Options FOL from question text (simple inline regex)
+        options_fol_extracted = []
+        opt_regex = r'(?:^|\n)\s*[A-Z][.)\s]+(.+?)(?=\n\s*[A-Z][.)\s]|\Z)'
+        opt_matches = re.findall(opt_regex, question, re.DOTALL)
+        for m in opt_matches:
+            clean = m.strip()
+            if clean:
+                options_fol_extracted.append(clean)
+                
+        # Clean question for translator (strip options dynamically to avoid hallucination)
+        clean_question = re.sub(opt_regex, '', question, flags=re.DOTALL).strip()
+                
+        # 1. DYNAMIC PREDICATE STANDARDIZER (GLOBAL GLOSSARY)
+        global_glossary = {}
+        if semantics.get("query_type") == "multiple_choice" and options_fol_extracted and self.llm.enabled:
+            print("\n🔍 [GLOSSARY] Extracting Global Glossary from Options...", flush=True)
+            schema = {
+                "type": "object",
+                "properties": {
+                    "glossary": {
+                        "type": "object",
+                        "additionalProperties": {"type": "string"}
+                    }
+                },
+                "required": ["glossary"],
+                "additionalProperties": False
+            }
+            all_premises = "\n".join(premises_nl)
+            opts = "\n".join(options_fol_extracted)
+            prompt = (
+                f"Question options use these logical formulas:\n{opts}\n"
+                f"Context premises:\n{all_premises}\n\n"
+                "Extract a JSON glossary mapping the single-letter predicates (like G, S, C) "
+                "to their core English keyword meaning (like 'gps navigation', 'camera').\n"
+                "HINT: The single letter almost always corresponds to the first letter of the core English noun (e.g. G -> gps, C -> camera, O -> obstacle).\n"
+                "CRITICAL: Each letter MUST map to a mathematically UNIQUE keyword phrase. NEVER map two different letters to the same meaning."
+            )
+            try:
+                res = self.llm.chat_json(
+                    system_prompt="You are a logic glossary builder. Output ONLY valid JSON.",
+                    user_prompt=prompt,
+                    temperature=0.0,
+                    max_tokens=256,
+                    json_schema=schema
+                )
+                if res and "glossary" in res:
+                    global_glossary = res["glossary"]
+                    print(f"   => {global_glossary}")
+            except Exception as e:
+                print(f"   => Failed to extract glossary: {e}")
+
+        # 2. CHUNKED TRANSLATION
+        if premises_fol is None:
+            premises_fol = []
+        needs_translation = not premises_fol or any("[NEEDS TRANSLATION]" in f for f in premises_fol)
+        effective_fol = list(premises_fol)
+        
+        if needs_translation:
+            if premises_fol and any("[NEEDS TRANSLATION]" in f for f in premises_fol):
+                print(f"\n📝 [PARTIAL TRANSLATION] Found cached FOL. Translating missing premises...", flush=True)
+                missing_indices = []
+                missing_nl = []
+                pre_translated_context = {}
+                for i, p in enumerate(premises_fol):
+                    if "[NEEDS TRANSLATION]" in p:
+                        missing_indices.append(i)
+                        missing_nl.append(p.replace("[NEEDS TRANSLATION]", "").strip())
+                    elif "[PRE-TRANSLATED FOL]" in p:
+                        fol_str = p.replace("[PRE-TRANSLATED FOL]", "").strip()
+                        if i < len(premises_nl):
+                            pre_translated_context[premises_nl[i]] = fol_str
+                
+                translated_missing = self._translate_nl_to_fol_chunked(
+                    missing_nl, clean_question, global_glossary, pre_translated_context
+                )
+                
+                for i, idx in enumerate(missing_indices):
+                    if i < len(translated_missing):
+                        effective_fol[idx] = translated_missing[i]
+                    else:
+                        effective_fol[idx] = "/* ERROR: Missing translation */"
+                        
+                for i in range(len(effective_fol)):
+                    if "[PRE-TRANSLATED FOL]" in effective_fol[i]:
+                        effective_fol[i] = effective_fol[i].replace("[PRE-TRANSLATED FOL]", "").strip()
+            else:
+                print(f"\n📝 [CHUNKED TRANSLATION] Starting for {len(premises_nl)} premises...", flush=True)
+                effective_fol = self._translate_nl_to_fol_chunked(list(premises_nl), clean_question, global_glossary)
+            
+            print(f"📝 [CHUNKED TRANSLATION] Got {len(effective_fol)} FOL formulas", flush=True)
+            for idx, fol in enumerate(effective_fol):
+                print(f"   P{idx+1}: {fol}", flush=True)
+        else:
+            # If purely pre-translated with tags, strip them
+            for i in range(len(effective_fol)):
+                if "[PRE-TRANSLATED FOL]" in effective_fol[i]:
+                    effective_fol[i] = effective_fol[i].replace("[PRE-TRANSLATED FOL]", "").strip()
+
+        # Collect unique predicates from the translated FOL
+        # 3. POST-PROCESSING (Z3 PROTECTION)
+        if needs_translation and global_glossary:
+            print(f"\n🛡️ [POST-PROCESSING] Enforcing Predicate Standards...", flush=True)
+            std_fol = []
+            for fol in effective_fol:
+                # Extract all raw predicates (word followed by open paren)
+                preds = set(re.findall(r'\b([A-Za-z_][A-Za-z0-9_]*)\s*\(', fol))
+                new_fol = fol
+                for p in preds:
+                    if p in ['x', 'y', 'z', '∀', '∃']: continue
+                    if p in global_glossary: continue # already perfect
+                    
+                    p_lower = p.lower().replace('_', ' ')
+                    for target_k, target_v in global_glossary.items():
+                        v_lower = target_v.lower()
+                        # If the predicate contains a core word from the glossary value (>3 chars)
+                        if any(word in p_lower for word in v_lower.split() if len(word) > 3) or p_lower in v_lower:
+                            # Replace EXACT predicate name `p(` with `target_k(`
+                            new_fol = re.sub(r'\b' + re.escape(p) + r'\s*\(', f"{target_k}(", new_fol)
+                            break
+                std_fol.append(new_fol)
+            effective_fol = std_fol
+            
+            for idx, fol in enumerate(effective_fol):
+                print(f"   [Cleaned] P{idx+1}: {fol}", flush=True)
+
+        # 4. PREPARE SOLVER PAYLOAD
+        print("\n" + "-"*60)
+        print("⚙️ STEP 4: Z3 SYMBOLIC SOLVER (with Retry Loop)")
+        print("-"*60)
+        
+        all_preds = set()
+        for fol_str in effective_fol:
+            found = re.findall(r'\b([A-Za-z_][A-Za-z_0-9]*)\s*\(', fol_str)
+            all_preds.update(found)
+        # Remove common non-predicates
+        all_preds -= {'x', 'y', 'z'}
+        
+        print(f"🔧 [AUTO-DETECTED PREDICATES] {sorted(all_preds)}", flush=True)
+        print(f"🔧 [OPTIONS FOL] {options_fol_extracted}", flush=True)
+
+        # Build translation dict for the Symbolic Solver
+        translation = {
+            "predicates": [f"{p}(x)" for p in sorted(all_preds)],
+            "functions": [],
+            "premises_fol": effective_fol,
+            "condition_fol": semantics.get("condition", ""),
+            "target_fol": semantics.get("target", ""),
+            "options_fol": options_fol_extracted,
+        }
+
+        from exact_pipeline.engines.symbolic_solver import run_symbolic_solver
+        
+        errors: List[str] = []
+        for attempt in range(self.max_retries + 1):
+            if attempt > 0 and errors:
+                # On retry, try full single-shot translation via LOGIC_SYMBOLIC_TEMPLATE
+                print(f"\n🔄 [RETRY {attempt}] Re-translating with full context...", flush=True)
+                from exact_pipeline.llm.templates import LOGIC_SYMBOLIC_TEMPLATE
+                sys_prompt = LOGIC_SYMBOLIC_TEMPLATE.render(
+                    question=clean_question, 
+                    premises=list(premises_nl), 
+                    premises_fol=effective_fol,
+                    semantics=semantics
+                )
+                user_prompt = (
+                    "Translate the question and extract semantics as JSON.\n"
+                    f"Previous solver error:\n{errors[-1]}\nPlease fix your FOL syntax."
+                )
+                
+                retry_schema = {
+                    "type": "object",
+                    "properties": {
+                        "translation": {
+                            "type": "object",
+                            "properties": {
+                                "predicates": {"type": "array", "items": {"type": "string"}},
+                                "functions": {"type": "array", "items": {"type": "string"}},
+                                "premises_fol": {"type": "array", "items": {"type": "string"}},
+                                "condition_fol": {"type": "string"},
+                                "target_fol": {"type": "string"},
+                                "options_fol": {"type": "array", "items": {"type": "string"}}
+                            },
+                            "required": ["predicates", "premises_fol", "condition_fol", "target_fol", "options_fol"],
+                            "additionalProperties": False
+                        }
+                    },
+                    "required": ["translation"],
+                    "additionalProperties": False
+                }
+                
+                try:
+                    raw = self.llm.chat_json(
+                        system_prompt=sys_prompt, 
+                        user_prompt=user_prompt, 
+                        temperature=0.2, 
+                        max_tokens=2048,
+                        json_schema=retry_schema
+                    )
+                    if raw and "translation" in raw:
+                        translation = raw["translation"]
+                except LLMError as exc:
+                    print(f"[EXACT] LLM symbolic retry error: {exc}", flush=True)
+
+            # Execute Symbolic Solver
+            solver_res = run_symbolic_solver(semantics, translation)
+            
+            verdict = solver_res.get("verdict", "Error")
+            if verdict == "Error":
+                errors.append(solver_res.get("explanation", "Unknown parsing error"))
+                print(f"[EXACT] Symbolic solver error (attempt {attempt+1}): {errors[-1]}", flush=True)
+                continue
+
+            if verdict == "Uncertain":
+                errors.append(solver_res.get("explanation", "Uncertain result"))
+                print(f"[EXACT] Symbolic solver uncertain (attempt {attempt+1}): {errors[-1]}", flush=True)
+                continue
+
+            cot = [
+                f"Chunked FOL Translation ({len(effective_fol)} premises)",
+                f"Auto-detected predicates: {sorted(all_preds)}",
+                f"Solver Explanation: {solver_res.get('explanation')}",
+            ]
+            
+            # Map solver tracking strings (e.g. "P1", "P2") back to 0-based indices
+            used_indices = []
+            for p in solver_res.get("premises_used", []):
+                if isinstance(p, str) and p.startswith("P"):
+                    try:
+                        used_indices.append(int(p[1:]) - 1)
+                    except ValueError:
+                        pass
+            
+            # Remove any out-of-bounds indices
+            used_indices = sorted(list(set([i for i in used_indices if 0 <= i < len(premises_nl)])))
+
+            final_answer = verdict if semantics.get("query_type") == "yes_no_uncertain" else str(solver_res.get("best_option", verdict))
+            
+            if used_indices:
+                used_str = "\n".join([f"- {premises_nl[i]}" for i in used_indices])
+                explanation = f"The conclusion {final_answer} is proven to be logically and mathematically valid based on the following premises:\n{used_str}"
+            else:
+                explanation = solver_res.get("explanation", "")
+
+            return PipelineResult(
+                answer=final_answer,
+                unit="",
+                explanation=explanation,
+                cot=cot,
+                premises=list(premises_nl),
+                premises_used=used_indices,
+                fol="\n".join(translation.get("premises_fol", [])),
+                confidence=0.9,
+                query_type="type1",
+                source="symbolic-solver",
+                metadata={"executor": "z3_symbolic", "semantics": semantics}
+            )
+
+        return None
+
     def _answer_with_llm(
         self,
         question: str,
         premises_nl: Sequence[str],
         premises_fol: Sequence[str],
         hits: Sequence[SearchHit[LogicExample]],
+        is_comparative: bool = False,
     ) -> Optional[PipelineResult]:
         if not self.llm.enabled:
             return None
@@ -449,22 +879,7 @@ else:
         examples_text = render_hits(hits, logic_document)
         
         from exact_pipeline.llm.templates import LOGIC_NETWORKX_TEMPLATE, LOGIC_TEMPLATE
-        q_lower = question.lower()
-        
-        # Strict structural intent matching. 
-        # This prevents Decoy phrases in Yes/No questions or multi-clause Boolean questions from triggering NetworkX.
-        strict_patterns = [
-            r"\b(what|which)( of the following)? is the( absolute)?( logical)? strongest( possible)? conclusion\b",
-            r"\b(what|which)( of the following)? conclusion is (the )?strongest\b",
-            r"\bfind the fewest (premises|steps)\b",
-            r"\bwhat requires the fewest (premises|steps)\b",
-            r"\bwith the minimum (number of )?(premises|steps)\b",
-            r"\b(what|which) is the most direct( path| inference)?\b",
-            r"\b(what|which) is the (longest|shortest) (chain|path)\b",
-            r"\bfind the (longest|shortest) (chain|path)\b"
-        ]
-        
-        is_comparative = any(re.search(pattern, q_lower) for pattern in strict_patterns)
+
 
         # If FOL is available, exclusively use it to avoid attention distraction.
         # Fallback to NL only if FOL is missing or empty.
@@ -548,11 +963,13 @@ else:
         }
         return PipelineResult(
             answer=executed.answer or str(raw.get("answer", "Uncertain")),
+            unit="",
             explanation=executed.explanation
             or str(raw.get("explanation", ""))
             or "The generated verifier answered using the supplied logical premises.",
             cot=cot,
             premises=premises,
+            premises_used=raw.get("premises_used", []),
             fol=fol,
             confidence=float(raw.get("confidence", 0.68) or 0.68),
             query_type="type1",

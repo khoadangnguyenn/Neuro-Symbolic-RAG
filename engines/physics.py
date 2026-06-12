@@ -92,10 +92,12 @@ class PhysicsPipeline:
         if not question:
             return PipelineResult(
                 answer="Uncertain",
+                unit="",
                 explanation="The request did not include a physics question.",
                 confidence=0.0,
                 query_type="type2",
                 source="validation",
+                premises_used=[]
             )
 
         route_info = payload.get("_route_info", {})
@@ -126,13 +128,15 @@ class PhysicsPipeline:
                     metadata["route_info"] = route_info
                     return PipelineResult(
                         answer=executed.answer or "Uncertain",
+                        unit="",
                         explanation=executed.explanation or "The cached Python solver computed the answer from the new parameters.",
                         cot=cot,
                         premises=["Retrieved logic from code cache."],
                         confidence=0.98,
                         query_type="type2",
                         source="fast_cache",
-                        metadata=metadata
+                        metadata=metadata,
+                        premises_used=[]
                     )
         # --- END FAST CACHE BYPASS ---
 
@@ -186,12 +190,14 @@ class PhysicsPipeline:
 
         return PipelineResult(
             answer="Uncertain",
+            unit="",
             explanation="No reliable exact training match, or sufficiently similar example was found.",
             cot=["Classified the query as Type 2.", "Attempted exact lookup.", "Attempted retrieval over official physics examples."],
             confidence=0.15,
             query_type="type2",
             source="fallback",
-            metadata={"route_info": route_info}
+            metadata={"route_info": route_info},
+            premises_used=[]
         )
 
     def _orchestrate_query(self, question: str) -> dict:
@@ -276,12 +282,14 @@ class PhysicsPipeline:
                     if result.is_real:
                         return PipelineResult(
                             answer=str(result),
+                            unit="",
                             explanation=f"Fast Path evaluated Formula: {formula_item.expression}",
                             cot=[f"Used formula {formula_item.expression} and substituted variables from input."],
                             confidence=0.95,
                             query_type="type2",
                             source="fast-path-sympy",
-                            premises=[formula_item.render()]
+                            premises=[formula_item.render()],
+                            premises_used=[formula_item.render()]
                         )
         except Exception as e:
             print(f"[EXACT] Fast path sympy execution failed: {e}", flush=True)
@@ -302,7 +310,8 @@ class PhysicsPipeline:
         if hit is not None:
             metadata["retrieval_score"] = round(hit.score, 4)
         return PipelineResult(
-            answer=answer,
+            answer=example.answer,
+            unit=example.unit,
             explanation=example.cot or f"The matched training problem has final answer {answer}.",
             cot=split_steps(example.cot),
             premises=["Retrieved from official Type 2 physics dataset."],
@@ -311,6 +320,7 @@ class PhysicsPipeline:
             source=source,
             matched_id=example.problem_id,
             metadata=metadata,
+            premises_used=["Retrieved from official Type 2 physics dataset."]
         )
 
     def _answer_with_llm(self, question: str, hits: Sequence[SearchHit[PhysicsExample]]) -> Optional[PipelineResult]:
@@ -351,14 +361,6 @@ class PhysicsPipeline:
             if code.strip():
                 executed = self.executor.run(code)
                 if executed.ok:
-                    # Save successful execution to code cache
-                    masked_q, nums = self._mask_numbers(question)
-                    self.code_cache[masked_q] = {
-                        "code": code,
-                        "original_numbers": nums
-                    }
-                    self._save_cache()
-                    
                     return self._from_python_execution(raw, executed, question, attempt + 1)
                 errors.append(executed.error)
             else:
@@ -393,6 +395,7 @@ class PhysicsPipeline:
         }
         return PipelineResult(
             answer=executed.answer or str(raw.get("answer", "Uncertain")),
+            unit=str(raw.get("unit", "")),
             explanation=executed.explanation
             or str(raw.get("explanation", ""))
             or "The generated Python solver computed the answer from the retrieved formulas.",
@@ -402,6 +405,7 @@ class PhysicsPipeline:
             query_type="type2",
             source="self-hosted-llm-python",
             metadata=metadata,
+            premises_used=premises
         )
 
     def _llm_physics_fallback(self, raw: Optional[dict], question: str, errors: Sequence[str]) -> Optional[PipelineResult]:
@@ -419,6 +423,7 @@ class PhysicsPipeline:
         
         return PipelineResult(
             answer=str(raw.get("answer", "Uncertain")),
+            unit=str(raw.get("unit", "")),
             explanation=str(raw.get("explanation", "")) or "The local LLM produced the answer using retrieved physics context.",
             cot=_string_list(raw.get("cot", [])),
             premises=premises,
@@ -426,6 +431,7 @@ class PhysicsPipeline:
             query_type="type2",
             source="self-hosted-llm-fallback",
             metadata=metadata,
+            premises_used=premises
         )
 
 

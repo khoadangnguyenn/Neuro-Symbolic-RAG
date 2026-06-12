@@ -57,7 +57,7 @@ class ExactPipeline:
             **common
         )
 
-    def answer(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+    def answer(self, payload: Dict[str, Any]) -> List[Dict[str, Any]]:
         # --- Multi-question support ---
         questions = payload.get("questions")
         if isinstance(questions, list) and len(questions) > 1:
@@ -68,9 +68,11 @@ class ExactPipeline:
             payload = {**payload, "question": questions[0]}
 
         result = self.answer_result(payload)
-        return result.to_response()
+        resp = result.to_response()
+        resp["query_id"] = str(first_present(payload, ["query_id", "id"], ""))
+        return [resp]
 
-    def _answer_multi(self, payload: Dict[str, Any], questions: List[str]) -> Dict[str, Any]:
+    def _answer_multi(self, payload: Dict[str, Any], questions: List[str]) -> List[Dict[str, Any]]:
         """Process multiple questions sharing the same premises."""
         results: List[Dict[str, Any]] = []
         for i, q in enumerate(questions):
@@ -92,7 +94,7 @@ class ExactPipeline:
                     "confidence": 0.0,
                     "source": "server-error",
                 })
-        return {"results": results, "total_questions": len(questions)}
+        return results
 
     def answer_result(self, payload: Dict[str, Any]) -> PipelineResult:
         query_type = infer_query_type(payload)

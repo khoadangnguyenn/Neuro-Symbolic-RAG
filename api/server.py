@@ -9,7 +9,12 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any, Dict
 
+import timeout_decorator
 from exact_pipeline.orchestration.pipeline import ExactPipeline
+
+@timeout_decorator.timeout(55, use_signals=False)
+def answer_with_timeout(pipeline: ExactPipeline, payload: Dict[str, Any]) -> Any:
+    return pipeline.answer(payload)
 
 
 def model_payload(pipeline: ExactPipeline) -> Dict[str, Any]:
@@ -56,14 +61,16 @@ def create_flask_app(pipeline: ExactPipeline | None = None):
         if not isinstance(payload, dict):
             return jsonify({"error": "JSON body must be an object"}), int(HTTPStatus.BAD_REQUEST)
         try:
-            response = app.pipeline.answer(payload)  # type: ignore[attr-defined]
+            response = answer_with_timeout(app.pipeline, payload)  # type: ignore[attr-defined]
         except Exception as exc:  # Keep API alive during evaluation.
-            response = {
+            response = [{
+                "query_id": payload.get("query_id", ""),
                 "answer": "Uncertain",
-                "explanation": f"Pipeline error: {exc}",
-                "confidence": 0.0,
-                "source": "server-error",
-            }
+                "unit": "",
+                "explanation": f"Pipeline error/timeout: {exc}",
+                "premises_used": [],
+                "reasoning": None
+            }]
         return jsonify(response)
 
     return app
@@ -91,14 +98,16 @@ class ExactRequestHandler(BaseHTTPRequestHandler):
             self._send_json({"error": str(exc)}, status=HTTPStatus.BAD_REQUEST)
             return
         try:
-            response = self.pipeline.answer(payload)
+            response = answer_with_timeout(self.pipeline, payload)
         except Exception as exc:  # Keep API alive during evaluation.
-            response = {
+            response = [{
+                "query_id": payload.get("query_id", ""),
                 "answer": "Uncertain",
-                "explanation": f"Pipeline error: {exc}",
-                "confidence": 0.0,
-                "source": "server-error",
-            }
+                "unit": "",
+                "explanation": f"Pipeline error/timeout: {exc}",
+                "premises_used": [],
+                "reasoning": None
+            }]
         self._send_json(response)
 
     def log_message(self, format: str, *args: Any) -> None:
