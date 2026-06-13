@@ -6,9 +6,9 @@ services:
     environment:
       EXACT_SERVER_BACKEND: flask
       EXACT_LLM_BASE_URL: ${EXACT_LLM_BASE_URL:-http://host.docker.internal:8001}
-      EXACT_LLM_MODEL: ${EXACT_LLM_MODEL:-exact-model}
+      EXACT_LLM_MODEL: ${EXACT_LLM_MODEL:-Qwen2.5-7B-Instruct}
       EXACT_EXPANSION_LLM_BASE_URL: ${EXACT_EXPANSION_LLM_BASE_URL:-http://host.docker.internal:8002}
-      EXACT_EXPANSION_LLM_MODEL: ${EXACT_EXPANSION_LLM_MODEL:-exact-model}
+      EXACT_EXPANSION_LLM_MODEL: ${EXACT_EXPANSION_LLM_MODEL:-gemma-3-1b-it}
       EXACT_MAX_RETRIES: ${EXACT_MAX_RETRIES:-2}
       EXACT_CODE_TIMEOUT: ${EXACT_CODE_TIMEOUT:-4}
     volumes:

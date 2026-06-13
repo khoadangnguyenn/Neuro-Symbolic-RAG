@@ -30,21 +30,20 @@ A completely isolated execution environment:
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start 
 
-The system relies on a **Dual-LLM** architecture. Please execute the following steps in order.
+The system relies on a **Dual-LLM** architecture. To run the system, please follow these steps in order:
 
-### Step 0: Download Models
-Create a `model/` directory and download the required GGUF weights (e.g., from Hugging Face):
-
+### Step 0: Download Models (One-time setup)
+Create a `model/` directory and download the required GGUF weights:
 ```bash
 mkdir -p model
 
 # Download Main LLM (Qwen2.5 7B)
-wget https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF/resolve/main/qwen2.5-7b-instruct-q4_k_m.gguf -O model/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+wget https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q8_0.gguf -O model/Qwen2.5-7B-Instruct-Q8_0.gguf
 
 # Download Expansion LLM (Gemma 3 1B)
-wget https://huggingface.co/bartowski/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf -O model/gemma-3-1b-it-Q4_K_M.gguf
+wget https://huggingface.co/unsloth/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-BF16.gguf -O model/gemma-3-1b-it-BF16.gguf
 ```
 
 ### Step 1: Start the Dual-LLM Servers
@@ -52,55 +51,67 @@ Run two LLM processes locally in separate terminals:
 
 **Terminal 1 (Main LLM - Math & Z3/SymPy Code Generation):**
 ```bash
-llama-server -m model/Qwen2.5-7B-Instruct-Q4_K_M.gguf \
+llama-server -m model/Qwen2.5-7B-Instruct-Q8_0.gguf \
   --host 0.0.0.0 --port 8001 -c 8192 --alias exact-model \
   -ngl 99 --parallel 1 --flash-attn on
 ```
 
 **Terminal 2 (Expansion LLM - High-speed Orchestration):**
 ```bash
-llama-server -m model/gemma-3-1b-it-Q4_K_M.gguf \
+llama-server -m model/gemma-3-1b-it-BF16.gguf \
   --host 0.0.0.0 --port 8002 -c 8192 --alias exact-model \
   -ngl 99 --parallel 1 --flash-attn on
 ```
 
 ### Step 2: Initialize the Database (Seeding)
-*(Note: Run this only once to build the GraphDB nodes, if you change the items in VectorDB, you need to run this again to update the GraphDB. Otherwise, you can skip this step)*
+*(Note: Run this only once to build the GraphDB nodes. If you update the VectorDB, you must run this again. Otherwise, you don't need to run this again).*
 ```bash
 EXACT_LLM_BASE_URL=http://localhost:8001 EXACT_LLM_MODEL=exact-model python3 scripts/auto_seeder.py
 ```
 
-### Step 3: Start the API Server
-Deploy the main API Server (Port 8000) via Docker.
+### Step 3: Start the API Gateway
+Open a third terminal and run Docker to start the central API Server on port `8000`:
 ```bash
 docker-compose up --build exact-api -d
 ```
-*(For local Python execution without Docker, export: `EXACT_LLM_BASE_URL=http://localhost:8001` and `EXACT_EXPANSION_LLM_BASE_URL=http://localhost:8002`)*
+*(Note: The API Gateway on port 8000 is fully configured to handle `/predict` for answering queries and to dynamically aggregate metadata from both LLMs for the `/v1/models` endpoint).*
 
----
-
-## 🎯 API Testing
-
-**Main Endpoint:** `POST http://localhost:8000/answer`
-
-**Method 1: Direct cURL (Physics Query Example):**
+### Step 4: Expose Localhost to the Internet (Tunneling)
+For the committee to evaluate your system, you **only need to expose port 8000** to the internet. Run ngrok (or cloudflared):
 ```bash
-curl -s http://localhost:8000/answer \
-  -H 'Content-Type: application/json' \
+ngrok http 8000
+```
+The system will generate a public URL (e.g., `https://<random-id>.ngrok-free.app`).
+
+### Step 5: Test the Public API
+Use the following `curl` command (replace `<YOUR_NGROK_URL>` with your actual ngrok link from Step 4) to simulate the committee's evaluation tool:
+```bash
+curl -X POST <YOUR_NGROK_URL>/predict \
+  -H "Content-Type: application/json" \
+  -H "ngrok-skip-browser-warning: true" \
   -d '{
-    "query_type": "type2",
-    "question": "Two point charges q1 = 10^-8 C and q2 = -2×10^-8 C are placed in air at two points A and B, 8 cm apart. Calculate the net force."
+    "query_id": "T1_0001",
+    "type": "type1",
+    "query": "Is Student A eligible for graduation?",
+    "premises": [
+      "A student who has completed at least 120 credits is eligible for graduation.",
+      "Student A has completed 118 credits."
+    ],
+    "options": ["Yes", "No", "Uncertain"]
   }'
 ```
+Or use the streamlit app to test (The default port is 8501):
+```bash
+python3 -m streamlit run exact_pipeline/app.py
+```
 
-**Method 2: Run the local test script:**
-```bash
-python3 test_custom.py
+### Step 6: Prepare `urls.txt` for Submission
+Create a file named `urls.txt` (to be placed in your final submission ZIP) and add the following two lines (replace with your actual ngrok domain):
+```text
+<YOUR_NGROK_URL>/predict
+<YOUR_NGROK_URL>/v1/models
 ```
-**Method 3: Open Web UI**
-```bash
-python3 -m streamlit run app.py
-```
+*The committee will use the first link to send 50 test JSON queries, and the second link to verify that your combined LLM setup stays within the 8B Parameter limit!*
 
 ---
 
@@ -118,12 +129,18 @@ EXACT-Full-Pipeline/
     ├── Full-Pipeline-Exact-2026.png 
     ├── docker-compose.yml       # Docker deployment config
     ├── Dockerfile               # Environment package
+    ├── requirements.txt         # Python dependencies
+    ├── app.py                   # Streamlit Web UI
     ├── dataset/                 # Raw Data & VectorDB/GraphDB storage
     ├── model/                   # LLM weights (.gguf)
     │
+    ├── api/                     
+    │   └── server.py            # API Gateway for /predict and /v1/models
     ├── core/                    # Configs & Pydantic models
     ├── engines/                 
-    │   └── executors.py         # Python Sandbox (Isolated execution)
+    │   ├── executors.py         # Python Sandbox (Isolated execution)
+    │   ├── logic.py             # First-Order Logic reasoning
+    │   └── physics.py           # Physics formula parsing
     ├── knowledge/               # HybridDB processors
     │   ├── graph_db.py          # NetworkX: Topology, causality, PageRank
     │   └── retrieval.py         # ChromaDB: Vector Extraction
@@ -132,12 +149,13 @@ EXACT-Full-Pipeline/
     │   └── templates.py         # System Prompts (Jinja2)
     ├── orchestration/           
     │   ├── router.py            # Intent Router (Logic/Physics)
-    │   └── pipeline.py          # FastAPI/Flask Server Init
+    │   └── pipeline.py          # Execution Pipeline
     │
     ├── scripts/                 
     │   ├── auto_seeder.py       # HybridDB Auto-seeder
     │   └── evaluate_local.py    # Local Accuracy evaluation
-    └── tests/                   
-        ├── smoke_test.py        # Module quick tests
-        └── test_custom.py       # Custom query API caller
+    ├── tests/                   
+    │   ├── smoke_test.py        # Module quick tests
+    │   └── test_custom.py       # Custom query API caller
+    └── utils/                   # Shared utilities
 ```

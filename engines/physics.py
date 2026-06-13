@@ -361,6 +361,14 @@ class PhysicsPipeline:
             if code.strip():
                 executed = self.executor.run(code)
                 if executed.ok:
+                    # Save successful execution to code cache
+                    masked_q, nums = self._mask_numbers(question)
+                    self.code_cache[masked_q] = {
+                        "code": code,
+                        "original_numbers": nums
+                    }
+                    self._save_cache()
+                    
                     return self._from_python_execution(raw, executed, question, attempt + 1)
                 errors.append(executed.error)
             else:
