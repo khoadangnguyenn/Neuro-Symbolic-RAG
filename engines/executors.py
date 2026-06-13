@@ -24,6 +24,7 @@ from exact_pipeline.utils.text_utils import join_answer, split_steps
 class ExecutionResult:
     ok: bool
     answer: Optional[str] = None
+    unit: Optional[str] = None
     explanation: Optional[str] = None
     cot: List[str] = field(default_factory=list)
     premises: List[str] = field(default_factory=list)
@@ -295,13 +296,14 @@ def _coerce_payload(payload: Any, *, stdout: str, code_digest: str) -> Optional[
     if answer is None:
         answer_text = None
     else:
-        answer_text = join_answer(str(answer), str(unit)) if unit else str(answer)
+        answer_text = str(answer)
 
     cot = payload.get("cot", payload.get("steps", []))
     premises = payload.get("premises", payload.get("used_premises", []))
     result = ExecutionResult(
         ok=bool(answer_text or payload.get("explanation")),
         answer=answer_text,
+        unit=str(unit) if unit else None,
         explanation=str(payload.get("explanation", "")) or None,
         cot=_string_list(cot),
         premises=_string_list(premises),

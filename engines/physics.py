@@ -403,7 +403,7 @@ class PhysicsPipeline:
         }
         return PipelineResult(
             answer=executed.answer or str(raw.get("answer", "Uncertain")),
-            unit=str(raw.get("unit", "")),
+            unit=executed.unit or str(raw.get("unit", "")),
             explanation=executed.explanation
             or str(raw.get("explanation", ""))
             or "The generated Python solver computed the answer from the retrieved formulas.",

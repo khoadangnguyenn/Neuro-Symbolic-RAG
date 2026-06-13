@@ -216,15 +216,13 @@ def get_reasoning_subgraph_context(query: str, index: HybridDB, max_cards: int =
         else:
             return physics_premises_for_query(query, index, max_cards)
         
-    context.append("### Retrieved Direct Premises:")
     for hit in hits:
         if hasattr(hit.item, "render"):
-            context.append(f"- {hit.item.render()}")
+            context.append(hit.item.render())
         else:
-            context.append(f"- {hit.item}")
+            context.append(str(hit.item))
             
     if subgraph and len(subgraph) > len(hits):
-        context.append("### Reasoning Subgraph Context (Dependencies & Related Rules):")
         for node, data in subgraph.nodes(data=True):
             if "text" in data:
                 # Omit if already in direct hits to avoid duplication
@@ -246,9 +244,8 @@ def get_reasoning_subgraph_context(query: str, index: HybridDB, max_cards: int =
         # Add connectivity info
         edges = list(subgraph.edges())
         if edges:
-            context.append("### Subgraph Connectivity:")
             for u, v in edges:
-                context.append(f"{u} -> {v}")
+                context.append(f"Dependency: {u} -> {v}")
                 
     return context
 

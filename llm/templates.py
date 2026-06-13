@@ -15,7 +15,8 @@ IMPORTANT RULES:
 - You MUST set a global variable RESULT = {"answer": "...", "explanation": "..."}.
 - IMPORTANT: Use `float()` instead of `.evalf()` for the final answer to avoid AttributeError when standard Python floats are generated.
 - Do NOT use print(). Only set RESULT.
-- The "answer" value must be a number with its unit (e.g. "2.5 J", "100 V").
+- The "answer" value must be JUST the numerical value (e.g. "2.5", "100").
+- You MUST provide the unit separately in the "unit" key (e.g. "J", "V").
 - The Retrieved Formulas/Rules are already pre-compiled or structured. DO NOT re-translate them. Just use them directly to translate the User Question into the final solver code.
 - Output ONLY valid Python/sympy code enclosed in python blocks. NO explanations, NO pleasantries, NO markdown outside the code block.
 
@@ -51,7 +52,7 @@ u23 = ((p3[0]-p2[0])/r23, (p3[1]-p2[1])/r23)
 Fx = F13 * u13[0] + F23 * u23[0]
 Fy = F13 * u13[1] + F23 * u23[1]
 net_F = sympy.sqrt(Fx**2 + Fy**2)
-RESULT = {"answer": f"{float(net_F)} N", "explanation": "Calculated net force using vector addition."}
+RESULT = {"answer": str(float(net_F)), "unit": "N", "explanation": "Calculated net force using vector addition."}
 ```
 
 Now solve this problem:
