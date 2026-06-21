@@ -1,92 +1,82 @@
-# 🎯 Neuro-Symbolic RAG
-This project completely replaces traditional text-based RAG (BM25) to eliminate LLM hallucinations. It leverages a Neuro-Symbolic HybridDB to map Logic and Physics knowledge as a topological network, heavily augmented with Offline Pre-computation, Graph Traversal (Steiner Tree), and Adaptive Routing.
+# 🎯 Neuro-Symbolic RAG EXACT Pipeline
 
-## 🧠 System Architecture
-![Pipeline Optimized](Pipeline-Optimized.png)
+This project implements a highly optimized, state-of-the-art **Neuro-Symbolic RAG** system designed to solve Physics and Logic reasoning tasks deterministically. By mapping Logic and Physics domain knowledge as a topological network and reasoning over it using logic/symbolic solvers (Z3 & SymPy), the pipeline completely eliminates typical LLM stochastic hallucinations. 
 
-The pipeline consists of 4 core components:
-
-### 1. Adaptive Intent Router (Zero-LLM Overhead)
-A hardware-aware router that categorizes queries instantly without consuming LLM resources:
-- **Static NLP**: Uses `spaCy` (`en_core_web_sm`) to calculate query complexity ($\kappa$) and measure computational pressure ($R_p$).
-- **Dynamic Routing**: Automatically routes queries to the **Fast Path** or **Hybrid Path** to optimize speed and prevent OOM issues.
-
-### 2. HybridDB (Shared Knowledge Base)
-Formulas and rules are stored across two parallel formats:
-- **VectorDB (ChromaDB)**: Uses `BAAI/bge-small-en-v1.5` for lightning-fast semantic retrieval.
-- **GraphDB (NetworkX)**: Maps causal structures and topologies, utilizing PageRank for knowledge ranking.
-- **Learned Predicate Schema**: Aligns NL and FOL premises from the training data,
-  keeps only confidence-consistent mappings, and caches the learned lexicon by
-  dataset fingerprint. It never reads answer labels; all answers still require
-  a Horn/Z3 proof.
-
-If the embedding model is not available locally, retrieval falls back to a
-lexical index instead of blocking startup on a network download. Set
-`EXACT_RETRIEVAL_ALLOW_DOWNLOAD=true` only when model downloads are intended.
-
-### 3. Execution Paths
-- ⚡ **Fast Path**: Direct VectorDB lookup. Bypasses the LLM entirely and executes static code if the confidence score is high.
-- 🔍 **Hybrid RAG Path**: Uses a secondary model (Gemma 1B) for keyword extraction (Query Expansion) prior to retrieval. Includes Coordinate Guardrails to prevent spatial hallucinations.
-- 💻 **Code Generation**: The Main LLM generates precise Python/Z3/SymPy code to solve the extracted problem.
-
-### 4. Python Sandbox Executor
-A completely isolated execution environment:
-- **Security**: Blocks hazardous modules (`os`, `sys`, `exec`, `eval`).
-- **Constraints**: Enforces a strict 4.0s timeout and only permits math libraries (`math`, `sympy`, `z3`).
-
-
+Equipped with Offline Pre-computation, Graph Traversal, Adaptive Routing, and an AST-guarded Secure Sandbox, the pipeline ensures safety, speed, and deterministic correctness while running strictly within the competition's **8B parameter limit**.
 
 ---
 
-## 🚀 Quick Start 
+## 🧠 System Architecture
 
-### Step 0: Download Model (One-time setup)
+
+
+### 1. Hardware-Aware Adaptive Intent Router
+A zero-LLM overhead router that classifies incoming queries instantly:
+- **Complexity Assessment ($\kappa$)**: Uses `spaCy` (`en_core_web_sm`) and syntactic analysis (counting logical connectors and structure tokens) to evaluate query complexity.
+- **Resource Pressure Monitoring ($R_p$)**: Evaluates CPU, MEM, and GPU utility levels.
+- **Utility Optimization**: Determines whether to execute via the **Fast Path** (direct database/cache execution) or the **Hybrid Path** (with retrieval and generation) to optimize response speed and avoid system degradation.
+
+### 2. HybridDB (Shared Knowledge Base)
+Concept rules and formulas are stored across dual synchronized structures:
+- **VectorDB (`ChromaDB`)**: Uses `BAAI/bge-small-en-v1.5` embeddings for semantic context search (with a robust lexical TF-IDF fallback if offline).
+- **GraphDB (`NetworkX`)**: Captures structural causal relationships, using PageRank centrality to extract neighboring logic premises.
+- **RAG-Based FOL Cache**: Automatically matches and retrieves previously translated FOL axioms from the VectorDB to bypass LLM translation steps.
+
+### 3. Domain Reasoning Engines
+- ⚡ **Type 1 (Logic) Pipeline**:
+  - **Deterministic Horn Solver**: Evaluates Horn-compatible queries via forward chaining without LLM dependencies.
+  - **Full Symbolic AST Path**: Translates complex logic questions into a compositional First-Order Logic (FOL) AST, repairs common translation errors using a post-processing sanitizer, and solves assertions using the **Z3 SMT Solver**.
+- ⚡ **Type 2 (Physics) Pipeline**:
+  - **Template-Based Fast Cache**: Replaces numbers with templates (e.g., `<NUM>`). Swaps new variables into cached execution scripts for instant answers.
+  - **Jinja2 Code Generation**: Prompts the Main LLM to write SymPy scripts, applying an automated self-repair loop to fix syntax or execution trace errors on the fly.
+
+### 4. Python Sandbox Executor
+A secure runtime environment implementing:
+- **AST Inspection**: Parses scripts to block hazardous modules (`os`, `sys`, `exec`, `eval`).
+- **Resource Limits**: Enforces a strict `4.0s` timeout and restricts execution imports to trusted libraries (`math`, `sympy`, `z3`).
+
+---
+
+## 🚀 Quick Start
+
+### Step 0: Download Model Weights
 Create a `model/` directory and download the required GGUF weights:
 ```bash
 mkdir -p model
-
 # Download Main LLM (Qwen3-8B-GGUF)
 wget https://huggingface.co/Qwen/Qwen3-8B-GGUF/resolve/main/Qwen3-8B-Q4_K_M.gguf -O model/Qwen3-8B-Q4_K_M.gguf
 ```
 
 ### Step 1: Start the Single LLM Server
-Run the LLM process locally in a terminal:
-
-**Terminal 1 (Main LLM - Orchestration, Math & Z3/SymPy Code Generation):**
+Run the local inference engine. Note that all Qwen3 thinking/reasoning modes are explicitly deactivated using the `--reasoning off` and `/no_think` switches to comply with latency constraints.
 ```bash
-llama-server -m model/Qwen3-8B-Q4_K_M.gguf \
-  --host 0.0.0.0 --port 8001 -c 8192 --alias Qwen3-8B-Instruct \
-  -ngl 99 --parallel 4 --flash-attn on --jinja \
-  --reasoning off --reasoning-budget 0 \
-  --chat-template-kwargs '{"enable_thinking":false}'
+llama-server -m model/Qwen3-8B-Q8_0_gguf \
+  --host 0.0.0.0 --port 8001 -c 16384 --alias exact-model \
+  -ngl 99 --parallel 1 --flash-attn on
 ```
 
-The client also sends `chat_template_kwargs.enable_thinking=false` and `/no_think`
-on every Qwen3 request. Keeping the server switches above makes non-thinking mode
-the process-wide default as well, including callers outside this pipeline.
-
-### Step 2: Initialize the Database (Seeding)
-*(Note: Run this only once to build the GraphDB nodes. If you update the VectorDB, you must run this again. Otherwise, you don't need to run this again).*
+### Step 2: Initialize Database (Seeding)
+Seed the HybridDB with formulas and logic rules. You only need to run this once. If it already exists, there’s no need to run it again.
 ```bash
-EXACT_LLM_BASE_URL=http://localhost:8001 EXACT_LLM_MODEL=Qwen3-8B-Instruct python3 scripts/auto_seeder.py
+EXACT_LLM_BASE_URL=http://localhost:8001 EXACT_LLM_MODEL=exact-model python3 scripts/auto_seeder.py
 ```
 
 ### Step 3: Start the API Gateway
-Open a third terminal and run Docker to start the central API Server on port `8000`:
+Launch the Flask/stdlib endpoint container:
 ```bash
 docker-compose up --build exact-api -d
 ```
-*(Note: The API Gateway on port 8000 is fully configured to handle `/predict` for answering queries and to dynamically aggregate metadata from both LLMs for the `/v1/models` endpoint).*
+The central API runs on port `8000`. The `/v1/models` endpoint is fully configured to route requests and verify model parameter constraints.
 
-### Step 4: Expose Localhost to the Internet (Tunneling)
-For the committee to evaluate your system, you **only need to expose port 8000** to the internet. Run ngrok (or cloudflared):
+### Step 4: Tunnel Localhost to the Internet
+Expose the endpoint port `8000` using ngrok or Cloudflare tunnels:
 ```bash
 ngrok http 8000
 ```
-The system will generate a public URL (e.g., `https://<random-id>.ngrok-free.app`).
+This generates a public forwarding URL (e.g., `https://<random-id>.ngrok-free.app`).
 
-### Step 5: Test the Public API
-Use the following `curl` command (replace `<YOUR_NGROK_URL>` with your actual ngrok link from Step 4) to simulate the committee's evaluation tool:
+### Step 5: Test the API Endpoint
+Send a sample logic payload to test predictions:
 ```bash
 curl -X POST <YOUR_NGROK_URL>/predict \
   -H "Content-Type: application/json" \
@@ -102,62 +92,65 @@ curl -X POST <YOUR_NGROK_URL>/predict \
     "options": ["Yes", "No", "Uncertain"]
   }'
 ```
-Or use the streamlit app to test (The default port is 8501):
+Or view the visual dashboard using the streamlit interface (default port `8501`):
 ```bash
 python3 -m streamlit run exact_pipeline/app.py
 ```
 
 ### Step 6: Prepare `urls.txt` for Submission
-Create a file named `urls.txt` (to be placed in your final submission ZIP) and add the following two lines (replace with your actual ngrok domain):
+Save your tunneling URLs in a `urls.txt` file inside your submission ZIP file:
 ```text
 <YOUR_NGROK_URL>/predict
 <YOUR_NGROK_URL>/v1/models
 ```
-*The committee will use the first link to send 50 test JSON queries, and the second link to verify that your single LLM setup stays within the 8B Parameter limit!*
 
 ---
 
 ## 📂 Core Folder Structure
 
 ```text
-EXACT-Full-Pipeline/
-├── Diagram/                     # System architecture diagrams
-├── docs/                        # Solution documentation
-├── test_client.py               # Automated interaction client
-├── test_debug.py                # Debug API calls
-├── test_llm_direct.py           # Direct LLM connection tests
+exact_pipeline/
+├── EXACT_Pipeline_Report.md     # Solution & Model Size report
+├── README.md                    # Project walkthrough
+├── Dockerfile                   # Python environment setup
+├── docker-compose.yml           # Multi-container orchestration
+├── requirements.txt             # Python libraries
+├── app.py                       # Streamlit UI Dashboard
 │
-└── exact_pipeline/              # MAIN SOURCE CODE
-    ├── Full-Pipeline-Exact-2026.png 
-    ├── docker-compose.yml       # Docker deployment config
-    ├── Dockerfile               # Environment package
-    ├── requirements.txt         # Python dependencies
-    ├── app.py                   # Streamlit Web UI
-    ├── dataset/                 # Raw Data & VectorDB/GraphDB storage
-    ├── model/                   # LLM weights (.gguf)
-    │
-    ├── api/                     
-    │   └── server.py            # API Gateway for /predict and /v1/models
-    ├── core/                    # Configs & Pydantic models
-    ├── engines/                 
-    │   ├── executors.py         # Python Sandbox (Isolated execution)
-    │   ├── logic.py             # First-Order Logic reasoning
-    │   └── physics.py           # Physics formula parsing
-    ├── knowledge/               # HybridDB processors
-    │   ├── graph_db.py          # NetworkX: Topology, causality, PageRank
-    │   └── retrieval.py         # ChromaDB: Vector Extraction
-    ├── llm/                     
-    │   ├── llm.py               # HTTP Client for vLLM/llama.cpp
-    │   └── templates.py         # System Prompts (Jinja2)
-    ├── orchestration/           
-    │   ├── router.py            # Intent Router (Logic/Physics)
-    │   └── pipeline.py          # Execution Pipeline
-    │
-    ├── scripts/                 
-    │   ├── auto_seeder.py       # HybridDB Auto-seeder
-    │   └── evaluate_local.py    # Local Accuracy evaluation
-    ├── tests/                   
-    │   ├── smoke_test.py        # Module quick tests
-    │   └── test_custom.py       # Custom query API caller
-    └── utils/                   # Shared utilities
+├── api/
+│   └── server.py                # HTTP API router (/predict, /v1/models)
+│
+├── core/
+│   ├── config.py                # System settings and environment loader
+│   ├── data.py                  # Dataset loaders and normalizers
+│   └── models.py                # Shared Pydantic data schemas
+│
+├── engines/
+│   ├── executors.py             # Secure Z3/Python Sandbox Executors
+│   ├── fol_ast.py               # First-Order Logic AST JSON schemas & builders
+│   ├── fol_parser.py            # String-to-AST parser for prefix token streams
+│   ├── horn_reasoner.py         # Forward-chaining deterministic solver
+│   ├── logic.py                 # Logic reasoning orchestrator & sanitizers
+│   ├── physics.py               # Physics formula parser & self-repair loop
+│   ├── schema_learner.py        # Predicate schema mapping & dynamic aliases
+│   └── symbolic_solver.py       # SMT constraint compiler for Z3
+│
+├── knowledge/
+│   ├── graph_db.py              # Subgraph extractors, Steiner Tree, PageRank
+│   ├── knowledge.py             # Shared HybridDB controller & index
+│   └── retrieval.py             # VectorDB search (ChromaDB + lexical fallback)
+│
+├── llm/
+│   ├── llm.py                   # OpenAI-compatible client (with Qwen3 thinking bypass)
+│   └── templates.py             # System & Jinja2 prompt templates
+│
+├── orchestration/
+│   ├── feedback.py              # Rule feedback extractors & GraphDB updates
+│   ├── pipeline.py              # Unified entry point for solver routing
+│   └── router.py                # Hardware-aware EMA utility routing
+│
+├── dataset/                     # Storage for VectorDB, GraphML files, and raw data
+├── scripts/                     # Seeders and evaluation tools
+├── tests/                       # Unit tests, smoke tests, and diverse testcases
+└── utils/                       # Common string normalization utilities
 ```
