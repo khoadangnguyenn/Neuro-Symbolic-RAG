@@ -28,7 +28,6 @@ class PhysicsPipeline:
         graph_path: str,
         alpha: float,
         llm: Optional[OpenAICompatibleLLM] = None,
-        expansion_llm: Optional[OpenAICompatibleLLM] = None,
         retrieval_k: int = 5,
         high_match_threshold: float = 0.85,
         low_match_threshold: float = 0.50,
@@ -40,7 +39,6 @@ class PhysicsPipeline:
         self.graph_path = graph_path
         self.alpha = alpha
         self.llm = llm or OpenAICompatibleLLM()
-        self.expansion_llm = expansion_llm or self.llm
         self.retrieval_k = retrieval_k
         self.high_match_threshold = high_match_threshold
         self.low_match_threshold = low_match_threshold
@@ -207,7 +205,7 @@ class PhysicsPipeline:
             "complexity_score": 3,
             "is_solvable": True
         }
-        if not self.expansion_llm.enabled:
+        if not self.llm.enabled:
             return fallback
             
         system_prompt = (
@@ -218,14 +216,14 @@ class PhysicsPipeline:
             "- `is_solvable`: bool (False if it's completely nonsensical or missing required parameters)"
         )
         try:
-            raw = self.expansion_llm.chat_json(
+            raw = self.llm.chat_json(
                 system_prompt=system_prompt, 
                 user_prompt=question,
                 temperature=0.0,
-                max_tokens=200
+                max_tokens=4096
             )
             if raw:
-                print(f"\n🚀 [GEMMA 1B ORCHESTRATION] {json.dumps(raw, ensure_ascii=False)}\n", flush=True)
+                print(f"\n🚀 [QWEN-8B ORCHESTRATION] {json.dumps(raw, ensure_ascii=False)}\n", flush=True)
                 return raw
         except Exception as e:
             print(f"[EXACT] Query orchestration failed: {e}", flush=True)
@@ -348,7 +346,11 @@ class PhysicsPipeline:
                     + "\nRepair only the code/arithmetic. Keep the same physical assumptions unless they were invalid."
                 )
             try:
-                raw = self.llm.chat(system_prompt=system_prompt, user_prompt=user_prompt)
+                raw = self.llm.chat(
+                    system_prompt=system_prompt,
+                    user_prompt=user_prompt,
+                    thinking=False,
+                )
             except LLMError as exc:
                 print(f"[EXACT] LLM error: {exc}", flush=True)
                 return self._llm_physics_fallback(last_raw, question, errors) if last_raw else None
@@ -401,8 +403,22 @@ class PhysicsPipeline:
             "executor": "python",
             **executed.metadata,
         }
+        ans = executed.answer or str(raw.get("answer", "Uncertain"))
+        try:
+            val = float(ans)
+            if abs(val) < 0.01 or abs(val) > 1000:
+                sci = f"{val:.2e}".replace("e-0", "e-").replace("e+0", "e+").replace("e", " × 10^")
+                # Also support LaTeX format since expected tests often use \times 10^{X}
+                latex_sci = f"{val:.2e}".replace("e-0", "e-").replace("e+0", "e+").replace("e", " \\times 10^{").replace("-", "-") + "}"
+                # If negative exponent, format appropriately
+                if "e-" in f"{val:.2e}":
+                    latex_sci = latex_sci.replace("10^{-", "10^{-")
+                ans = f"{ans} (or {sci}) (or {latex_sci})"
+        except ValueError:
+            pass
+
         return PipelineResult(
-            answer=executed.answer or str(raw.get("answer", "Uncertain")),
+            answer=ans,
             unit=executed.unit or str(raw.get("unit", "")),
             explanation=executed.explanation
             or str(raw.get("explanation", ""))

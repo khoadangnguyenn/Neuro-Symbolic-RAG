@@ -26,10 +26,13 @@ fol_grammar = """
 ?comp_expr: arith_expr "=" arith_expr  -> eq
           | arith_expr "==" arith_expr -> eq
           | arith_expr "!=" arith_expr -> neq
+          | arith_expr "≠" arith_expr -> neq
           | arith_expr "<" arith_expr  -> lt
           | arith_expr ">" arith_expr  -> gt
           | arith_expr "<=" arith_expr -> lte
+          | arith_expr "≤" arith_expr -> lte
           | arith_expr ">=" arith_expr -> gte
+          | arith_expr "≥" arith_expr -> gte
           | arith_expr
 
 ?arith_expr: arith_expr "+" term -> add
@@ -64,10 +67,16 @@ def sota_parse_text(premise: str):
     return fol_parser.parse(premise)
 
 class AdvancedZ3Transformer(Transformer):
-    def __init__(self, types_dict: dict, context: z3.Context):
+    def __init__(
+        self,
+        types_dict: dict,
+        context: z3.Context,
+        constant_types=None,
+    ):
         super().__init__()
         self.context = context
         self.types = types_dict or {}
+        self.constant_types = constant_types or {}
         self.sort_object = z3.DeclareSort("Object", ctx=self.context)
 
         self.sort_map = {
@@ -79,17 +88,22 @@ class AdvancedZ3Transformer(Transformer):
 
         self.constants = {}
         self.functions = {}
+        self.function_signatures = {}
 
     def integer(self, token):
-        return z3.IntVal(int(token), ctx=self.context)
+        return z3.IntVal(int(token[0]), ctx=self.context)
 
     def float(self, token):
-        return z3.RealVal(float(token), ctx=self.context)
+        return z3.RealVal(float(token[0]), ctx=self.context)
 
     def constant(self, token):
-        name = str(token)
+        name = str(token[0])
         if name not in self.constants:
-            declared_type = self.types.get(name, "Object")
+            # A spelling may legally occur both as a function/predicate name
+            # and as an object constant (e.g. today(x) hallucinated in a
+            # glossary while `today` is used as rain(today)).  Function result
+            # types must never leak into the constant namespace.
+            declared_type = self.constant_types.get(name, "Object")
             sort = self.sort_map.get(declared_type, self.sort_object)
             self.constants[name] = z3.Const(name, sort)
         return self.constants[name]
@@ -98,21 +112,27 @@ class AdvancedZ3Transformer(Transformer):
         name = str(args[0])
         params = args[1:]
 
-        key = f"{name}_{len(params)}"
+        if not params:
+            if name not in self.constants:
+                declared_type = self.types.get(name, "Bool")
+                sort = self.sort_map.get(declared_type, z3.BoolSort(ctx=self.context))
+                self.constants[name] = z3.Const(name, sort)
+            return self.constants[name]
 
-        if key not in self.functions:
-            declared_type = self.types.get(name, "Bool")
-            range_sort = self.sort_map.get(
-                declared_type, z3.BoolSort(ctx=self.context)
+        domain_sorts = [p.sort() for p in params]
+        declared_type = self.types.get(name, "Bool")
+        range_sort = self.sort_map.get(declared_type, z3.BoolSort(ctx=self.context))
+        signature = (tuple(str(sort) for sort in domain_sorts), str(range_sort))
+        existing = self.function_signatures.get(name)
+        if existing is not None and existing != signature:
+            raise TypeError(
+                f"inconsistent signature for {name}: expected {existing}, got {signature}"
             )
+        if name not in self.functions:
+            self.functions[name] = z3.Function(name, *(domain_sorts + [range_sort]))
+            self.function_signatures[name] = signature
 
-            domain = [p.sort() for p in params]
-
-            self.functions[key] = z3.Function(
-                name, *(domain + [range_sort])
-            )
-
-        return self.functions[key](*params)
+        return self.functions[name](*params)
 
     def add(self, args):
         return args[0] + args[1]
@@ -146,6 +166,9 @@ class AdvancedZ3Transformer(Transformer):
 
     def implies(self, args):
         return z3.Implies(args[0], args[1])
+
+    def iff(self, args):
+        return args[0] == args[1]
 
     def logical_or(self, args):
         return z3.Or(args[0], args[1])

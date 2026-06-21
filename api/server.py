@@ -12,7 +12,7 @@ from typing import Any, Dict
 import timeout_decorator
 from exact_pipeline.orchestration.pipeline import ExactPipeline
 
-@timeout_decorator.timeout(55, use_signals=False)
+@timeout_decorator.timeout(180, use_signals=False)
 def answer_with_timeout(pipeline: ExactPipeline, payload: Dict[str, Any]) -> Any:
     return pipeline.answer(payload)
 
@@ -44,18 +44,15 @@ def _fetch_remote_models(base_url: str, real_id: str) -> Dict[str, Any]:
 
 def model_payload(pipeline: ExactPipeline) -> Dict[str, Any]:
     main_url = os.getenv("EXACT_LLM_BASE_URL", "http://host.docker.internal:8001")
-    exp_url = os.getenv("EXACT_EXPANSION_LLM_BASE_URL", "http://host.docker.internal:8002")
     
-    main_id = os.getenv("EXACT_LLM_MODEL", "Qwen2.5-7B-Instruct")
-    exp_id = os.getenv("EXACT_EXPANSION_LLM_MODEL", "gemma-3-1b-it")
+    main_id = os.getenv("EXACT_LLM_MODEL", "Qwen3-8B")
     
     main_data = _fetch_remote_models(main_url, main_id)
-    exp_data = _fetch_remote_models(exp_url, exp_id)
     
     return {
         "object": "list",
-        "models": main_data.get("models", []) + exp_data.get("models", []),
-        "data": main_data.get("data", []) + exp_data.get("data", [])
+        "models": main_data.get("models", []),
+        "data": main_data.get("data", [])
     }
 
 

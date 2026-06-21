@@ -6,11 +6,13 @@ services:
     environment:
       EXACT_SERVER_BACKEND: flask
       EXACT_LLM_BASE_URL: ${EXACT_LLM_BASE_URL:-http://host.docker.internal:8001}
-      EXACT_LLM_MODEL: ${EXACT_LLM_MODEL:-Qwen2.5-7B-Instruct}
-      EXACT_EXPANSION_LLM_BASE_URL: ${EXACT_EXPANSION_LLM_BASE_URL:-http://host.docker.internal:8002}
-      EXACT_EXPANSION_LLM_MODEL: ${EXACT_EXPANSION_LLM_MODEL:-gemma-3-1b-it}
+      EXACT_LLM_MODEL: ${EXACT_LLM_MODEL:-Qwen3-8B}
       EXACT_MAX_RETRIES: ${EXACT_MAX_RETRIES:-2}
       EXACT_CODE_TIMEOUT: ${EXACT_CODE_TIMEOUT:-4}
+      EXACT_QWEN_MODE_HINT: ${EXACT_QWEN_MODE_HINT:-auto}
+      EXACT_QWEN_HARD_THINKING_SWITCH: ${EXACT_QWEN_HARD_THINKING_SWITCH:-on}
+      EXACT_RETRIEVAL_MODE: ${EXACT_RETRIEVAL_MODE:-auto}
+      EXACT_RETRIEVAL_ALLOW_DOWNLOAD: ${EXACT_RETRIEVAL_ALLOW_DOWNLOAD:-false}
     volumes:
       - ./dataset/chromadb_data:/app/exact_pipeline/dataset/chromadb_data
       - ./dataset/graph_data:/app/exact_pipeline/dataset/graph_data

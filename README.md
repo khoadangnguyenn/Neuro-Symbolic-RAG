@@ -15,6 +15,14 @@ A hardware-aware router that categorizes queries instantly without consuming LLM
 Formulas and rules are stored across two parallel formats:
 - **VectorDB (ChromaDB)**: Uses `BAAI/bge-small-en-v1.5` for lightning-fast semantic retrieval.
 - **GraphDB (NetworkX)**: Maps causal structures and topologies, utilizing PageRank for knowledge ranking.
+- **Learned Predicate Schema**: Aligns NL and FOL premises from the training data,
+  keeps only confidence-consistent mappings, and caches the learned lexicon by
+  dataset fingerprint. It never reads answer labels; all answers still require
+  a Horn/Z3 proof.
+
+If the embedding model is not available locally, retrieval falls back to a
+lexical index instead of blocking startup on a network download. Set
+`EXACT_RETRIEVAL_ALLOW_DOWNLOAD=true` only when model downloads are intended.
 
 ### 3. Execution Paths
 - ⚡ **Fast Path**: Direct VectorDB lookup. Bypasses the LLM entirely and executes static code if the confidence score is high.
@@ -32,41 +40,35 @@ A completely isolated execution environment:
 
 ## 🚀 Quick Start 
 
-The system relies on a **Dual-LLM** architecture. To run the system, please follow these steps in order:
-
-### Step 0: Download Models (One-time setup)
+### Step 0: Download Model (One-time setup)
 Create a `model/` directory and download the required GGUF weights:
 ```bash
 mkdir -p model
 
-# Download Main LLM (Qwen2.5 7B)
-wget https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q8_0.gguf -O model/Qwen2.5-7B-Instruct-Q8_0.gguf
-
-# Download Expansion LLM (Gemma 3 1B)
-wget https://huggingface.co/unsloth/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-BF16.gguf -O model/gemma-3-1b-it-BF16.gguf
+# Download Main LLM (Qwen3-8B-GGUF)
+wget https://huggingface.co/Qwen/Qwen3-8B-GGUF/resolve/main/Qwen3-8B-Q4_K_M.gguf -O model/Qwen3-8B-Q4_K_M.gguf
 ```
 
-### Step 1: Start the Dual-LLM Servers
-Run two LLM processes locally in separate terminals:
+### Step 1: Start the Single LLM Server
+Run the LLM process locally in a terminal:
 
-**Terminal 1 (Main LLM - Math & Z3/SymPy Code Generation):**
+**Terminal 1 (Main LLM - Orchestration, Math & Z3/SymPy Code Generation):**
 ```bash
-llama-server -m model/Qwen2.5-7B-Instruct-Q8_0.gguf \
-  --host 0.0.0.0 --port 8001 -c 8192 --alias exact-model \
-  -ngl 99 --parallel 1 --flash-attn on
+llama-server -m model/Qwen3-8B-Q4_K_M.gguf \
+  --host 0.0.0.0 --port 8001 -c 8192 --alias Qwen3-8B-Instruct \
+  -ngl 99 --parallel 4 --flash-attn on --jinja \
+  --reasoning off --reasoning-budget 0 \
+  --chat-template-kwargs '{"enable_thinking":false}'
 ```
 
-**Terminal 2 (Expansion LLM - High-speed Orchestration):**
-```bash
-llama-server -m model/gemma-3-1b-it-BF16.gguf \
-  --host 0.0.0.0 --port 8002 -c 8192 --alias exact-model \
-  -ngl 99 --parallel 1 --flash-attn on
-```
+The client also sends `chat_template_kwargs.enable_thinking=false` and `/no_think`
+on every Qwen3 request. Keeping the server switches above makes non-thinking mode
+the process-wide default as well, including callers outside this pipeline.
 
 ### Step 2: Initialize the Database (Seeding)
 *(Note: Run this only once to build the GraphDB nodes. If you update the VectorDB, you must run this again. Otherwise, you don't need to run this again).*
 ```bash
-EXACT_LLM_BASE_URL=http://localhost:8001 EXACT_LLM_MODEL=exact-model python3 scripts/auto_seeder.py
+EXACT_LLM_BASE_URL=http://localhost:8001 EXACT_LLM_MODEL=Qwen3-8B-Instruct python3 scripts/auto_seeder.py
 ```
 
 ### Step 3: Start the API Gateway
@@ -111,7 +113,7 @@ Create a file named `urls.txt` (to be placed in your final submission ZIP) and a
 <YOUR_NGROK_URL>/predict
 <YOUR_NGROK_URL>/v1/models
 ```
-*The committee will use the first link to send 50 test JSON queries, and the second link to verify that your combined LLM setup stays within the 8B Parameter limit!*
+*The committee will use the first link to send 50 test JSON queries, and the second link to verify that your single LLM setup stays within the 8B Parameter limit!*
 
 ---
 

@@ -1,0 +1,1399 @@
+[
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If an artifact has a humidity-control log and no pest-damage report, then it is storage-ready.",
+        "If an artifact is storage-ready and has a provenance certificate, then it is eligible for exhibition.",
+        "If an artifact is eligible for exhibition and has curator approval, then it can be placed on public display.",
+        "If an artifact is fragile, then it requires low-light protection.",
+        "If an artifact requires low-light protection and can be placed on public display, then it must be displayed in a climate-controlled case.",
+        "The Amber Amulet has a humidity-control log.",
+        "The Amber Amulet has no pest-damage report.",
+        "The Amber Amulet has a provenance certificate.",
+        "The Amber Amulet has curator approval.",
+        "The Amber Amulet is fragile."
+      ],
+      "query": "Based on the museum conservation rules, which conclusion is logically supported?\nA. The Amber Amulet must be displayed in a climate-controlled case\nB. The Amber Amulet cannot be placed on public display\nC. The Amber Amulet needs pest treatment before storage\nD. The Amber Amulet lacks a provenance certificate",
+      "query_id": "T1_0021",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A",
+      "aliases": [
+        "A",
+        "Option A",
+        "A. The Amber Amulet must be displayed in a climate-controlled case",
+        "The Amber Amulet must be displayed in a climate-controlled case"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0021",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a manuscript is scanned at 600 dpi and its metadata is complete, then it is preservation-ready.",
+        "If a manuscript is preservation-ready and its rights are cleared, then it is eligible for the public portal.",
+        "If a manuscript is eligible for the public portal and OCR has been verified, then it is searchable online.",
+        "If a manuscript contains personal data, then privacy review is required.",
+        "If privacy review is required and redaction is complete, then the manuscript is safe for public release.",
+        "The River Codex was scanned at 600 dpi.",
+        "The River Codex metadata is complete.",
+        "The River Codex rights are cleared.",
+        "The River Codex OCR has been verified.",
+        "The River Codex contains personal data."
+      ],
+      "query": "Based on the digitization rules, which conclusion is correct?\nA. The River Codex is not eligible for the public portal\nB. The River Codex is searchable online, but safe public release is not established\nC. The River Codex lacks OCR verification\nD. The River Codex is safe for public release because it contains personal data",
+      "query_id": "T1_0031",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "B",
+      "aliases": [
+        "B",
+        "Option B",
+        "B. The River Codex is searchable online, but safe public release is not established",
+        "The River Codex is searchable online, but safe public release is not established"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0031",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a package is medical and weighs under 2 kilograms, then it receives priority delivery status.",
+        "If a package has priority delivery status and its route is clear, then it can be dispatched.",
+        "If a package can be dispatched and the weather is safe, then it is eligible to use the aerial corridor.",
+        "If a package is eligible to use the aerial corridor and an operator is assigned, then launch is approved.",
+        "If an emergency waiver is approved and an alternate route is mapped, then the route is clear.",
+        "The MedKit-7 package is medical.",
+        "The MedKit-7 package weighs under 2 kilograms.",
+        "An emergency waiver is approved for MedKit-7.",
+        "An alternate route is mapped for MedKit-7.",
+        "The weather is safe for MedKit-7."
+      ],
+      "query": "Based on the drone delivery rules, which conclusion is logically supported?\nA. MedKit-7 cannot be dispatched because the route is blocked\nB. MedKit-7 has launch approval\nC. MedKit-7 is eligible to use the aerial corridor\nD. MedKit-7 is not a priority package",
+      "query_id": "T1_0025",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C",
+      "aliases": [
+        "C",
+        "Option C",
+        "C. MedKit-7 is eligible to use the aerial corridor",
+        "MedKit-7 is eligible to use the aerial corridor"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0025",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a patient has a fever and low oxygen saturation, then the patient is placed in respiratory isolation.",
+        "If a patient is in respiratory isolation and has a positive rapid test, then the patient enters the antiviral protocol.",
+        "If a patient enters the antiviral protocol and has a completed renal screen, then the patient receives the standard antiviral dose.",
+        "If a patient has renal impairment, then the patient requires dose adjustment.",
+        "If a patient requires dose adjustment, then the patient should not receive the standard antiviral dose without review.",
+        "Mira has a fever.",
+        "Mira has low oxygen saturation.",
+        "Mira has a positive rapid test.",
+        "Mira has renal impairment."
+      ],
+      "query": "Based on the triage rules, which conclusion is correct?\nA. Mira can be discharged because the rapid test is positive\nB. Mira can receive the standard antiviral dose immediately\nC. Mira does not need respiratory isolation\nD. Mira enters the antiviral protocol and requires dose review",
+      "query_id": "T1_0027",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "D",
+      "aliases": [
+        "D",
+        "Option D",
+        "D. Mira enters the antiviral protocol and requires dose review",
+        "Mira enters the antiviral protocol and requires dose review"
+      ],
+      "premises_used": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0027",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If soil moisture is low and a heatwave is active, then irrigation is needed.",
+        "If irrigation is needed and the reservoir has water, then irrigation is scheduled.",
+        "If irrigation is scheduled and sensor calibration is current, then autonomous watering is allowed.",
+        "If pest risk is high, then pesticide review is required.",
+        "If pesticide review is required and agronomist approval is given, then chemical treatment is allowed.",
+        "Greenhouse Basil has low soil moisture.",
+        "A heatwave is active for Greenhouse Basil.",
+        "The Greenhouse Basil reservoir has water.",
+        "The Greenhouse Basil sensor calibration is current.",
+        "Greenhouse Basil has high pest risk."
+      ],
+      "query": "Based on the smart greenhouse rules, which conclusion is supported?\nA. The reservoir lacks water\nB. Chemical treatment is allowed for Greenhouse Basil\nC. Irrigation is unnecessary because a heatwave is active\nD. Autonomous watering is allowed for Greenhouse Basil",
+      "query_id": "T1_0035",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "D",
+      "aliases": [
+        "D",
+        "Option D",
+        "D. Autonomous watering is allowed for Greenhouse Basil",
+        "Autonomous watering is allowed for Greenhouse Basil"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0035",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a vaccine batch stayed between 2 and 8 degrees Celsius and its seal is intact, then the batch is viable.",
+        "If a vaccine batch is viable and its temperature log is complete, then clinic distribution is allowed.",
+        "If clinic distribution is allowed and the recipient clinic is certified, then the batch can be administered.",
+        "If a temperature excursion is recorded, then quarantine is required.",
+        "If no temperature excursion is recorded and the seal is intact, then quarantine is not required.",
+        "Batch Nova stayed between 2 and 8 degrees Celsius.",
+        "Batch Nova has an intact seal.",
+        "Batch Nova has a complete temperature log.",
+        "The recipient clinic for Batch Nova is certified.",
+        "No temperature excursion is recorded for Batch Nova."
+      ],
+      "query": "Based on the cold-chain rules, which conclusion is logically supported?\nA. Batch Nova is not viable\nB. Batch Nova must be quarantined\nC. Batch Nova can be administered\nD. Batch Nova lacks a complete temperature log",
+      "query_id": "T1_0039",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C",
+      "aliases": [
+        "C",
+        "Option C",
+        "C. Batch Nova can be administered",
+        "Batch Nova can be administered"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0039",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a server is patched and its logs have been reviewed, then the incident is contained.",
+        "If an incident is contained and all affected passwords have been reset, then the affected account is secured.",
+        "If an affected account is secured and the forensic report has been submitted, then the case is audit-ready.",
+        "If a case is audit-ready and a manager signs off, then the case can be formally closed.",
+        "The Atlas server is patched.",
+        "The Atlas server logs have been reviewed.",
+        "All affected Atlas passwords have been reset.",
+        "The Atlas forensic report has been submitted."
+      ],
+      "query": "Based on the cybersecurity workflow, which statement is correct?\nA. The Atlas case is audit-ready, but formal closure is not established by the premises\nB. The Atlas case is formally closed\nC. The Atlas incident is not contained\nD. The Atlas account still needs password resets",
+      "query_id": "T1_0023",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A",
+      "aliases": [
+        "A",
+        "Option A",
+        "A. The Atlas case is audit-ready, but formal closure is not established by the premises",
+        "The Atlas case is audit-ready, but formal closure is not established by the premises"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0023",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a reef shows bleaching signs and has a temperature anomaly, then a stress alert is issued.",
+        "If a reef has a stress alert and coral cover is below 30 percent, then it becomes a restoration priority.",
+        "If a reef is a restoration priority and local fishing pressure is high, then a temporary no-take zone is recommended.",
+        "If a temporary no-take zone is recommended and community consultation is complete, then the conservation plan is approved.",
+        "Azure Reef shows bleaching signs.",
+        "Azure Reef has a temperature anomaly.",
+        "Azure Reef has coral cover below 30 percent.",
+        "Azure Reef has high local fishing pressure."
+      ],
+      "query": "Based on the reef management rules, which conclusion follows?\nA. Azure Reef has no restoration priority\nB. Azure Reef's conservation plan is approved\nC. A temporary no-take zone is recommended for Azure Reef\nD. Azure Reef has no stress alert",
+      "query_id": "T1_0033",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C",
+      "aliases": [
+        "C",
+        "Option C",
+        "C. A temporary no-take zone is recommended for Azure Reef",
+        "A temporary no-take zone is recommended for Azure Reef"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0033",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a clinic volunteer has first-aid certification and completed patient privacy training, then the volunteer may assist at the triage desk.",
+        "If a volunteer may assist at the triage desk and has morning availability, then the volunteer is assigned to the morning triage shift.",
+        "Every volunteer assigned to the morning triage shift receives a blue access badge.",
+        "Linh has first-aid certification.",
+        "Linh completed patient privacy training.",
+        "Linh has morning availability.",
+        "The morning triage shift needs 3 volunteers.",
+        "No premise states that Linh has pharmacy training."
+      ],
+      "query": "Which conclusion is supported by the clinic roster premises?\nA. Linh receives a blue access badge\nB. Linh has pharmacy training\nC. The morning triage shift needs 5 volunteers\nD. Linh cannot assist at the triage desk",
+      "query_id": "T1_0046",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A",
+      "aliases": [
+        "A",
+        "Option A",
+        "A. Linh receives a blue access badge",
+        "Linh receives a blue access badge"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0046",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a manuscript reports a preregistered hypothesis, then it improves methodological transparency.",
+        "If a manuscript improves methodological transparency and releases its analysis code, then it passes the reproducibility checklist.",
+        "If a manuscript passes the reproducibility checklist, then it is eligible for open science recognition.",
+        "Manuscript Nova reports a preregistered hypothesis.",
+        "Manuscript Nova releases its analysis code.",
+        "Manuscript Nova does not include a graphical abstract.",
+        "Manuscripts without graphical abstracts can still be peer reviewed."
+      ],
+      "query": "Which conclusion follows from the premises?\nA. Manuscript Nova fails the reproducibility checklist\nB. Manuscript Nova cannot be peer reviewed\nC. Manuscript Nova lacks methodological transparency\nD. Manuscript Nova is eligible for open science recognition",
+      "query_id": "T1_0013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "D",
+      "aliases": [
+        "D",
+        "Option D",
+        "D. Manuscript Nova is eligible for open science recognition",
+        "Manuscript Nova is eligible for open science recognition"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0013",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a warehouse robot has obstacle detection, then it can navigate aisles safely.",
+        "If a robot can navigate aisles safely and has barcode scanning, then it can pick inventory items.",
+        "If a robot can pick inventory items and has weight verification, then it can prepare outbound orders.",
+        "Robot Kappa has obstacle detection.",
+        "Robot Kappa has barcode scanning.",
+        "Robot Kappa lacks weight verification.",
+        "Robot Kappa has a long-life battery."
+      ],
+      "query": "Based on the premises, which conclusion is correct?\nA. Robot Kappa can prepare outbound orders\nB. Robot Kappa can pick inventory items\nC. Robot Kappa has weight verification\nD. Robot Kappa cannot navigate aisles safely",
+      "query_id": "T1_0015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "B",
+      "aliases": [
+        "B",
+        "Option B",
+        "B. Robot Kappa can pick inventory items",
+        "Robot Kappa can pick inventory items"
+      ],
+      "premises_used": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    "model_response": {
+      "answer": "A",
+      "explanation": "The conclusion A is proven to be logically and mathematically valid based on the following premises:\n- Robot Kappa has obstacle detection.\n- Robot Kappa has a long-life battery.",
+      "premises_used": [
+        3,
+        6
+      ],
+      "query_id": "T1_0015",
+      "reasoning": {
+        "steps": [
+          "Chunked FOL Translation (7 premises)",
+          "Auto-detected predicates: ['C', 'O', 'S', 'W']",
+          "Solver Explanation: A is the strongest conclusion."
+        ],
+        "type": "fol"
+      },
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 33.33,
+      "sample_score": 16.67,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a satellite has calibrated thermal sensors, then it can monitor surface temperature.",
+        "If a satellite can monitor surface temperature and has cloud-penetrating radar, then it can support disaster mapping.",
+        "If a satellite supports disaster mapping, then it can provide emergency response data.",
+        "Satellite Vega has calibrated thermal sensors.",
+        "Satellite Vega does not have cloud-penetrating radar.",
+        "Satellite Vega has a high-resolution optical camera.",
+        "All satellites with high-resolution optical cameras can capture daytime images."
+      ],
+      "query": "Based on the premises, which statement is best supported?\nA. Satellite Vega can support disaster mapping\nB. Satellite Vega can monitor surface temperature and capture daytime images\nC. Satellite Vega can provide emergency response data\nD. Satellite Vega has cloud-penetrating radar",
+      "query_id": "T1_0007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "B",
+      "aliases": [
+        "B",
+        "Option B",
+        "B. Satellite Vega can monitor surface temperature and capture daytime images",
+        "Satellite Vega can monitor surface temperature and capture daytime images"
+      ],
+      "premises_used": [
+        0,
+        3,
+        5,
+        6
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0007",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Asha may join Study Alpha\nB. Asha cannot handle participant data\nC. Asha has budget approval\nD. Study Alpha has 20 enrolled participants",
+      "query_id": "T1_0041",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A",
+      "aliases": [
+        "A",
+        "Option A",
+        "A. Asha may join Study Alpha",
+        "Asha may join Study Alpha"
+      ],
+      "premises_used": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0041",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a package is medical and weighs under 2 kilograms, then it receives priority delivery status.",
+        "If a package has priority delivery status and its route is clear, then it can be dispatched.",
+        "If a package can be dispatched and the weather is safe, then it is eligible to use the aerial corridor.",
+        "If a package is eligible to use the aerial corridor and an operator is assigned, then launch is approved.",
+        "If an emergency waiver is approved and an alternate route is mapped, then the route is clear.",
+        "The MedKit-7 package is medical.",
+        "The MedKit-7 package weighs under 2 kilograms.",
+        "An emergency waiver is approved for MedKit-7.",
+        "An alternate route is mapped for MedKit-7.",
+        "The weather is safe for MedKit-7."
+      ],
+      "query": "Is MedKit-7 eligible to use the aerial corridor, according to the premises?",
+      "query_id": "T1_0026",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes",
+      "aliases": [
+        "Y",
+        "yes"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0026",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If an artifact has a humidity-control log and no pest-damage report, then it is storage-ready.",
+        "If an artifact is storage-ready and has a provenance certificate, then it is eligible for exhibition.",
+        "If an artifact is eligible for exhibition and has curator approval, then it can be placed on public display.",
+        "If an artifact is fragile, then it requires low-light protection.",
+        "If an artifact requires low-light protection and can be placed on public display, then it must be displayed in a climate-controlled case.",
+        "The Amber Amulet has a humidity-control log.",
+        "The Amber Amulet has no pest-damage report.",
+        "The Amber Amulet has a provenance certificate.",
+        "The Amber Amulet has curator approval.",
+        "The Amber Amulet is fragile."
+      ],
+      "query": "Does the Amber Amulet qualify for public display, according to the premises?",
+      "query_id": "T1_0022",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes",
+      "aliases": [
+        "Y",
+        "yes"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0022",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a solar array is online and the battery bank is charged, then the microgrid can island from the main grid.",
+        "If the microgrid can island and the load forecast is stable, then night service can be maintained.",
+        "If night service can be maintained and the diesel backup has been tested, then the microgrid has a high resilience score.",
+        "If the microgrid has a high resilience score and community notification has been sent, then the emergency hub is ready.",
+        "The Harbor microgrid solar array is online.",
+        "The Harbor microgrid battery bank is charged.",
+        "The Harbor load forecast is stable.",
+        "The Harbor diesel backup has been tested."
+      ],
+      "query": "Does the Harbor microgrid have a high resilience score, according to the premises?",
+      "query_id": "T1_0030",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes",
+      "aliases": [
+        "Y",
+        "yes"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0030",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a reef shows bleaching signs and has a temperature anomaly, then a stress alert is issued.",
+        "If a reef has a stress alert and coral cover is below 30 percent, then it becomes a restoration priority.",
+        "If a reef is a restoration priority and local fishing pressure is high, then a temporary no-take zone is recommended.",
+        "If a temporary no-take zone is recommended and community consultation is complete, then the conservation plan is approved.",
+        "Azure Reef shows bleaching signs.",
+        "Azure Reef has a temperature anomaly.",
+        "Azure Reef has coral cover below 30 percent.",
+        "Azure Reef has high local fishing pressure."
+      ],
+      "query": "Is a temporary no-take zone recommended for Azure Reef, according to the premises?",
+      "query_id": "T1_0034",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes",
+      "aliases": [
+        "Y",
+        "yes"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0034",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Is Asha listed as an active contributor?",
+      "query_id": "T1_0042",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes",
+      "aliases": [
+        "Y",
+        "yes"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0042",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a server is patched and its logs have been reviewed, then the incident is contained.",
+        "If an incident is contained and all affected passwords have been reset, then the affected account is secured.",
+        "If an affected account is secured and the forensic report has been submitted, then the case is audit-ready.",
+        "If a case is audit-ready and a manager signs off, then the case can be formally closed.",
+        "The Atlas server is patched.",
+        "The Atlas server logs have been reviewed.",
+        "All affected Atlas passwords have been reset.",
+        "The Atlas forensic report has been submitted."
+      ],
+      "query": "Do the premises prove that the Atlas case can be formally closed?",
+      "query_id": "T1_0024",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "No",
+      "aliases": [
+        "N",
+        "no"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0024",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a patient has a fever and low oxygen saturation, then the patient is placed in respiratory isolation.",
+        "If a patient is in respiratory isolation and has a positive rapid test, then the patient enters the antiviral protocol.",
+        "If a patient enters the antiviral protocol and has a completed renal screen, then the patient receives the standard antiviral dose.",
+        "If a patient has renal impairment, then the patient requires dose adjustment.",
+        "If a patient requires dose adjustment, then the patient should not receive the standard antiviral dose without review.",
+        "Mira has a fever.",
+        "Mira has low oxygen saturation.",
+        "Mira has a positive rapid test.",
+        "Mira has renal impairment."
+      ],
+      "query": "Do the premises establish that Mira should receive the standard antiviral dose?",
+      "query_id": "T1_0028",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "No",
+      "aliases": [
+        "N",
+        "no"
+      ],
+      "premises_used": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0028",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a satellite has calibrated thermal sensors, then it can monitor surface temperature.",
+        "If a satellite can monitor surface temperature and has cloud-penetrating radar, then it can support disaster mapping.",
+        "If a satellite supports disaster mapping, then it can provide emergency response data.",
+        "Satellite Vega has calibrated thermal sensors.",
+        "Satellite Vega does not have cloud-penetrating radar.",
+        "Satellite Vega has a high-resolution optical camera.",
+        "All satellites with high-resolution optical cameras can capture daytime images."
+      ],
+      "query": "Does having thermal sensors and an optical camera guarantee emergency response data in this case?",
+      "query_id": "T1_0008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "No",
+      "aliases": [
+        "N",
+        "no"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0008",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a warehouse robot has obstacle detection, then it can navigate aisles safely.",
+        "If a robot can navigate aisles safely and has barcode scanning, then it can pick inventory items.",
+        "If a robot can pick inventory items and has weight verification, then it can prepare outbound orders.",
+        "Robot Kappa has obstacle detection.",
+        "Robot Kappa has barcode scanning.",
+        "Robot Kappa lacks weight verification.",
+        "Robot Kappa has a long-life battery."
+      ],
+      "query": "Does Robot Kappa satisfy every requirement for preparing outbound orders?",
+      "query_id": "T1_0016",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "No",
+      "aliases": [
+        "N",
+        "no"
+      ],
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0016",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a manuscript is scanned at 600 dpi and its metadata is complete, then it is preservation-ready.",
+        "If a manuscript is preservation-ready and its rights are cleared, then it is eligible for the public portal.",
+        "If a manuscript is eligible for the public portal and OCR has been verified, then it is searchable online.",
+        "If a manuscript contains personal data, then privacy review is required.",
+        "If privacy review is required and redaction is complete, then the manuscript is safe for public release.",
+        "The River Codex was scanned at 600 dpi.",
+        "The River Codex metadata is complete.",
+        "The River Codex rights are cleared.",
+        "The River Codex OCR has been verified.",
+        "The River Codex contains personal data."
+      ],
+      "query": "Do the premises establish that the River Codex is safe for public release?",
+      "query_id": "T1_0032",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "No",
+      "aliases": [
+        "N",
+        "no"
+      ],
+      "premises_used": [
+        3,
+        4,
+        9
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0032",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Does Asha have budget approval?",
+      "query_id": "T1_0043",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain",
+      "aliases": [
+        "U",
+        "uncertain"
+      ],
+      "premises_used": [
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "is an active contributor",
+      "explanation": "The longest chain of inference from Asha completed ethics training leads to is an active contributor.",
+      "premises_used": [],
+      "query_id": "T1_0043",
+      "reasoning": {
+        "steps": [],
+        "type": "fol"
+      },
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0.0,
+      "p2_score": 0.0,
+      "sample_score": 0.0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a clinic volunteer has first-aid certification and completed patient privacy training, then the volunteer may assist at the triage desk.",
+        "If a volunteer may assist at the triage desk and has morning availability, then the volunteer is assigned to the morning triage shift.",
+        "Every volunteer assigned to the morning triage shift receives a blue access badge.",
+        "Linh has first-aid certification.",
+        "Linh completed patient privacy training.",
+        "Linh has morning availability.",
+        "The morning triage shift needs 3 volunteers.",
+        "No premise states that Linh has pharmacy training."
+      ],
+      "query": "Does Linh have pharmacy training?",
+      "query_id": "T1_0048",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain",
+      "aliases": [
+        "U",
+        "uncertain"
+      ],
+      "premises_used": [
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "T1_0048",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 100.0,
+      "p2_score": 0.0,
+      "sample_score": 50.0,
+      "status": "wrong_premises_used"
+    }
+  }
+]

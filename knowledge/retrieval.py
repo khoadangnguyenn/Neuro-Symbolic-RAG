@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Callable, Generic, Iterable, List, Sequence, TypeVar, Optional
+from typing import Callable, Dict, Generic, Iterable, List, Sequence, TypeVar, Optional
+from math import sqrt
+import re
 
 import os
 os.environ["ANONYMIZED_TELEMETRY"] = "False"
@@ -64,6 +66,60 @@ class CrossEncoderReranker:
         return final_hits
 
 
+class _LexicalCollection:
+    """Small persistent-interface shim used when embeddings are unavailable.
+
+    It intentionally mirrors the three Chroma methods used by this project so
+    the rest of HybridDB does not need an offline-specific branch.
+    """
+
+    def __init__(self, name: str, documents: Sequence[str], ids: Sequence[str]) -> None:
+        self.name = name
+        self._documents: Dict[str, str] = dict(zip(ids, documents))
+
+    def count(self) -> int:
+        return len(self._documents)
+
+    def upsert(self, *, documents: Sequence[str], ids: Sequence[str]) -> None:
+        self._documents.update(zip(ids, documents))
+
+    def query(self, *, query_texts: Sequence[str], n_results: int) -> dict:
+        all_ids: List[List[str]] = []
+        all_distances: List[List[float]] = []
+        for query in query_texts:
+            query_tokens = _lexical_tokens(query)
+            ranked = []
+            for item_id, document in self._documents.items():
+                document_tokens = _lexical_tokens(document)
+                overlap = len(query_tokens & document_tokens)
+                denominator = sqrt(max(1, len(query_tokens)) * max(1, len(document_tokens)))
+                score = overlap / denominator
+                if query.strip().lower() in document.lower():
+                    score += 0.25
+                ranked.append((min(score, 1.0), item_id))
+            ranked.sort(key=lambda item: (-item[0], item[1]))
+            selected = ranked[:n_results]
+            all_ids.append([item_id for _, item_id in selected])
+            all_distances.append([1.0 - score for score, _ in selected])
+        return {"ids": all_ids, "distances": all_distances}
+
+
+def _lexical_tokens(text: str) -> set[str]:
+    tokens = re.findall(r"[a-z0-9]+", str(text or "").lower())
+    normalized = set()
+    for token in tokens:
+        if len(token) > 4 and token.endswith("ies"):
+            token = token[:-3] + "y"
+        elif len(token) > 4 and token.endswith("ing"):
+            token = token[:-3]
+        elif len(token) > 3 and token.endswith("ed"):
+            token = token[:-2]
+        elif len(token) > 3 and token.endswith("s") and not token.endswith("ss"):
+            token = token[:-1]
+        normalized.add(token)
+    return normalized
+
+
 class VectorDBIndex(Generic[T]):
     def __init__(
         self,
@@ -77,22 +133,44 @@ class VectorDBIndex(Generic[T]):
         self.items_by_id = {id_fn(item): item for item in self.items}
         self.text_fn = text_fn
         self.id_fn = id_fn
-        self.client = chromadb.PersistentClient(
-            path=db_path,
-            settings=chromadb.Settings(anonymized_telemetry=False)
-        )
-        # Use a lightweight embedding model (~80MB, fast, low RAM)
-        self.embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name="BAAI/bge-small-en-v1.5"
-        )
-        
         # Append suffix to avoid dimension mismatch with the old BAAI/bge-m3 collection
         collection_name = collection_name + "_bgesmall"
-        self.collection = self.client.get_or_create_collection(
-            name=collection_name,
-            embedding_function=self.embedding_function,
-            metadata={"hnsw:space": "cosine"}
-        )
+        documents = [text_fn(item) for item in self.items]
+        ids = [id_fn(item) for item in self.items]
+        self.client = None
+        self.embedding_function = None
+
+        retrieval_mode = os.getenv("EXACT_RETRIEVAL_MODE", "auto").strip().lower()
+        if retrieval_mode == "lexical":
+            self.collection = _LexicalCollection(collection_name, documents, ids)
+        else:
+            allow_download = os.getenv(
+                "EXACT_RETRIEVAL_ALLOW_DOWNLOAD", "false"
+            ).strip().lower() in {"1", "true", "yes", "on"}
+            try:
+                # Local-first prevents a missing model cache from stalling API
+                # startup with repeated network retries. Downloads remain an
+                # explicit deployment choice.
+                self.embedding_function = embedding_functions.SentenceTransformerEmbeddingFunction(
+                    model_name="BAAI/bge-small-en-v1.5",
+                    local_files_only=not allow_download,
+                )
+                self.client = chromadb.PersistentClient(
+                    path=db_path,
+                    settings=chromadb.Settings(anonymized_telemetry=False),
+                )
+                self.collection = self.client.get_or_create_collection(
+                    name=collection_name,
+                    embedding_function=self.embedding_function,
+                    metadata={"hnsw:space": "cosine"},
+                )
+            except Exception as exc:
+                logging.getLogger(__name__).warning(
+                    "Embedding retrieval unavailable; using lexical fallback: %s", exc
+                )
+                self.client = None
+                self.embedding_function = None
+                self.collection = _LexicalCollection(collection_name, documents, ids)
         
         if self.collection.count() == 0 and self.items:
             print(f"Indexing {len(self.items)} items into collection '{collection_name}'...")

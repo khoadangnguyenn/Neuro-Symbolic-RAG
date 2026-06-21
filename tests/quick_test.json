@@ -1,0 +1,2714 @@
+[
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Asha may join Study Alpha\nB. Asha cannot handle participant data\nC. Asha has budget approval\nD. Study Alpha has 20 enrolled participants",
+      "query_id": "quick_type1_mc",
+      "type": "type1"
+    },
+    "expected": {
+      "aliases": [
+        "Option A",
+        "A. Asha may join Study Alpha",
+        "Asha may join Study Alpha"
+      ],
+      "answer": "A",
+      "premises_used": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "quick_type1_mc",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0,
+      "p2_score": 0,
+      "sample_score": 0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Is Asha listed as an active contributor?",
+      "query_id": "quick_type1_yes_no",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes",
+      "premises_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "Uncertain",
+      "explanation": "Pipeline error/timeout: 'Timed Out'",
+      "premises_used": [],
+      "query_id": "quick_type1_yes_no",
+      "reasoning": null,
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0,
+      "p2_score": 0,
+      "sample_score": 0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Does Asha have budget approval?",
+      "query_id": "quick_type1_uncertain",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain",
+      "premises_used": [
+        7
+      ]
+    },
+    "model_response": {
+      "answer": "No",
+      "explanation": "No information in the premises directly confirms or denies Asha's budget approval.",
+      "premises_used": [],
+      "query_id": "quick_type1_uncertain",
+      "reasoning": {
+        "steps": [],
+        "type": "fol"
+      },
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0,
+      "p2_score": 0,
+      "sample_score": 0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "How many enrolled participants does Study Alpha have?",
+      "query_id": "quick_type1_number",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "12",
+      "premises_used": [
+        6
+      ]
+    },
+    "model_response": {
+      "answer": "12",
+      "explanation": "Given the premises, Asha meets all the criteria to join Study Alpha, but the number of enrolled participants in Study Alpha is directly stated as 12.",
+      "premises_used": [],
+      "query_id": "quick_type1_number",
+      "reasoning": {
+        "steps": [],
+        "type": "fol"
+      },
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 100,
+      "p2_score": 0,
+      "sample_score": 50,
+      "status": "wrong_premises_used"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Which researcher may join Study Alpha?",
+      "query_id": "quick_type1_text",
+      "type": "type1"
+    },
+    "expected": {
+      "aliases": [
+        "Asha",
+        "researcher Asha",
+        "Researcher Asha"
+      ],
+      "answer": "Asha",
+      "premises_used": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    "model_response": {
+      "answer": "active contributor",
+      "explanation": "The longest chain of inference from Asha's completed ethics training leads to active contributor.",
+      "premises_used": [],
+      "query_id": "quick_type1_text",
+      "reasoning": {
+        "steps": [],
+        "type": "fol"
+      },
+      "unit": ""
+    },
+    "result": {
+      "error": "",
+      "ok": false,
+      "p1_score": 0,
+      "p2_score": 0,
+      "sample_score": 0,
+      "status": "wrong_answer"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [],
+      "query": "A capacitor has capacitance C = 47 \u03bcF and is connected to a potential difference U = 12 V. Calculate the energy stored in the capacitor.",
+      "query_id": "quick_type2_physics",
+      "type": "type2"
+    },
+    "expected": {
+      "answer": "3.38 \u00d7 10^-3",
+      "unit": "J"
+    },
+    "model_response": {
+      "answer": "0.003384",
+      "explanation": "Calculated energy using the formula E = 0.5 * C * U^2.",
+      "premises_used": [
+        "capacitor_energy_voltage: E = 0.5*C*U^2. Use SI units: C in farads, U in volts, E in joules.",
+        "capacitor_charge: Q = C*U. A fully charged capacitor stores charge equal to capacitance times voltage.",
+        "capacitance: C = Q/U. Capacitance is charge divided by voltage."
+      ],
+      "query_id": "quick_type2_physics",
+      "reasoning": null,
+      "unit": "J"
+    },
+    "result": {
+      "error": "",
+      "ok": true,
+      "p1_score": 100,
+      "p2_score": null,
+      "sample_score": 100,
+      "status": "correct"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If an employee completed cybersecurity training and has a company badge, then that employee may access the internal network.",
+        "If an employee may access the internal network and has manager approval, then that employee may work remotely.",
+        "Every employee who may work remotely is listed in the remote work registry.",
+        "Linh completed cybersecurity training.",
+        "Linh has a company badge.",
+        "Linh has manager approval.",
+        "The remote work registry contains 58 employees.",
+        "No premise states whether Linh owns a company laptop."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Linh may work remotely\nB. Linh cannot access the internal network\nC. Linh owns a company laptop\nD. The remote work registry contains 100 employees",
+      "query_id": "quick_type1_mc_001",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a student passed Calculus I and passed Calculus II, then that student may enroll in Differential Equations.",
+        "If a student may enroll in Differential Equations and paid tuition, then that student may register for the advanced schedule.",
+        "Every student who may register for the advanced schedule receives a scheduling email.",
+        "Bao passed Calculus I.",
+        "Bao passed Calculus II.",
+        "Bao paid tuition.",
+        "The university has 120 lecture rooms.",
+        "No premise states whether Bao owns a bicycle."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Bao may register for the advanced schedule\nB. Bao failed Calculus II\nC. Bao owns a bicycle\nD. The university has 300 lecture rooms",
+      "query_id": "quick_type1_mc_002",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a vendor submitted all compliance documents and passed inspection, then that vendor is eligible for certification.",
+        "If a vendor is eligible for certification and paid the certification fee, then that vendor receives a certification review.",
+        "Every vendor receiving a certification review appears in the review queue.",
+        "Nova Supplies submitted all compliance documents.",
+        "Nova Supplies passed inspection.",
+        "Nova Supplies paid the certification fee.",
+        "The review queue currently contains 23 vendors.",
+        "No premise states whether Nova Supplies exports products internationally."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Nova Supplies receives a certification review\nB. Nova Supplies failed inspection\nC. Nova Supplies exports products internationally\nD. The review queue contains 50 vendors",
+      "query_id": "quick_type1_mc_003",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a member paid annual dues and signed the conduct agreement, then that member is in good standing.",
+        "If a member is in good standing and attends orientation, then that member may vote in club elections.",
+        "Every member who may vote in club elections is listed on the voter roll.",
+        "Minh paid annual dues.",
+        "Minh signed the conduct agreement.",
+        "Minh attended orientation.",
+        "The club owns three meeting rooms.",
+        "No premise states whether Minh serves on a committee."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Minh may vote in club elections\nB. Minh is not in good standing\nC. Minh serves on a committee\nD. The club owns ten meeting rooms",
+      "query_id": "quick_type1_mc_004",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a passenger checked in online and possesses a valid passport, then that passenger may enter the departure area.",
+        "If a passenger may enter the departure area and passes security screening, then that passenger may board Flight Z7.",
+        "Every passenger who may board Flight Z7 appears on the boarding manifest.",
+        "Trang checked in online.",
+        "Trang possesses a valid passport.",
+        "Trang passed security screening.",
+        "Flight Z7 departs at 19:00.",
+        "No premise states whether Trang purchased travel insurance."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Trang may board Flight Z7\nB. Trang failed security screening\nC. Trang purchased travel insurance\nD. Flight Z7 departs at 21:00",
+      "query_id": "quick_type1_mc_005",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a developer completed code review training and has repository access, then that developer may merge pull requests.",
+        "If a developer may merge pull requests and has team lead approval, then that developer may release version updates.",
+        "Every developer who may release version updates is listed as a release manager.",
+        "Quang completed code review training.",
+        "Quang has repository access.",
+        "Quang has team lead approval.",
+        "The software project contains 42 modules.",
+        "No premise states whether Quang has a company phone."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Quang may release version updates\nB. Quang cannot merge pull requests\nC. Quang has a company phone\nD. The software project contains 100 modules",
+      "query_id": "quick_type1_mc_006",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a teacher completed safeguarding training and passed the certification exam, then that teacher may supervise field trips.",
+        "If a teacher may supervise field trips and receives principal approval, then that teacher may lead the annual excursion.",
+        "Every teacher who may lead the annual excursion is listed in the excursion roster.",
+        "Huy completed safeguarding training.",
+        "Huy passed the certification exam.",
+        "Huy received principal approval.",
+        "The school has 780 students.",
+        "No premise states whether Huy teaches mathematics."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Huy may lead the annual excursion\nB. Huy failed the certification exam\nC. Huy teaches mathematics\nD. The school has 900 students",
+      "query_id": "quick_type1_mc_007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a customer created an account and verified an email address, then that customer may submit support tickets.",
+        "If a customer may submit support tickets and has an active subscription, then that customer receives priority support.",
+        "Every customer receiving priority support appears in the priority queue.",
+        "An completed account creation.",
+        "An verified an email address.",
+        "An has an active subscription.",
+        "The company offers seven subscription plans.",
+        "No premise states whether An purchased consulting services."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. An receives priority support\nB. An cannot submit support tickets\nC. An purchased consulting services\nD. The company offers ten subscription plans",
+      "query_id": "quick_type1_mc_008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a volunteer completed safety orientation and signed the volunteer agreement, then that volunteer may enter restricted areas.",
+        "If a volunteer may enter restricted areas and wears an identification badge, then that volunteer may assist at the event stage.",
+        "Every volunteer who may assist at the event stage appears on the stage roster.",
+        "Nam completed safety orientation.",
+        "Nam signed the volunteer agreement.",
+        "Nam wears an identification badge.",
+        "The event hosts 40 exhibitors.",
+        "No premise states whether Nam received a parking permit."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Nam may assist at the event stage\nB. Nam cannot enter restricted areas\nC. Nam received a parking permit\nD. The event hosts 80 exhibitors",
+      "query_id": "quick_type1_mc_009",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a scientist submitted a proposal and received funding approval, then that scientist may start Project Orion.",
+        "If a scientist may start Project Orion and obtained laboratory space, then that scientist may hire research assistants.",
+        "Every scientist who may hire research assistants is listed as a project lead.",
+        "Khoa submitted a proposal.",
+        "Khoa received funding approval.",
+        "Khoa obtained laboratory space.",
+        "Project Orion has a budget of 2 million dollars.",
+        "No premise states whether Khoa owns patent rights."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Khoa may hire research assistants\nB. Khoa did not receive funding approval\nC. Khoa owns patent rights\nD. Project Orion has a budget of 5 million dollars",
+      "query_id": "quick_type1_mc_010",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If an applicant passed the written exam and passed the practical exam, then that applicant qualifies for certification.",
+        "If an applicant qualifies for certification and submitted the final application, then that applicant receives a certification decision.",
+        "Every applicant receiving a certification decision is recorded in the certification database.",
+        "Yen passed the written exam.",
+        "Yen passed the practical exam.",
+        "Yen submitted the final application.",
+        "The certification database was updated yesterday.",
+        "No premise states whether Yen received a scholarship."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Yen receives a certification decision\nB. Yen failed the practical exam\nC. Yen received a scholarship\nD. The certification database was updated last year",
+      "query_id": "quick_type1_mc_011",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a driver completed defensive driving training and holds a valid license, then that driver may operate company vehicles.",
+        "If a driver may operate company vehicles and is assigned to Route 8, then that driver may transport equipment.",
+        "Every driver who may transport equipment appears on the logistics schedule.",
+        "Phuc completed defensive driving training.",
+        "Phuc holds a valid license.",
+        "Phuc is assigned to Route 8.",
+        "The logistics department has 14 vehicles.",
+        "No premise states whether Phuc owns a motorcycle."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Phuc may transport equipment\nB. Phuc lacks a valid license\nC. Phuc owns a motorcycle\nD. The logistics department has 20 vehicles",
+      "query_id": "quick_type1_mc_012",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a candidate submitted all required documents and passed the background check, then that candidate is eligible for hiring.",
+        "If a candidate is eligible for hiring and accepts the offer, then that candidate becomes an employee.",
+        "Every employee receives an employee ID.",
+        "Tuan submitted all required documents.",
+        "Tuan passed the background check.",
+        "Tuan accepted the offer.",
+        "The company opened two new offices this year.",
+        "No premise states whether Tuan owns stock in the company."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Tuan becomes an employee\nB. Tuan failed the background check\nC. Tuan owns stock in the company\nD. The company opened five new offices this year",
+      "query_id": "quick_type1_mc_013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a borrower submitted income verification and passed credit review, then that borrower qualifies for loan processing.",
+        "If a borrower qualifies for loan processing and signs the disclosure form, then that borrower receives a final evaluation.",
+        "Every borrower receiving a final evaluation is entered into the review system.",
+        "Mai submitted income verification.",
+        "Mai passed credit review.",
+        "Mai signed the disclosure form.",
+        "The bank processed 500 applications last month.",
+        "No premise states whether Mai owns a second home."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Mai receives a final evaluation\nB. Mai failed credit review\nC. Mai owns a second home\nD. The bank processed 1000 applications last month",
+      "query_id": "quick_type1_mc_014",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a player completed registration and paid the tournament fee, then that player may enter the championship bracket.",
+        "If a player may enter the championship bracket and attends the briefing session, then that player may compete on opening day.",
+        "Every player who may compete on opening day appears on the competition roster.",
+        "Son completed registration.",
+        "Son paid the tournament fee.",
+        "Son attended the briefing session.",
+        "The tournament includes 64 competitors.",
+        "No premise states whether Son owns professional equipment."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Son may compete on opening day\nB. Son did not pay the tournament fee\nC. Son owns professional equipment\nD. The tournament includes 128 competitors",
+      "query_id": "quick_type1_mc_015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Beta.",
+        "Every researcher who may join Study Beta is listed as an active contributor.",
+        "Nina completed ethics training.",
+        "Nina has lab access.",
+        "Nina has supervisor approval.",
+        "Study Beta has 18 enrolled participants.",
+        "No premise states whether Nina has budget approval."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Nina has budget approval\nB. Study Beta has 25 enrolled participants\nC. Nina may join Study Beta\nD. Nina cannot handle participant data",
+      "query_id": "task_001",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All certified auditors completed compliance training.",
+        "All employees who completed compliance training may access the audit portal.",
+        "Khanh is a certified auditor.",
+        "The company has 11 departments.",
+        "No premise states whether Khanh supervises staff."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Khanh may access the audit portal\nB. Khanh supervises staff\nC. The company has 20 departments\nD. Khanh did not complete compliance training",
+      "query_id": "task_002",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a student passed Physics I and Physics II, then that student may enroll in Quantum Mechanics.",
+        "If a student may enroll in Quantum Mechanics and paid tuition, then that student may access the advanced laboratory.",
+        "Mai passed Physics I.",
+        "Mai passed Physics II.",
+        "Mai paid tuition.",
+        "The university owns 6 observatories.",
+        "No premise states whether Mai owns a telescope."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Mai owns a telescope\nB. The university owns 10 observatories\nC. Mai failed Physics II\nD. Mai may access the advanced laboratory",
+      "query_id": "task_003",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All premium members receive priority support.",
+        "All users who receive priority support are listed in the priority queue.",
+        "Bao is a premium member.",
+        "The service offers 4 subscription tiers.",
+        "No premise states whether Bao purchased consulting services."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Bao purchased consulting services\nB. Bao receives priority support\nC. The service offers 8 subscription tiers\nD. Bao is not listed in the priority queue",
+      "query_id": "task_004",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a volunteer completed safety orientation and signed the volunteer agreement, then that volunteer may enter restricted areas.",
+        "If a volunteer may enter restricted areas and wears an identification badge, then that volunteer may assist backstage.",
+        "Tuan completed safety orientation.",
+        "Tuan signed the volunteer agreement.",
+        "Tuan wears an identification badge.",
+        "The event includes 32 exhibitors.",
+        "No premise states whether Tuan has a parking permit."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Tuan has a parking permit\nB. Tuan may assist backstage\nC. Tuan cannot enter restricted areas\nD. The event includes 50 exhibitors",
+      "query_id": "task_005",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All registered speakers submitted an abstract.",
+        "All people who submitted an abstract receive a conference badge.",
+        "Linh is a registered speaker.",
+        "The conference has 14 workshops.",
+        "No premise states whether Linh booked a hotel."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Linh booked a hotel\nB. The conference has 20 workshops\nC. Linh receives a conference badge\nD. Linh did not submit an abstract",
+      "query_id": "task_006",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If an applicant passed the written test and passed the interview, then that applicant is eligible for hiring.",
+        "If an applicant is eligible for hiring and accepts an offer, then that applicant becomes an employee.",
+        "An passed the written test.",
+        "An passed the interview.",
+        "An accepted an offer.",
+        "The company opened 3 offices this year.",
+        "No premise states whether An owns company stock."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. An owns company stock\nB. The company opened 8 offices this year\nC. An failed the interview\nD. An becomes an employee",
+      "query_id": "task_007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All librarians have library access cards.",
+        "All people with library access cards may enter the archive room.",
+        "Huong is a librarian.",
+        "The library contains 120,000 books.",
+        "No premise states whether Huong owns a scanner."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Huong may enter the archive room\nB. Huong owns a scanner\nC. Huong is not a librarian\nD. The library contains 200,000 books",
+      "query_id": "task_008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a driver completed safety training and holds a valid license, then that driver may operate company vehicles.",
+        "If a driver may operate company vehicles and is assigned to Route 9, then that driver may transport equipment.",
+        "Phuc completed safety training.",
+        "Phuc holds a valid license.",
+        "Phuc is assigned to Route 9.",
+        "The logistics team manages 16 vehicles.",
+        "No premise states whether Phuc owns a truck."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Phuc owns a truck\nB. The logistics team manages 30 vehicles\nC. Phuc may transport equipment\nD. Phuc lacks a valid license",
+      "query_id": "task_009",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All members of the chess club paid membership dues.",
+        "All people who paid membership dues may participate in club tournaments.",
+        "Nam is a member of the chess club.",
+        "The club owns 22 chess sets.",
+        "No premise states whether Nam has won a tournament."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Nam may participate in club tournaments\nB. Nam has won a tournament\nC. The club owns 40 chess sets\nD. Nam did not pay membership dues",
+      "query_id": "task_010",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a scientist submitted a proposal and received funding approval, then that scientist may start Project Vega.",
+        "If a scientist may start Project Vega and obtained lab space, then that scientist may hire assistants.",
+        "Lan submitted a proposal.",
+        "Lan received funding approval.",
+        "Lan obtained lab space.",
+        "Project Vega has a budget of 1.5 million dollars.",
+        "No premise states whether Lan owns any patents."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Lan owns patents\nB. Project Vega has a budget of 3 million dollars\nC. Lan may hire assistants\nD. Lan did not receive funding approval",
+      "query_id": "task_011",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All certified translators passed the language assessment.",
+        "All people who passed the language assessment may work on international projects.",
+        "Trang is a certified translator.",
+        "The agency serves clients in 18 countries.",
+        "No premise states whether Trang speaks Japanese."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Trang speaks Japanese\nB. Trang may work on international projects\nC. The agency serves clients in 25 countries\nD. Trang failed the language assessment",
+      "query_id": "task_012",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a customer created an account and verified an email address, then that customer may submit support tickets.",
+        "If a customer may submit support tickets and has an active subscription, then that customer receives priority support.",
+        "Duc created an account.",
+        "Duc verified an email address.",
+        "Duc has an active subscription.",
+        "The platform supports 12 languages.",
+        "No premise states whether Duc purchased training services."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Duc purchased training services\nB. The platform supports 20 languages\nC. Duc cannot submit support tickets\nD. Duc receives priority support",
+      "query_id": "task_013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "All registered voters possess voter identification.",
+        "All people who possess voter identification may cast ballots.",
+        "Hoa is a registered voter.",
+        "The district has 9 polling stations.",
+        "No premise states whether Hoa volunteered during the election."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Hoa may cast ballots\nB. Hoa volunteered during the election\nC. Hoa lacks voter identification\nD. The district has 15 polling stations",
+      "query_id": "task_014",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "premises": [
+        "If a passenger checked in online and possesses a valid passport, then that passenger may enter the departure area.",
+        "If a passenger may enter the departure area and passes security screening, then that passenger may board Flight Q8.",
+        "Yen checked in online.",
+        "Yen possesses a valid passport.",
+        "Yen passed security screening.",
+        "Flight Q8 departs at 18:40.",
+        "No premise states whether Yen purchased travel insurance."
+      ],
+      "query": "Based on the premises, which option is logically supported?\nA. Yen purchased travel insurance\nB. Flight Q8 departs at 21:00\nC. Yen may board Flight Q8\nD. Yen failed security screening",
+      "query_id": "task_015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If an employee completed cybersecurity training and has a company badge, then that employee may access the internal network.",
+        "If an employee may access the internal network and has manager approval, then that employee may work remotely.",
+        "Every employee who may work remotely is listed in the remote work registry.",
+        "Linh completed cybersecurity training.",
+        "Linh has a company badge.",
+        "Linh has manager approval.",
+        "The remote work registry contains 58 employees.",
+        "No premise states whether Linh owns a company laptop."
+      ],
+      "query": "Is Linh listed in the remote work registry?",
+      "query_id": "yn_001",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All certified auditors completed compliance training.",
+        "All employees who completed compliance training may access the audit portal.",
+        "Khanh is a certified auditor.",
+        "The company has 11 departments.",
+        "No premise states whether Khanh manages a team."
+      ],
+      "query": "Can Khanh access the audit portal?",
+      "query_id": "yn_002",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a student passed Physics I and Physics II, then that student may enroll in Quantum Mechanics.",
+        "If a student may enroll in Quantum Mechanics and paid tuition, then that student may access the advanced laboratory.",
+        "Mai passed Physics I.",
+        "Mai passed Physics II.",
+        "Mai paid tuition.",
+        "The university owns 6 observatories.",
+        "No premise states whether Mai owns a telescope."
+      ],
+      "query": "May Mai access the advanced laboratory?",
+      "query_id": "yn_003",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All premium members receive priority support.",
+        "All users who receive priority support are listed in the priority queue.",
+        "Bao is a premium member.",
+        "The service offers 4 subscription tiers.",
+        "No premise states whether Bao purchased consulting services."
+      ],
+      "query": "Is Bao listed in the priority queue?",
+      "query_id": "yn_004",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a volunteer completed safety orientation and signed the volunteer agreement, then that volunteer may enter restricted areas.",
+        "If a volunteer may enter restricted areas and wears an identification badge, then that volunteer may assist backstage.",
+        "Tuan completed safety orientation.",
+        "Tuan signed the volunteer agreement.",
+        "Tuan wears an identification badge.",
+        "The event includes 32 exhibitors.",
+        "No premise states whether Tuan has a parking permit."
+      ],
+      "query": "May Tuan assist backstage?",
+      "query_id": "yn_005",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All registered speakers submitted an abstract.",
+        "All people who submitted an abstract receive a conference badge.",
+        "Linh is a registered speaker.",
+        "The conference has 14 workshops.",
+        "No premise states whether Linh booked a hotel."
+      ],
+      "query": "Did Linh receive a conference badge?",
+      "query_id": "yn_006",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If an applicant passed the written test and passed the interview, then that applicant is eligible for hiring.",
+        "If an applicant is eligible for hiring and accepts an offer, then that applicant becomes an employee.",
+        "An passed the written test.",
+        "An passed the interview.",
+        "An accepted an offer.",
+        "The company opened 3 offices this year.",
+        "No premise states whether An owns company stock."
+      ],
+      "query": "Did An become an employee?",
+      "query_id": "yn_007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All librarians have library access cards.",
+        "All people with library access cards may enter the archive room.",
+        "Huong is a librarian.",
+        "The library contains 120000 books.",
+        "No premise states whether Huong owns a scanner."
+      ],
+      "query": "May Huong enter the archive room?",
+      "query_id": "yn_008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a driver completed safety training and holds a valid license, then that driver may operate company vehicles.",
+        "If a driver may operate company vehicles and is assigned to Route 9, then that driver may transport equipment.",
+        "Phuc completed safety training.",
+        "Phuc holds a valid license.",
+        "Phuc is assigned to Route 9.",
+        "The logistics team manages 16 vehicles.",
+        "No premise states whether Phuc owns a truck."
+      ],
+      "query": "May Phuc transport equipment?",
+      "query_id": "yn_009",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All members of the chess club paid membership dues.",
+        "All people who paid membership dues may participate in club tournaments.",
+        "Nam is a member of the chess club.",
+        "The club owns 22 chess sets.",
+        "No premise states whether Nam has won a tournament."
+      ],
+      "query": "May Nam participate in club tournaments?",
+      "query_id": "yn_010",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a scientist submitted a proposal and received funding approval, then that scientist may start Project Vega.",
+        "If a scientist may start Project Vega and obtained lab space, then that scientist may hire assistants.",
+        "Lan submitted a proposal.",
+        "Lan received funding approval.",
+        "Lan obtained lab space.",
+        "Project Vega has a budget of 1.5 million dollars.",
+        "No premise states whether Lan owns any patents."
+      ],
+      "query": "May Lan hire assistants?",
+      "query_id": "yn_011",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All certified translators passed the language assessment.",
+        "All people who passed the language assessment may work on international projects.",
+        "Trang is a certified translator.",
+        "The agency serves clients in 18 countries.",
+        "No premise states whether Trang speaks Japanese."
+      ],
+      "query": "May Trang work on international projects?",
+      "query_id": "yn_012",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a customer created an account and verified an email address, then that customer may submit support tickets.",
+        "If a customer may submit support tickets and has an active subscription, then that customer receives priority support.",
+        "Duc created an account.",
+        "Duc verified an email address.",
+        "Duc has an active subscription.",
+        "The platform supports 12 languages.",
+        "No premise states whether Duc purchased training services."
+      ],
+      "query": "Does Duc receive priority support?",
+      "query_id": "yn_013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All registered voters possess voter identification.",
+        "All people who possess voter identification may cast ballots.",
+        "Hoa is a registered voter.",
+        "The district has 9 polling stations.",
+        "No premise states whether Hoa volunteered during the election."
+      ],
+      "query": "May Hoa cast ballots?",
+      "query_id": "yn_014",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a passenger checked in online and possesses a valid passport, then that passenger may enter the departure area.",
+        "If a passenger may enter the departure area and passes security screening, then that passenger may board Flight Q8.",
+        "Yen checked in online.",
+        "Yen possesses a valid passport.",
+        "Yen passed security screening.",
+        "Flight Q8 departs at 18:40.",
+        "No premise states whether Yen purchased travel insurance."
+      ],
+      "query": "May Yen board Flight Q8?",
+      "query_id": "yn_015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All managers have office access.",
+        "All employees with office access may use Meeting Room A.",
+        "Binh is a manager.",
+        "The company owns 3 warehouses.",
+        "No premise states whether Binh has a reserved parking space."
+      ],
+      "query": "Does Binh have a reserved parking space?",
+      "query_id": "yn_016",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a supplier passed inspection and submitted compliance forms, then that supplier is approved.",
+        "If a supplier is approved and pays the annual fee, then that supplier is listed in the preferred vendor directory.",
+        "RiverTech passed inspection.",
+        "RiverTech submitted compliance forms.",
+        "The preferred vendor directory was updated this month.",
+        "No premise states whether RiverTech paid the annual fee."
+      ],
+      "query": "Is RiverTech listed in the preferred vendor directory?",
+      "query_id": "yn_017",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All gold members receive lounge access.",
+        "All people with lounge access may enter the VIP area.",
+        "Quoc purchased a ticket.",
+        "The venue has 4 entrances.",
+        "No premise states whether Quoc is a gold member."
+      ],
+      "query": "May Quoc enter the VIP area?",
+      "query_id": "yn_018",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If an employee completed safety training, then that employee may enter Building A.",
+        "Employees who have not completed safety training may not enter Building A.",
+        "Lan did not complete safety training.",
+        "Building A contains 5 laboratories.",
+        "No premise states whether Lan works remotely."
+      ],
+      "query": "May Lan enter Building A?",
+      "query_id": "yn_019",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All certified drone operators hold a valid drone license.",
+        "Anyone without a valid drone license may not operate company drones.",
+        "Minh is not a certified drone operator.",
+        "The company owns 8 drones.",
+        "No premise states whether Minh holds a valid drone license."
+      ],
+      "query": "May Minh operate company drones?",
+      "query_id": "yn_020",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If an employee completed cybersecurity training and has a company badge, then that employee may access the internal network.",
+        "If an employee may access the internal network and has manager approval, then that employee may work remotely.",
+        "Every employee who may work remotely is listed in the remote work registry.",
+        "Linh completed cybersecurity training.",
+        "Linh has a company badge.",
+        "Linh has manager approval.",
+        "The remote work registry contains 58 employees.",
+        "No premise states whether Linh owns a company laptop."
+      ],
+      "query": "Does Linh own a company laptop?",
+      "query_id": "uncertain_001",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a student passed Physics I and Physics II, then that student may enroll in Quantum Mechanics.",
+        "If a student may enroll in Quantum Mechanics and paid tuition, then that student may access the advanced laboratory.",
+        "Mai passed Physics I.",
+        "Mai passed Physics II.",
+        "Mai paid tuition.",
+        "The university owns 6 observatories.",
+        "No premise states whether Mai owns a telescope."
+      ],
+      "query": "Does Mai own a telescope?",
+      "query_id": "uncertain_002",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All premium members receive priority support.",
+        "All users who receive priority support are listed in the priority queue.",
+        "Bao is a premium member.",
+        "The service offers 4 subscription tiers.",
+        "No premise states whether Bao purchased consulting services."
+      ],
+      "query": "Did Bao purchase consulting services?",
+      "query_id": "uncertain_003",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a volunteer completed safety orientation and signed the volunteer agreement, then that volunteer may enter restricted areas.",
+        "If a volunteer may enter restricted areas and wears an identification badge, then that volunteer may assist backstage.",
+        "Tuan completed safety orientation.",
+        "Tuan signed the volunteer agreement.",
+        "Tuan wears an identification badge.",
+        "The event includes 32 exhibitors.",
+        "No premise states whether Tuan has a parking permit."
+      ],
+      "query": "Does Tuan have a parking permit?",
+      "query_id": "uncertain_004",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All registered speakers submitted an abstract.",
+        "All people who submitted an abstract receive a conference badge.",
+        "Linh is a registered speaker.",
+        "The conference has 14 workshops.",
+        "No premise states whether Linh booked a hotel."
+      ],
+      "query": "Did Linh book a hotel?",
+      "query_id": "uncertain_005",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If an applicant passed the written test and passed the interview, then that applicant is eligible for hiring.",
+        "If an applicant is eligible for hiring and accepts an offer, then that applicant becomes an employee.",
+        "An passed the written test.",
+        "An passed the interview.",
+        "An accepted an offer.",
+        "The company opened 3 offices this year.",
+        "No premise states whether An owns company stock."
+      ],
+      "query": "Does An own company stock?",
+      "query_id": "uncertain_006",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All librarians have library access cards.",
+        "All people with library access cards may enter the archive room.",
+        "Huong is a librarian.",
+        "The library contains 120000 books.",
+        "No premise states whether Huong owns a scanner."
+      ],
+      "query": "Does Huong own a scanner?",
+      "query_id": "uncertain_007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a driver completed safety training and holds a valid license, then that driver may operate company vehicles.",
+        "If a driver may operate company vehicles and is assigned to Route 9, then that driver may transport equipment.",
+        "Phuc completed safety training.",
+        "Phuc holds a valid license.",
+        "Phuc is assigned to Route 9.",
+        "The logistics team manages 16 vehicles.",
+        "No premise states whether Phuc owns a truck."
+      ],
+      "query": "Does Phuc own a truck?",
+      "query_id": "uncertain_008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All members of the chess club paid membership dues.",
+        "All people who paid membership dues may participate in club tournaments.",
+        "Nam is a member of the chess club.",
+        "The club owns 22 chess sets.",
+        "No premise states whether Nam has won a tournament."
+      ],
+      "query": "Has Nam won a tournament?",
+      "query_id": "uncertain_009",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a scientist submitted a proposal and received funding approval, then that scientist may start Project Vega.",
+        "If a scientist may start Project Vega and obtained lab space, then that scientist may hire assistants.",
+        "Lan submitted a proposal.",
+        "Lan received funding approval.",
+        "Lan obtained lab space.",
+        "Project Vega has a budget of 1.5 million dollars.",
+        "No premise states whether Lan owns any patents."
+      ],
+      "query": "Does Lan own any patents?",
+      "query_id": "uncertain_010",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All certified translators passed the language assessment.",
+        "All people who passed the language assessment may work on international projects.",
+        "Trang is a certified translator.",
+        "The agency serves clients in 18 countries.",
+        "No premise states whether Trang speaks Japanese."
+      ],
+      "query": "Does Trang speak Japanese?",
+      "query_id": "uncertain_011",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a customer created an account and verified an email address, then that customer may submit support tickets.",
+        "If a customer may submit support tickets and has an active subscription, then that customer receives priority support.",
+        "Duc created an account.",
+        "Duc verified an email address.",
+        "Duc has an active subscription.",
+        "The platform supports 12 languages.",
+        "No premise states whether Duc purchased training services."
+      ],
+      "query": "Did Duc purchase training services?",
+      "query_id": "uncertain_012",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All registered voters possess voter identification.",
+        "All people who possess voter identification may cast ballots.",
+        "Hoa is a registered voter.",
+        "The district has 9 polling stations.",
+        "No premise states whether Hoa volunteered during the election."
+      ],
+      "query": "Did Hoa volunteer during the election?",
+      "query_id": "uncertain_013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a passenger checked in online and possesses a valid passport, then that passenger may enter the departure area.",
+        "If a passenger may enter the departure area and passes security screening, then that passenger may board Flight Q8.",
+        "Yen checked in online.",
+        "Yen possesses a valid passport.",
+        "Yen passed security screening.",
+        "Flight Q8 departs at 18:40.",
+        "No premise states whether Yen purchased travel insurance."
+      ],
+      "query": "Did Yen purchase travel insurance?",
+      "query_id": "uncertain_014",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All managers have office access.",
+        "All employees with office access may use Meeting Room A.",
+        "Binh is a manager.",
+        "The company owns 3 warehouses.",
+        "No premise states whether Binh has a reserved parking space."
+      ],
+      "query": "Does Binh have a reserved parking space?",
+      "query_id": "uncertain_015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a supplier passed inspection and submitted compliance forms, then that supplier is approved.",
+        "If a supplier is approved and pays the annual fee, then that supplier is listed in the preferred vendor directory.",
+        "RiverTech passed inspection.",
+        "RiverTech submitted compliance forms.",
+        "The preferred vendor directory was updated this month.",
+        "No premise states whether RiverTech paid the annual fee."
+      ],
+      "query": "Did RiverTech pay the annual fee?",
+      "query_id": "uncertain_016",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All gold members receive lounge access.",
+        "All people with lounge access may enter the VIP area.",
+        "Quoc purchased a ticket.",
+        "The venue has 4 entrances.",
+        "No premise states whether Quoc is a gold member."
+      ],
+      "query": "Is Quoc a gold member?",
+      "query_id": "uncertain_017",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a borrower submitted income verification and passed credit review, then that borrower qualifies for loan processing.",
+        "If a borrower qualifies for loan processing and signs the disclosure form, then that borrower receives a final evaluation.",
+        "Mai submitted income verification.",
+        "Mai passed credit review.",
+        "The bank processed 500 applications last month.",
+        "No premise states whether Mai signed the disclosure form."
+      ],
+      "query": "Did Mai sign the disclosure form?",
+      "query_id": "uncertain_018",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "All certified instructors completed teaching training.",
+        "All people who completed teaching training may conduct workshops.",
+        "The academy employs 30 instructors.",
+        "No premise states whether Huy is a certified instructor.",
+        "No premise states whether Huy completed teaching training."
+      ],
+      "query": "Is Huy a certified instructor?",
+      "query_id": "uncertain_019",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [
+        "Yes",
+        "No",
+        "Uncertain"
+      ],
+      "premises": [
+        "If a developer completed code review training and has repository access, then that developer may merge pull requests.",
+        "If a developer may merge pull requests and has team lead approval, then that developer may release version updates.",
+        "Quang completed code review training.",
+        "Quang has repository access.",
+        "The project contains 42 modules.",
+        "No premise states whether Quang has team lead approval."
+      ],
+      "query": "Does Quang have team lead approval?",
+      "query_id": "uncertain_020",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Uncertain"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If an employee completed cybersecurity training and has a company badge, then that employee may access the internal network.",
+        "If an employee may access the internal network and has manager approval, then that employee may work remotely.",
+        "Every employee who may work remotely is listed in the remote work registry.",
+        "Linh completed cybersecurity training.",
+        "Linh has a company badge.",
+        "Linh has manager approval.",
+        "The remote work registry contains 58 employees.",
+        "No premise states whether Linh owns a company laptop."
+      ],
+      "query": "How many employees are listed in the remote work registry?",
+      "query_id": "number_001",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "58"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a student passed Physics I and Physics II, then that student may enroll in Quantum Mechanics.",
+        "If a student may enroll in Quantum Mechanics and paid tuition, then that student may access the advanced laboratory.",
+        "Mai passed Physics I.",
+        "Mai passed Physics II.",
+        "Mai paid tuition.",
+        "The university owns 6 observatories.",
+        "No premise states whether Mai owns a telescope."
+      ],
+      "query": "How many observatories does the university own?",
+      "query_id": "number_002",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "6"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All premium members receive priority support.",
+        "All users who receive priority support are listed in the priority queue.",
+        "Bao is a premium member.",
+        "The service offers 4 subscription tiers.",
+        "No premise states whether Bao purchased consulting services."
+      ],
+      "query": "How many subscription tiers does the service offer?",
+      "query_id": "number_003",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "4"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a volunteer completed safety orientation and signed the volunteer agreement, then that volunteer may enter restricted areas.",
+        "If a volunteer may enter restricted areas and wears an identification badge, then that volunteer may assist backstage.",
+        "Tuan completed safety orientation.",
+        "Tuan signed the volunteer agreement.",
+        "Tuan wears an identification badge.",
+        "The event includes 32 exhibitors.",
+        "No premise states whether Tuan has a parking permit."
+      ],
+      "query": "How many exhibitors does the event include?",
+      "query_id": "number_004",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "32"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All registered speakers submitted an abstract.",
+        "All people who submitted an abstract receive a conference badge.",
+        "Linh is a registered speaker.",
+        "The conference has 14 workshops.",
+        "No premise states whether Linh booked a hotel."
+      ],
+      "query": "How many workshops does the conference have?",
+      "query_id": "number_005",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "14"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If an applicant passed the written test and passed the interview, then that applicant is eligible for hiring.",
+        "If an applicant is eligible for hiring and accepts an offer, then that applicant becomes an employee.",
+        "An passed the written test.",
+        "An passed the interview.",
+        "An accepted an offer.",
+        "The company opened 3 offices this year.",
+        "No premise states whether An owns company stock."
+      ],
+      "query": "How many offices did the company open this year?",
+      "query_id": "number_006",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "3"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All librarians have library access cards.",
+        "All people with library access cards may enter the archive room.",
+        "Huong is a librarian.",
+        "The library contains 120000 books.",
+        "No premise states whether Huong owns a scanner."
+      ],
+      "query": "How many books does the library contain?",
+      "query_id": "number_007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "120000"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a driver completed safety training and holds a valid license, then that driver may operate company vehicles.",
+        "If a driver may operate company vehicles and is assigned to Route 9, then that driver may transport equipment.",
+        "Phuc completed safety training.",
+        "Phuc holds a valid license.",
+        "Phuc is assigned to Route 9.",
+        "The logistics team manages 16 vehicles.",
+        "No premise states whether Phuc owns a truck."
+      ],
+      "query": "How many vehicles does the logistics team manage?",
+      "query_id": "number_008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "16"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All members of the chess club paid membership dues.",
+        "All people who paid membership dues may participate in club tournaments.",
+        "Nam is a member of the chess club.",
+        "The club owns 22 chess sets.",
+        "No premise states whether Nam has won a tournament."
+      ],
+      "query": "How many chess sets does the club own?",
+      "query_id": "number_009",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "22"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a scientist submitted a proposal and received funding approval, then that scientist may start Project Vega.",
+        "If a scientist may start Project Vega and obtained lab space, then that scientist may hire assistants.",
+        "Lan submitted a proposal.",
+        "Lan received funding approval.",
+        "Lan obtained lab space.",
+        "Project Vega has a budget of 1.5 million dollars.",
+        "No premise states whether Lan owns any patents."
+      ],
+      "query": "What is the budget of Project Vega in million dollars?",
+      "query_id": "number_010",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "1.5"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All certified translators passed the language assessment.",
+        "All people who passed the language assessment may work on international projects.",
+        "Trang is a certified translator.",
+        "The agency serves clients in 18 countries.",
+        "No premise states whether Trang speaks Japanese."
+      ],
+      "query": "In how many countries does the agency serve clients?",
+      "query_id": "number_011",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "18"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a customer created an account and verified an email address, then that customer may submit support tickets.",
+        "If a customer may submit support tickets and has an active subscription, then that customer receives priority support.",
+        "Duc created an account.",
+        "Duc verified an email address.",
+        "Duc has an active subscription.",
+        "The platform supports 12 languages.",
+        "No premise states whether Duc purchased training services."
+      ],
+      "query": "How many languages does the platform support?",
+      "query_id": "number_012",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "12"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All registered voters possess voter identification.",
+        "All people who possess voter identification may cast ballots.",
+        "Hoa is a registered voter.",
+        "The district has 9 polling stations.",
+        "No premise states whether Hoa volunteered during the election."
+      ],
+      "query": "How many polling stations does the district have?",
+      "query_id": "number_013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "9"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a passenger checked in online and possesses a valid passport, then that passenger may enter the departure area.",
+        "If a passenger may enter the departure area and passes security screening, then that passenger may board Flight Q8.",
+        "Yen checked in online.",
+        "Yen possesses a valid passport.",
+        "Yen passed security screening.",
+        "Flight Q8 departs at 18:40.",
+        "No premise states whether Yen purchased travel insurance."
+      ],
+      "query": "At what time does Flight Q8 depart?",
+      "query_id": "number_014",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "18:40"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All managers have office access.",
+        "All employees with office access may use Meeting Room A.",
+        "Binh is a manager.",
+        "The company owns 3 warehouses.",
+        "No premise states whether Binh has a reserved parking space."
+      ],
+      "query": "How many warehouses does the company own?",
+      "query_id": "number_015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "3"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a supplier passed inspection and submitted compliance forms, then that supplier is approved.",
+        "If a supplier is approved and pays the annual fee, then that supplier is listed in the preferred vendor directory.",
+        "RiverTech passed inspection.",
+        "RiverTech submitted compliance forms.",
+        "The preferred vendor directory was updated this month.",
+        "The company works with 27 suppliers.",
+        "No premise states whether RiverTech paid the annual fee."
+      ],
+      "query": "How many suppliers does the company work with?",
+      "query_id": "number_016",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "27"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All gold members receive lounge access.",
+        "All people with lounge access may enter the VIP area.",
+        "Quoc purchased a ticket.",
+        "The venue has 4 entrances.",
+        "No premise states whether Quoc is a gold member."
+      ],
+      "query": "How many entrances does the venue have?",
+      "query_id": "number_017",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "4"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a borrower submitted income verification and passed credit review, then that borrower qualifies for loan processing.",
+        "If a borrower qualifies for loan processing and signs the disclosure form, then that borrower receives a final evaluation.",
+        "Mai submitted income verification.",
+        "Mai passed credit review.",
+        "The bank processed 500 applications last month.",
+        "No premise states whether Mai signed the disclosure form."
+      ],
+      "query": "How many applications did the bank process last month?",
+      "query_id": "number_018",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "500"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All certified instructors completed teaching training.",
+        "All people who completed teaching training may conduct workshops.",
+        "The academy employs 30 instructors.",
+        "No premise states whether Huy is a certified instructor.",
+        "No premise states whether Huy completed teaching training."
+      ],
+      "query": "How many instructors does the academy employ?",
+      "query_id": "number_019",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "30"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a developer completed code review training and has repository access, then that developer may merge pull requests.",
+        "If a developer may merge pull requests and has team lead approval, then that developer may release version updates.",
+        "Quang completed code review training.",
+        "Quang has repository access.",
+        "The project contains 42 modules.",
+        "No premise states whether Quang has team lead approval."
+      ],
+      "query": "How many modules does the project contain?",
+      "query_id": "number_020",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "42"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a researcher completed ethics training and has lab access, then that researcher can handle participant data.",
+        "If a researcher can handle participant data and has supervisor approval, then that researcher may join Study Alpha.",
+        "Every researcher who may join Study Alpha is listed as an active contributor.",
+        "Asha completed ethics training.",
+        "Asha has lab access.",
+        "Asha has supervisor approval.",
+        "Study Alpha has 12 enrolled participants.",
+        "No premise states whether Asha has budget approval."
+      ],
+      "query": "Which researcher may join Study Alpha?",
+      "query_id": "text_001",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Asha"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If an employee completed cybersecurity training and has a company badge, then that employee may access the internal network.",
+        "If an employee may access the internal network and has manager approval, then that employee may work remotely.",
+        "Every employee who may work remotely is listed in the remote work registry.",
+        "Linh completed cybersecurity training.",
+        "Linh has a company badge.",
+        "Linh has manager approval.",
+        "The remote work registry contains 58 employees.",
+        "No premise states whether Linh owns a company laptop."
+      ],
+      "query": "Which employee may work remotely?",
+      "query_id": "text_002",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Linh"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a student passed Physics I and Physics II, then that student may enroll in Quantum Mechanics.",
+        "If a student may enroll in Quantum Mechanics and paid tuition, then that student may access the advanced laboratory.",
+        "Mai passed Physics I.",
+        "Mai passed Physics II.",
+        "Mai paid tuition.",
+        "The university owns 6 observatories.",
+        "No premise states whether Mai owns a telescope."
+      ],
+      "query": "Which student may access the advanced laboratory?",
+      "query_id": "text_003",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Mai"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All premium members receive priority support.",
+        "All users who receive priority support are listed in the priority queue.",
+        "Bao is a premium member.",
+        "The service offers 4 subscription tiers.",
+        "No premise states whether Bao purchased consulting services."
+      ],
+      "query": "Which user receives priority support?",
+      "query_id": "text_004",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Bao"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a volunteer completed safety orientation and signed the volunteer agreement, then that volunteer may enter restricted areas.",
+        "If a volunteer may enter restricted areas and wears an identification badge, then that volunteer may assist backstage.",
+        "Tuan completed safety orientation.",
+        "Tuan signed the volunteer agreement.",
+        "Tuan wears an identification badge.",
+        "The event includes 32 exhibitors.",
+        "No premise states whether Tuan has a parking permit."
+      ],
+      "query": "Which volunteer may assist backstage?",
+      "query_id": "text_005",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Tuan"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All registered speakers submitted an abstract.",
+        "All people who submitted an abstract receive a conference badge.",
+        "Linh is a registered speaker.",
+        "The conference has 14 workshops.",
+        "No premise states whether Linh booked a hotel."
+      ],
+      "query": "Which person receives a conference badge?",
+      "query_id": "text_006",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Linh"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If an applicant passed the written test and passed the interview, then that applicant is eligible for hiring.",
+        "If an applicant is eligible for hiring and accepts an offer, then that applicant becomes an employee.",
+        "An passed the written test.",
+        "An passed the interview.",
+        "An accepted an offer.",
+        "The company opened 3 offices this year.",
+        "No premise states whether An owns company stock."
+      ],
+      "query": "Which applicant becomes an employee?",
+      "query_id": "text_007",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "An"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All librarians have library access cards.",
+        "All people with library access cards may enter the archive room.",
+        "Huong is a librarian.",
+        "The library contains 120000 books.",
+        "No premise states whether Huong owns a scanner."
+      ],
+      "query": "Which person may enter the archive room?",
+      "query_id": "text_008",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Huong"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a driver completed safety training and holds a valid license, then that driver may operate company vehicles.",
+        "If a driver may operate company vehicles and is assigned to Route 9, then that driver may transport equipment.",
+        "Phuc completed safety training.",
+        "Phuc holds a valid license.",
+        "Phuc is assigned to Route 9.",
+        "The logistics team manages 16 vehicles.",
+        "No premise states whether Phuc owns a truck."
+      ],
+      "query": "Which driver may transport equipment?",
+      "query_id": "text_009",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Phuc"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All members of the chess club paid membership dues.",
+        "All people who paid membership dues may participate in club tournaments.",
+        "Nam is a member of the chess club.",
+        "The club owns 22 chess sets.",
+        "No premise states whether Nam has won a tournament."
+      ],
+      "query": "Which person may participate in club tournaments?",
+      "query_id": "text_010",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Nam"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a scientist submitted a proposal and received funding approval, then that scientist may start Project Vega.",
+        "If a scientist may start Project Vega and obtained lab space, then that scientist may hire assistants.",
+        "Lan submitted a proposal.",
+        "Lan received funding approval.",
+        "Lan obtained lab space.",
+        "Project Vega has a budget of 1.5 million dollars.",
+        "No premise states whether Lan owns any patents."
+      ],
+      "query": "Which scientist may hire assistants?",
+      "query_id": "text_011",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Lan"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All certified translators passed the language assessment.",
+        "All people who passed the language assessment may work on international projects.",
+        "Trang is a certified translator.",
+        "The agency serves clients in 18 countries.",
+        "No premise states whether Trang speaks Japanese."
+      ],
+      "query": "Which person may work on international projects?",
+      "query_id": "text_012",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Trang"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a customer created an account and verified an email address, then that customer may submit support tickets.",
+        "If a customer may submit support tickets and has an active subscription, then that customer receives priority support.",
+        "Duc created an account.",
+        "Duc verified an email address.",
+        "Duc has an active subscription.",
+        "The platform supports 12 languages.",
+        "No premise states whether Duc purchased training services."
+      ],
+      "query": "Which customer receives priority support?",
+      "query_id": "text_013",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Duc"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All registered voters possess voter identification.",
+        "All people who possess voter identification may cast ballots.",
+        "Hoa is a registered voter.",
+        "The district has 9 polling stations.",
+        "No premise states whether Hoa volunteered during the election."
+      ],
+      "query": "Which person may cast ballots?",
+      "query_id": "text_014",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Hoa"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a passenger checked in online and possesses a valid passport, then that passenger may enter the departure area.",
+        "If a passenger may enter the departure area and passes security screening, then that passenger may board Flight Q8.",
+        "Yen checked in online.",
+        "Yen possesses a valid passport.",
+        "Yen passed security screening.",
+        "Flight Q8 departs at 18:40.",
+        "No premise states whether Yen purchased travel insurance."
+      ],
+      "query": "Which passenger may board Flight Q8?",
+      "query_id": "text_015",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Yen"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All managers have office access.",
+        "All employees with office access may use Meeting Room A.",
+        "Binh is a manager.",
+        "The company owns 3 warehouses.",
+        "No premise states whether Binh has a reserved parking space."
+      ],
+      "query": "Which employee may use Meeting Room A?",
+      "query_id": "text_016",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Binh"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a supplier passed inspection and submitted compliance forms, then that supplier is approved.",
+        "If a supplier is approved and pays the annual fee, then that supplier is listed in the preferred vendor directory.",
+        "RiverTech passed inspection.",
+        "RiverTech submitted compliance forms.",
+        "RiverTech paid the annual fee.",
+        "The company works with 27 suppliers."
+      ],
+      "query": "Which supplier is listed in the preferred vendor directory?",
+      "query_id": "text_017",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "RiverTech"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "All gold members receive lounge access.",
+        "All people with lounge access may enter the VIP area.",
+        "Quoc is a gold member.",
+        "The venue has 4 entrances.",
+        "No premise states whether Quoc reserved a VIP seat."
+      ],
+      "query": "Which person may enter the VIP area?",
+      "query_id": "text_018",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Quoc"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a borrower submitted income verification and passed credit review, then that borrower qualifies for loan processing.",
+        "If a borrower qualifies for loan processing and signs the disclosure form, then that borrower receives a final evaluation.",
+        "Mai submitted income verification.",
+        "Mai passed credit review.",
+        "Mai signed the disclosure form.",
+        "The bank processed 500 applications last month."
+      ],
+      "query": "Which borrower receives a final evaluation?",
+      "query_id": "text_019",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Mai"
+    }
+  },
+  {
+    "request_payload": {
+      "options": [],
+      "premises": [
+        "If a developer completed code review training and has repository access, then that developer may merge pull requests.",
+        "If a developer may merge pull requests and has team lead approval, then that developer may release version updates.",
+        "Quang completed code review training.",
+        "Quang has repository access.",
+        "Quang has team lead approval.",
+        "The project contains 42 modules."
+      ],
+      "query": "Which developer may release version updates?",
+      "query_id": "text_020",
+      "type": "type1"
+    },
+    "expected": {
+      "answer": "Quang"
+    }
+  }
+]

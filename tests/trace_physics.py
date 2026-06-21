@@ -65,7 +65,7 @@ def main():
     
     original_orchestrate = physics_engine._orchestrate_query
     def trace_orchestrate(question):
-        print(f"\n[2] 🧠 ORCHESTRATION STAGE (Gemma 1B)")
+        print(f"\n[2] 🧠 ORCHESTRATION STAGE")
         res = original_orchestrate(question)
         print(json.dumps(res, indent=4))
         return res

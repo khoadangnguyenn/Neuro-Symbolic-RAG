@@ -12486,6 +12486,1336 @@
       <data key="d2">True</data>
       <data key="d1">True</data>
     </node>
+    <node id="dynamic_logic_6969a15e">
+      <data key="d0">ForAll(x, Implies(~G(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b9eb6234">
+      <data key="d0">ForAll(x, R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ecf97e46">
+      <data key="d0">ForAll(x, Implies(~R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ccd6bd9a">
+      <data key="d0">ForAll(x, Implies(~C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_912f1c7a">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_792a815f">
+      <data key="d0">ForAll(x, Implies(B(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_372cd63b">
+      <data key="d0">ForAll(x, Implies(S(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e277c35b">
+      <data key="d0">ForAll(x, G(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d7ab818c">
+      <data key="d0">ForAll(x, C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8abf068b">
+      <data key="d0">ForAll(x, Implies(R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a290ef1a">
+      <data key="d0">ForAll(x, O(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_dded8730">
+      <data key="d0">ForAll(x, Implies(L(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_fc5e75e2">
+      <data key="d0">ForAll(x, Implies(~C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e771c87a">
+      <data key="d0">ForAll(x, Implies(~C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8afcf989">
+      <data key="d0">ForAll(x, Implies(~B(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8dedacbe">
+      <data key="d0">ForAll(x, Implies(R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_bc118971">
+      <data key="d0">ForAll(x, Implies(~R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d80b1c91">
+      <data key="d0">ForAll(x, Implies(~R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_43b26e06">
+      <data key="d0">ForAll(x, Implies(O(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_06668a24">
+      <data key="d0">ForAll(x, O(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c79d4833">
+      <data key="d0">ForAll(x, Implies(L(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_fb94be06">
+      <data key="d0">ForAll(x, Implies(~C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4a4ebcef">
+      <data key="d0">ForAll(x, Implies(R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_24142000">
+      <data key="d0">ForAll(x, Implies(~R(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f23c73ba">
+      <data key="d0">ForAll(x, Implies(B(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_7a8daa3d">
+      <data key="d0">ForAll(x, Implies(S(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_09f24bfe">
+      <data key="d0">ForAll(x, G(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_dea4ca07">
+      <data key="d0">ForAll(x, B(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_62f4d278">
+      <data key="d0">ForAll(x, Implies(~C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b04b6796">
+      <data key="d0">ForAll(x, L(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_51718899">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_be478d8d">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d6591a30">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_9a8f6eb8">
+      <data key="d0">Not(option_D</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_cd452a56">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4b569ecb">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_cf7273ca">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_bf41ffaa">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1c093f5f">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_65dbafb5">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a21114d1">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c7047ad4">
+      <data key="d0">ForAll(x, Implies(And(EthicsTraining(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a5574ac1">
+      <data key="d0">ForAll(x, Implies(And(CanHandleData(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_717dd801">
+      <data key="d0">ForAll(x, Implies(MayJoinStudyAlpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_31e228d6">
+      <data key="d0">Not(BudgetApproval(asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c16fe7bb">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_17b1b70e">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_6ba5b692">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e451c082">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_5dd361ad">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a6428f2f">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0994c5b5">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1bb3c779">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_360a89c7">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_fea36079">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_18b77130">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b8159e58">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a34b0250">
+      <data key="d0">ForAll(x, Implies(A(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a5ea36db">
+      <data key="d0">ForAll(x, Implies(B(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b8fdd609">
+      <data key="d0">ForAll(x, Implies(A(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_14fbbafe">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_57e0f8d7">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f7b0e90a">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b856d824">
+      <data key="d0">ForAll(x, Implies(Bool('rains'</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a363cb0d">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_389a00a3">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_6773a51b">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_abbf41ea">
+      <data key="d0">ForAll(Drone, Implies(HighQualityCamera(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_373d46a6">
+      <data key="d0">Not(LongBatteryLife(X</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0a6ad1f6">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_add52192">
+      <data key="d0">ForAll(x, Implies(Bool('rains'</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f4f8d49b">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ef293f88">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_3d617014">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f2c72827">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a8fd155b">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_59111dad">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_00b3fddf">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d6bd2c80">
+      <data key="d0">ForAll(x, Implies(b(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c35a28f6">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_05ea9426">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f9fd51ee">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8e22fb3e">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_40b8d63d">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_67203d34">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_722ff751">
+      <data key="d0">Not(M(fluffy</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_3e5b9fec">
+      <data key="d0">ForAll(x, Implies(Bool('rains'</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d7277556">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1dbec69f">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d6ce274e">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e5e689d6">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ed345c19">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_020ad9e3">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d3d3e7ff">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_9c86fae5">
+      <data key="d0">ForAll(x, Implies(b(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a116cb3e">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_7e078734">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_370cc866">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_fe737675">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_39c1ed7d">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_04b70c91">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_2197efad">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d2bfc5c6">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_cae54cb2">
+      <data key="d0">ForAll(x, Implies(rains(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_48e254c8">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_69da4d00">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_6a7f6efe">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_3d788ea8">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_7466d8c0">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_441ba035">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_2e35ec90">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_eba380b9">
+      <data key="d0">ForAll(x, Implies(b(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ed356d4d">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c67d3bd3">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e410469b">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_3d7bd893">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_03057c48">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_6639b347">
+      <data key="d0">ForAll(x, Implies(rains(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_fd7ec8f4">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1e3530a6">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b5a1f803">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4c162fc3">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e3560132">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_548e70a4">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_df91b218">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_498512cc">
+      <data key="d0">ForAll(x, Implies(b(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8207a637">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_53557021">
+      <data key="d0">ForAll(x, Implies(a(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ab992f0b">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_36e30d99">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d8f6a955">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_85a55f67">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_15ac9650">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_519395b9">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_2b55fa35">
+      <data key="d0">ForAll(x, Implies(rains(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_7afdc070">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a9ffd546">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_6144eb0c">
+      <data key="d0">Not(option_C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_82c6cbf3">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ff54f1ed">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c29b6120">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8cf35a94">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_11f3b7b3">
+      <data key="d0">Not(M(fluffy</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ce70f67b">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0285b556">
+      <data key="d0">Not(LongBatteryLife(Drone</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_51ff882d">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a9e19e8e">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_542f90e2">
+      <data key="d0">Not(M(fluffy</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e5795bc4">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_49d44f94">
+      <data key="d0">Not(LongBatteryLife(Drone_X</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8c408cda">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_74d50980">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_59c3e00b">
+      <data key="d0">Not(M(fluffy</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ed8fdc0d">
+      <data key="d0">Implies(And(completed_ethics_training(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_071e0dd8">
+      <data key="d0">Implies(And(can_handle_participant_data(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1846d915">
+      <data key="d0">Implies(may_join_study_alpha(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_01936836">
+      <data key="d0">ForAll(x, Implies(And(ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c6812eaf">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_87fe851a">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_344301d8">
+      <data key="d0">Not(may_join_study_alpha(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c1a8506f">
+      <data key="d0">ForAll(x, Implies(And(ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b000096b">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_bed936dc">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_711a6e8f">
+      <data key="d0">Not(may_join_study_alpha(researcher_const</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_df44bbe6">
+      <data key="d0">ForAll(x, Implies(HighQualityCamera(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_2f281c05">
+      <data key="d0">Not(LongBatteryLife(X</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_de345d6c">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_2c2d5a86">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_581d104a">
+      <data key="d0">Not(M(fluffy</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_83353755">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f837c2d4">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_ab89fbc5">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0ff7f2af">
+      <data key="d0">Not(BudgetApproval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_9e867023">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a45c9450">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_183bd17a">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4029625a">
+      <data key="d0">Not(target</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0fbb3111">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_142a9350">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8e968fad">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b2eb8e95">
+      <data key="d0">Not(Implies(has_supervisor_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_409209d5">
+      <data key="d0">Implies(has_supervisor_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_9a072074">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_5bb34e31">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f492147c">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_636186a1">
+      <data key="d0">Not(budget_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_aa8076e8">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_74da6969">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d841e0bc">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d9376d88">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e568bf19">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8cbff6d2">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e88848df">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4c9cb136">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_acb5a825">
+      <data key="d0">Not(option_D</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_9194af5c">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b78c8e58">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e4553c2c">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a8930283">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_364f3686">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0ca3cc71">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_084d80ce">
+      <data key="d0">Not(target</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a0603596">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_284443b8">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b7077206">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c15ad26b">
+      <data key="d0">Not(enrolled_participants_in_study_alpha(12</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_9373a452">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_119af6c2">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4b2748af">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_e6ba667e">
+      <data key="d0">Not(has_budget_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c222eb08">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4393eff8">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_91849cd5">
+      <data key="d0">Not(option_D</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1e22d491">
+      <data key="d0">ForAll(x, Implies(And(ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_778be3e7">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_1630415d">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f32ca3ec">
+      <data key="d0">Not(supervisor_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_67e116bf">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_75e30f89">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a95cefae">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_30410aec">
+      <data key="d0">Not(has_budget_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_5b4949b2">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_43324ef8">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d7b8b917">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a7c13679">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a4ab3f23">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b059f9fe">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_886b2873">
+      <data key="d0">Not(Implies(has_budget_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_048bde3f">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b4e37876">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_98e24887">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_eb549b5f">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f47df723">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f070d64d">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_50883c4c">
+      <data key="d0">Not(has_budget_approval(Asha</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_c681ce22">
+      <data key="d0">ForAll(x, Implies(And(completed_ethics_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d108a132">
+      <data key="d0">ForAll(x, Implies(And(can_handle_participant_data(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0a4c84c5">
+      <data key="d0">ForAll(x, Implies(may_join_study_alpha(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f9df14ca">
+      <data key="d0">Not(enrolled_participants_in_study_alpha(12</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_7d9726cd">
+      <data key="d0">ForAll(x, Implies(C(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_8f65dec7">
+      <data key="d0">Not(M(Fluffy</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_259f793d">
+      <data key="d0">ForAll(x, Implies(And(cybersecurity_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_4c0deb4c">
+      <data key="d0">ForAll(x, Implies(And(may_access_internal_network(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_61479f17">
+      <data key="d0">ForAll(x, Implies(may_work_remotely(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_086e4970">
+      <data key="d0">Not(listed_in_remote_work_registry(Linh</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d0693c8a">
+      <data key="d0">ForAll(x, Implies(And(has_cybersecurity_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_94fa5b7f">
+      <data key="d0">ForAll(x, Implies(And(may_access_internal_network(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_0eb296bb">
+      <data key="d0">ForAll(x, Implies(may_work_remotely(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_776fa6e5">
+      <data key="d0">ForAll(x, And(has_cybersecurity_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a3029450">
+      <data key="d0">ForAll(x, Implies(employee(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_500bbf38">
+      <data key="d0">ForAll(x, Implies(And(person(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_3f70e97a">
+      <data key="d0">ForAll(x, Implies(member_of_chess_club(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b37c5ea4">
+      <data key="d0">ForAll(x, Implies(paid_membership_dues(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_f64501a8">
+      <data key="d0">ForAll(x, Implies(chess_set(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_7dad1293">
+      <data key="d0">ForAll(x, Implies(And(person(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_6699b779">
+      <data key="d0">ForAll(x, Implies(manager(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d3a5a7f4">
+      <data key="d0">ForAll(x, Implies(office_access(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_2cbd1061">
+      <data key="d0">ForAll(x, Implies(owns_company(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_d09b67f5">
+      <data key="d0">ForAll(x, Implies(certified_instructor(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_a6fd6ab1">
+      <data key="d0">ForAll(x, Implies(completed_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_bacaa583">
+      <data key="d0">ForAll(x, Implies(is_certified_instructor(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_b8fbd1ab">
+      <data key="d0">ForAll(x, Implies(completed_teaching_training(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_5e54a6e1">
+      <data key="d0">ForAll(x, Implies(rain(x</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_3d75cf94">
+      <data key="d0">Not(option_A</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_58cfa124">
+      <data key="d0">Not(option_B</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
+    <node id="dynamic_logic_85cc3e08">
+      <data key="d0">Not(option_C</data>
+      <data key="d2">True</data>
+      <data key="d1">True</data>
+    </node>
     <edge source="logic_rule_f3f9055ef436dc998758ecb2019102a5" target="logic_rule_c2b9e6e8c74ea65588721f6d62a88039">
       <data key="d5">feeds_into</data>
     </edge>

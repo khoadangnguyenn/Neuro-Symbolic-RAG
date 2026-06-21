@@ -160,7 +160,7 @@ class Z3Executor(PythonSandboxExecutor):
     """Executor for generated Python/Z3 proof scripts."""
 
     def __init__(self, *, timeout_s: float = 4.0) -> None:
-        super().__init__(timeout_s=timeout_s, allowed_imports={*self.DEFAULT_ALLOWED_IMPORTS, "z3", "networkx"})
+        super().__init__(timeout_s=timeout_s, allowed_imports={*self.DEFAULT_ALLOWED_IMPORTS, "z3"})
 
     def run(self, code: str) -> ExecutionResult:
         result = super().run(code)
@@ -259,8 +259,22 @@ try:
         pass
     tree = ast.parse(CODE, mode="exec")
     validate(tree)
-    with contextlib.redirect_stdout(stdout_buffer):
-        exec(compile(tree, "<exact-generated-code>", "exec"), namespace, namespace)
+    max_retries = 10
+    for _ in range(max_retries):
+        try:
+            with contextlib.redirect_stdout(stdout_buffer):
+                exec(compile(tree, "<exact-generated-code>", "exec"), namespace, namespace)
+            break  # success
+        except NameError as e:
+            import re
+            m = re.search(r"name '([^']+)' is not defined", str(e))
+            if m:
+                missing = m.group(1)
+                if "Object" in namespace and "Function" in namespace and "BoolSort" in namespace:
+                    namespace[missing] = namespace["Function"](missing, namespace["Object"], namespace["BoolSort"]())
+                    continue # retry
+            raise # re-raise if we couldn't handle it
+    
     stdout = stdout_buffer.getvalue().strip()
     payload = namespace.get("RESULT", namespace.get("result"))
     if payload is None:

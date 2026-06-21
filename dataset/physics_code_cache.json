@@ -1,0 +1,54 @@
+{
+  "Two equal charges q<NUM> = q<NUM> = <NUM> × <NUM>^<NUM> C are fixed at points A and B separated by <NUM> cm. Calculate the electric field strength at point C where AC = BC = <NUM> cm.": {
+    "code": "import sympy as sp\n\nk = 9e9\nq1 = q2 = 8e-8\nr1 = r2 = 5e-2\ndistance_AB = 6e-2\n\n# Coordinates of points A and B\nA = (0, 0)\nB = (distance_AB, 0)\n\n# Coordinates of point C (unknown)\nx, y = sp.symbols('x y', real=True)\n\n# Equations for point C\neq1 = sp.Eq(sp.sqrt((x - A[0])**2 + (y - A[1])**2), r1)\neq2 = sp.Eq(sp.sqrt((x - B[0])**2 + (y - B[1])**2), r2)\n\n# Solve for coordinates of C\nsol = sp.solve([eq1, eq2], (x, y))\n# Pick the first valid solution (e.g. positive y)\nC = sol[0]\n\n# Electric field due to q1 at C\nE1 = k * abs(q1) / r1**2\n# Unit vector from A to C\nu1 = ((C[0] - A[0]) / r1, (C[1] - A[1]) / r1)\n# Electric field due to q2 at C\nE2 = k * abs(q2) / r2**2\n# Unit vector from B to C\nu2 = ((C[0] - B[0]) / r2, (C[1] - B[1]) / r2)\n\n# Electric field components\nEx = E1 * u1[0] + E2 * u2[0]\nEy = E1 * u1[1] + E2 * u2[1]\n\n# Net electric field magnitude\nnet_E = sp.sqrt(Ex**2 + Ey**2)\n\nRESULT = {\"answer\": str(float(net_E)), \"unit\": \"N/C\", \"explanation\": \"Calculated net electric field strength at point C using vector addition.\"}",
+    "original_numbers": [
+      "1",
+      "2",
+      "8",
+      "10",
+      "-8",
+      "6",
+      "5"
+    ]
+  },
+  "A capacitor has capacitance C = <NUM> μF and is connected to a potential difference U = <NUM> V. Calculate the energy stored in the capacitor.": {
+    "code": "import sympy\nC = 47e-6\nU = 12\nE = 0.5 * C * U**2\nRESULT = {\"answer\": str(float(E)), \"unit\": \"J\", \"explanation\": \"Calculated energy stored in the capacitor using the formula E = 0.5 * C * U^2.\"}",
+    "original_numbers": [
+      "47",
+      "12"
+    ]
+  },
+  "A car travels <NUM> km in <NUM> hours. What is its average speed in km/h?\nA. <NUM>\nB. <NUM>\nC. <NUM>\nD. <NUM>": {
+    "code": "distance = 100  # km\ntime = 2  # hours\n\n# Calculate average speed\naverage_speed = distance / time\n\nRESULT = {\"answer\": str(float(average_speed)), \"unit\": \"km/h\", \"explanation\": \"Calculated average speed using distance divided by time.\"}",
+    "original_numbers": [
+      "100",
+      "2",
+      "30",
+      "40",
+      "50",
+      "60"
+    ]
+  },
+  "Two point charges q<NUM> = <NUM>^<NUM> C and q<NUM> = <NUM>×<NUM>^<NUM> C are placed in air at two points A and B, <NUM> cm apart. Calculate the net force.": {
+    "code": "import sympy\nk = 9e9\nq1, q2 = 10e-8, -2e-8\nr = 8e-2\n\n# Assign coordinates to points A and B\np1 = (0, 0)\np2 = (r, 0)\n\n# Solve for unknown coordinates (p3) based on distances from p1 and p2\nx, y = sympy.symbols('x y', real=True)\neq1 = sympy.Eq(x**2 + y**2, 4e-2**2)\neq2 = sympy.Eq((x - r)**2 + y**2, 5e-2**2)\nsol = sympy.solve([eq1, eq2], (x, y))\np3 = [s for s in sol if s[1] >= 0][0]\n\n# Distances from p3 to p1 and p2\nr13 = 4e-2\nr23 = 5e-2\n\n# Coulomb's force between charges\nF13 = k * abs(q1 * 1e-8) / r13**2\nF23 = k * abs(q2 * 1e-8) / r23**2\n\n# Unit vectors from p3 to p1 and p2\nu13 = ((p3[0]-p1[0])/r13, (p3[1]-p1[1])/r13)\nu23 = ((p3[0]-p2[0])/r23, (p3[1]-p2[1])/r23)\n\n# Force components\nFx = F13 * u13[0] + F23 * u23[0]\nFy = F13 * u13[1] + F23 * u23[1]\n\n# Net force magnitude\nnet_F = sympy.sqrt(Fx**2 + Fy**2)\nRESULT = {\"answer\": str(float(net_F)), \"unit\": \"N\", \"explanation\": \"Calculated net force using vector addition.\"}",
+    "original_numbers": [
+      "1",
+      "10",
+      "-8",
+      "2",
+      "-2",
+      "10",
+      "-8",
+      "8"
+    ]
+  },
+  "What is the formula for calculating the kinetic energy of an object given its mass and velocity?\nA. E = mc^<NUM>\nB. K = <NUM>/<NUM> m v^<NUM>\nC. F = ma\nD. P = mv": {
+    "code": "RESULT = {\"answer\": \"B\", \"unit\": \"\", \"explanation\": \"The formula for kinetic energy is K = 1/2 m v^2.\"}",
+    "original_numbers": [
+      "2",
+      "1",
+      "2",
+      "2"
+    ]
+  }
+}

@@ -103,7 +103,7 @@ def parse_logic(pipeline: ExactPipeline, limit: int = None):
                         - "conclusion_predicates": list of strings (the results)
                         """
                         try:
-                            resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=512)
+                            resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=4096)
                             if resp and matched_id in logic_db.graph.nodes:
                                 node_data = logic_db.graph.nodes[matched_id]
                                 
@@ -139,7 +139,7 @@ def parse_logic(pipeline: ExactPipeline, limit: int = None):
                     """
                     try:
                         logger.info(f"Querying LLM for new Logic Rule...")
-                        resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=512)
+                        resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=4096)
                         if resp:
                             logic_db.add_rule(rule_id, rule_text, auto_save=False)
                             logic_db.graph.nodes[rule_id]["premise_predicates"] = json.dumps(resp.get("premise_predicates", []))
@@ -226,7 +226,7 @@ def parse_physics(pipeline: ExactPipeline, limit: int = 50):
             - "variables": a list of physical variable symbols used (e.g. ["U", "I", "R"])
             """
             try:
-                resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=512)
+                resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=4096)
                 if resp and matched_id in physics_db.graph.nodes:
                     node_data = physics_db.graph.nodes[matched_id]
                     existing_vars = set(json.loads(node_data.get("variables", "[]")))
@@ -256,7 +256,7 @@ def parse_physics(pipeline: ExactPipeline, limit: int = 50):
         
         try:
             logger.info(f"Querying LLM for new Physics question {ex.problem_id}...")
-            resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=512)
+            resp = llm.chat_json(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.0, max_tokens=4096)
             if resp and "formula_id" in resp:
                 f_id = resp["formula_id"]
                 if f_id not in seen_formulas:

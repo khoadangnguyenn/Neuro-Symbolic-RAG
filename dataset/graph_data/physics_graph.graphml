@@ -383,7 +383,7 @@
       <data key="d3">["k", "|q|", "r"]</data>
     </node>
     <node id="electric_field_dipole">
-      <data key="d0">electric dipole perpendicular bispsector resultant E_net = 2 * E1 * cos(θ) When calculating the resultant electric field at a point on the perpendicular bisector of an electric dipole.</data>
+      <data key="d0">electric dipole perpendicular bisector resultant E_net = 2 * E1 * cos(θ) When calculating the resultant electric field at a point on the perpendicular bisector of an electric dipole.</data>
       <data key="d2">True</data>
       <data key="d1">True</data>
       <data key="d3">["E_net", "E1", "cos(\u03b8)"]</data>
