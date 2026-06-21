@@ -44,7 +44,7 @@ Create a `model/` directory and download the required GGUF weights:
 ```bash
 mkdir -p model
 # Download Main LLM (Qwen3-8B-GGUF)
-wget https://huggingface.co/Qwen/Qwen3-8B-GGUF/resolve/main/Qwen3-8B-Q4_K_M.gguf -O model/Qwen3-8B-Q4_K_M.gguf
+wget https://huggingface.co/Qwen/Qwen3-8B-GGUF/resolve/main/Qwen3-8B-Q8_0.gguf -O model/Qwen3-8B-Q8_0.gguf
 ```
 
 ### Step 1: Start the Single LLM Server
